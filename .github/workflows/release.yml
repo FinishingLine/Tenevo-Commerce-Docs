@@ -21,4 +21,4 @@ jobs:
           draft: false
           title: "Release ${{ github.ref }}"
           files: |
-            docs/*
+            API/*
