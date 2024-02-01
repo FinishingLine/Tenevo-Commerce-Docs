@@ -10,6 +10,10 @@ The following APIs are available for Store
 | API Interfaces | Manages API Interfaces | [Details](API_Interfaces.md) |
 | API Interfaces Meta | Manages API Interface Meta | [Details](API_Interfaces_Meta.md) |
 | API Interfaces Settings | Manages API Interface Settings | [Details](API_Interfaces_Settings.md) |
+| ASNs | Manages Advanced Shipment Notifications | [Details](ASNs.md) |
+| ASNs Addresses | Manages advanced shipment notification addresses | [Details](ASNs_Addresses.md) |
+| ASNs Contents | Manages advanced shipment notification contents | [Details](ASNs_Contents.md) |
+| ASNs Contents Items | Manages advanced shipment notification content items | [Details](ASNs_Contents_Items.md) |
 | Attachments | Manages Attachments | [Details](Attachments.md) |
 | Automations | Manages automations | [Details](Automations.md) |
 | Automations Actions | Manages automation actions | [Details](Automations_Actions.md) |
