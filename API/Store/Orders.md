@@ -45,6 +45,8 @@ This allows you to create an order
 | is_fbaprep | Indicates whether an order is for FBA prep, or not | Boolean |  | 0 | N | N |
 | is_gift | Indicates whether an order is a gift, or not | Boolean |  | 0 | N | N |
 | is_priority | Indicates whether the order should be given priority over other orders, or not | Boolean |  | 0 | N | N |
+| is_resend | Indicates whether the order is an order that has been resent, or not | Boolean |  | 0 | N | N |
+| is_test | Indicates whether an order is a test order, or not | Boolean |  | 0 | N | N |
 | marketplace_id | A valid Marketplace ID | Integer |  | NULL | N | N |
 | marketplace_order_number | The Order Number as provided by the Marketplace | String | Between 1 and 255 characters long | NULL | N | N |
 | notes | Any extra notes pertaining to the order | String |  | NULL | N | N |
@@ -59,6 +61,7 @@ This allows you to create an order
 | reference_id | A reference that corresponds to a Marketplace Order ID | String | Between 1 and 255 characters long | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
 | resend_order_id | Where the order is a resend, the original Order ID | Integer |  | NULL | N | N |
+| resend_reason | The reason why a resend is being sent out, only when `is_resend` is true | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` | unknown | N | Y |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long | 0 | N | N |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long | NULL | N | N |
 | shipping_method_code | The code of the shipping method | String | Up to 20 characters long | NULL | Y | N |
@@ -111,6 +114,7 @@ This allows you to update a specific order
 | is_fbaprep | Indicates whether an order is for FBA prep, or not | Boolean |  | 0 | N | N |
 | is_gift | Indicates whether an order is a gift, or not | Boolean |  | 0 | N | N |
 | is_priority | Indicates whether the order should be given priority over other orders, or not | Boolean |  | 0 | N | N |
+| is_test | Indicates whether an order is a test order, or not | Boolean |  | 0 | N | N |
 | notes | Any extra notes pertaining to the order | String |  | NULL | N | N |
 | packing_instructions | The instructions for the packing of the order | String |  | NULL | N | N |
 | processed_at | A valid UTC datetime of when the order was last processed | Datetime |  | NULL | N | N |
@@ -171,6 +175,7 @@ This allows you to list orders
 | is_priority | Indicates whether the order should be given priority over other orders, or not | Boolean |  |
 | is_resend | Indicates whether the order is an order that has been resent | Boolean |  |
 | is_subscription | Indicates whether the order is part of a subscription | Boolean |  |
+| is_test | Indicates whether the order is a test order, or not | Boolean |  |
 | last_name | The last name of the customer | String | Up to 255 characters long |
 | marketplace | The name of the marketplace from which the order came from | String | Up to 20 characters long |
 | marketplace_id | A valid Marketplace ID | Integer |  |
@@ -191,6 +196,7 @@ This allows you to list orders
 | reference_id | A reference that corresponds to a Marketplace Order ID | String | Between 1 and 255 characters long |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  |
 | resend_order_id | Where the order is a resend, the original Order ID | Integer |  |
+| resend_reason | The reason why a resend is being sent out | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long |
 | shipping_method_code | The code of the shipping method | String | Up to 20 characters long |
