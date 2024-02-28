@@ -44,6 +44,7 @@ This allows you to create an order grouping item
 | properties | A JSON encoded array of properties related to the item | String |  | NULL | N | N |
 | quantity_ordered | The total number of this item ordered | Integer | Up to 10 digits long | 0 | Y | N |
 | reference_id | A reference that corresponds to a Marketplace Order Item ID | String | Between 1 and 255 characters long | NULL | N | N |
+| requires_rework | Indicates whether the item requires rework, or not | Boolean |  | false | N | N |
 | tax_rate | The rate of tax | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | unit_discount | The total discount, including tax, given on one item, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_discount_tax | The amount of tax that has been discounted given on one item, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
@@ -132,6 +133,7 @@ This allows you to list the order grouping items
 | quantity_returning | The total number units of this item being returned | Integer | Up to 10 digits long |
 | reference | A unique reference for this item | String | Exactly 10 characters long |
 | reference_id | A reference that corresponds to a Marketplace Order Item ID | String | Between 1 and 255 characters long |
+| requires_rework | Indicates whether the item requires rework, or not | Boolean |  |
 | sku | The original SKU of the ordered item | String | Up to 200 characters long |
 | status | The fulfillment status of the item | String | One of the following values: `closed`, `open` |
 | tax_rate | The rate of tax | Float | Up to 2 decimal places and no larger than 99999999.99 |
