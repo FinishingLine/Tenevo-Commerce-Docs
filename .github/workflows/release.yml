@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Docs Update"
       - name: Create Release
         id: create_release
         uses: "marvinpinto/action-automatic-releases@latest"
@@ -18,6 +21,6 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           draft: false
-          title: "Release ${{ github.ref }}"
+          title: "Release ${{ github.ref_name }}"
           files: |
             API/*
