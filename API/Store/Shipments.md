@@ -75,7 +75,7 @@ This allows you to update a specific shipment
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#update-shipments-parcels) | Array |  | NULL | N | N |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long | NULL | N | N |
 | shipped_at | The date and time the order was marked as shipped | Datetime |  | NULL | N | N |
-| status | The status of the shipment | String | One of the following values: `open`, `despatched` | NULL | N | N |
+| status | The status of the shipment | String | One of the following values: `open`, `despatched`, `cancelled` | NULL | N | N |
 
 ## View Shipments
 This allows you to list the shipments belonging to the fulfillment
