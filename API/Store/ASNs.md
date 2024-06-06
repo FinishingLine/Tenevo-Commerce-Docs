@@ -35,6 +35,7 @@ This allows you to create an advanced shipment notification
 | expected_arrival_date | The date when the items are expected to arrive | Date |  | NULL | N | N |
 | goods_in_type | The goods in type for this ASN - `tbc` can only be used when status is `draft` | String | One of the following values: `20ft container`, `40ft container`, `40fthc container`, `carton`, `pallet`, `tbc` | NULL | Y | N |
 | is_pickup_managed | Indicates whether or not the receiver is to pickup the items | Boolean |  | false | N | N |
+| notes | Notes related to this ASN | String |  | NULL | N | N |
 | pickup_from | A UTC datetime of when to pickup the items from; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
 | pickup_until | A UTC datetime of when to pickup the items until; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
 | reference | A unique reference used to identify the ASN | String | Up to 50 characters long | NULL | Y | N |
@@ -73,11 +74,12 @@ This allows you to update a specific advanced shipment notification
 | expected_arrival_date | The date when the items are expected to arrive | Date |  | NULL | N | N |
 | goods_in_type | The goods in type for this ASN - `tbc` can only be used when status is `draft` | String | One of the following values: `20ft container`, `40ft container`, `40fthc container`, `carton`, `pallet`, `tbc` | NULL | Y | N |
 | is_pickup_managed | Indicates whether or not the receiver is to pickup the items | Boolean |  | false | N | N |
+| notes | Notes related to this ASN | String |  | NULL | N | N |
 | pickup_from | A UTC datetime of when to pickup the items from; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
 | pickup_until | A UTC datetime of when to pickup the items until; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
 | received_at | A UTC datetime of when the items were received | Datetime |  | NOW | N | N |
 | reference | A unique reference used to identify the ASN | String | Up to 50 characters long | NULL | Y | N |
-| status | The status of the ASN | String | One of the following values: `cancelled`, `completed`, `draft`, `in transit`, `pending`, `received` | draft | N | N |
+| status | The status of the ASN | String | One of the following values: `cancelled`, `completed`, `draft`, `in transit`, `part received`, `pending`, `received` | draft | N | N |
 
 ## View Advanced Shipment Notifications
 This allows you to list the advanced shipment notifications
@@ -106,11 +108,12 @@ This allows you to list the advanced shipment notifications
 | expected_arrival_date | The date when the items are expected to arrive | Date |  |
 | goods_in_type | The goods in type for this ASN | String | One of the following values: `20ft container`, `40ft container`, `40fthc container`, `carton`, `pallet`, `tbc` |
 | is_pickup_managed | Indicates whether or not the receiver is to pickup the items | Boolean |  |
+| notes | Notes related to this ASN | String |  |
 | pickup_from | A UTC datetime of when to pickup the items from | Datetime |  |
 | pickup_until | A UTC datetime of when to pickup the items until | Datetime |  |
 | received_at | A UTC datetime of when the items were received | Datetime |  |
 | reference | A unique reference used to identify the ASN | String | Up to 50 characters long |
-| status | The status of the ASN | String | One of the following values: `cancelled`, `completed`, `draft`, `in transit`, `pending`, `received` |
+| status | The status of the ASN | String | One of the following values: `cancelled`, `completed`, `draft`, `in transit`, `part received`, `pending`, `received` |
 | supplier | The name of the Supplier | String |  |
 | supplier_id | A valid Supplier ID | Integer |  |
 | total_item_weight | The total item weight within the ASN | Integer |  |
