@@ -10,19 +10,43 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     permissions:
+      pull-requests: write
       contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: main
+          branch: "docs/update"
+          create_branch: true
           commit_message: "Docs Update"
           tagging_message: "${{ github.ref_name }}"
+          
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: "docs/update"
+          commit-message: "Docs Update"
+          title: "Docs Update for ${{ github.ref_name }}"
+          body: "Docs Update for ${{ github.ref_name }}"
+          add-paths: |
+            API/*
+            
+      - name: Enable Pull Request Automerge
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.PAT }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
+          
       - name: Create Release
+        if: steps.cpr.outputs.pull-request-operation == 'created'
         id: create_release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
           draft: false
           title: "Release ${{ github.ref_name }}"
