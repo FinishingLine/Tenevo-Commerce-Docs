@@ -95,6 +95,7 @@ This allows you to list the parcels belonging to a shipment
 | has_hazardous | Indicates whether the parcel contains a hazardous item, or not | Boolean |  |
 | has_itemwithbattery | Indicates whether the parcel contains an item with a battery, or not | Boolean |  |
 | has_liquid | Indicates whether the parcel contains a liquid item, or not | Boolean |  |
+| is_customer_notified | Indicates whether the customer has been notified about the parcel, or not | Boolean |  |
 | is_mixed | Indicates whether the parcel contains mixed items, or not | Boolean |  |
 | items | An array of items for the shipment parcel - see [Shipments Parcels Items](Shipments_Parcels_Items.md#view-shipments-parcels-items) | Array |  |
 | label_file | The name of the saved file for the shipping label | String |  |
