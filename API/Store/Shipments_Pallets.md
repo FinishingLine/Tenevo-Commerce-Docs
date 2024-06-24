@@ -82,6 +82,7 @@ This allows you to list the pallets belonging to a shipment
 | has_itemwithbattery | Indicates whether the pallet contains an item with a battery, or not | Boolean |  |
 | has_liquid | Indicates whether the pallet contains a liquid item, or not | Boolean |  |
 | height | The height of the pallet, in millimetres | Integer | Up to 10 digits long |
+| is_customer_notified | Indicates whether the customer has been notified about the pallet, or not | Boolean |  |
 | label_file | The name of the saved file for the shipping label | String |  |
 | length | The length of the pallet, in millimetres | Integer | Up to 10 digits long |
 | pallet_number | The pallet number, must be unique to the shipment | Integer | Up to 3 digits long |
