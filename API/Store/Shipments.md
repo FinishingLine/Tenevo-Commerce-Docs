@@ -44,7 +44,7 @@ This allows you to create a shipment
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#create-shipments-parcels) | Array |  | NULL | N | N |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long | NULL | N | N |
 | shipped_at | A UTC datetime of when the shipment was shipped | Datetime |  | NULL | N | N |
-| status | The status of the shipment | String | One of the following values: `despatched`, `open` | NULL | N | N |
+| status | The status of the shipment | String | One of the following values: `despatched`, `labelled`, `open` | NULL | N | N |
 | updated_at | A UTC datetime of when the shipment was updated | Datetime |  | NULL | N | N |
 | vat_recipient | The VAT number of the recipient | String | Up to 20 characters long | NULL | N | N |
 | vat_sender | The VAT number of the sender | String | Up to 20 characters long | NULL | N | N |
@@ -75,7 +75,7 @@ This allows you to update a specific shipment
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#update-shipments-parcels) | Array |  | NULL | N | N |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long | NULL | N | N |
 | shipped_at | The date and time the order was marked as shipped | Datetime |  | NULL | N | N |
-| status | The status of the shipment | String | One of the following values: `open`, `despatched` | NULL | N | N |
+| status | The status of the shipment | String | One of the following values: `cancelled`, `despatched`, `labelled`, `open` | NULL | N | N |
 
 ## View Shipments
 This allows you to list the shipments belonging to the fulfillment
@@ -99,6 +99,7 @@ This allows you to list the shipments belonging to the fulfillment
 | eori | EORI | String | Up to 20 characters long |
 | est_delivery_date | The estimated delivery date of the shipment | Date |  |
 | ioss_number | The IOSS Number used for the shipment | String | Exactly 12 characters long |
+| is_customer_notified | Indicates whether the customer has been fully notified about the shipment, or not | Boolean |  |
 | is_pallet | Indicates whether the shipment is a pallet shipment, or not | Boolean |  |
 | is_returns | Indicates whether the shipment is a returns shipment, or not | Boolean |  |
 | is_selflabelled | Indicates whether the shipment is self labelled, or not | Boolean |  |
@@ -110,7 +111,7 @@ This allows you to list the shipments belonging to the fulfillment
 | reference | A unique reference for this shipment | String | Exactly 10 characters long |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long |
 | shipped_at | A UTC datetime of when the shipment was shipped | Datetime |  |
-| status | The status of the shipment | String | One of the following values: `despatched`, `open` |
+| status | The status of the shipment | String | One of the following values: `cancelled`, `despatched`, `labelled`, `open` |
 | store_id | A valid Store ID | Integer |  |
 | total_items | The total number of unique items in the shipment | Integer | Up to 10 digits long |
 | total_pallet_weight | The weight of all the pallets in the shipment, including packaging, in grams | Integer | Up to 10 digits long |
