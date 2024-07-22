@@ -28,7 +28,7 @@ This allows you to create contents for an adanced shipping notification
 | items | An array of items - see [ASNs Contents Items](ASNs_Contents_Items.md#create-asns-contents-items) | Array |  | NULL | N | N |
 | length | The length of the content, in mm | Integer | Up to 10 digits long | NULL | N | N |
 | tracking_number | The tracking number of the content | String | Up to 100 characters long | NULL | N | N |
-| weight | The total weight of the content, including packaging, in g | Integer | Up to 10 digits long | NULL | N | N |
+| weight | The total weight of the content, including outer packaging, excluding the items, in g | Integer | Up to 10 digits long | NULL | N | N |
 | width | The width of the content, in mm | Integer | Up to 10 digits long | NULL | N | N |
 
 ## Delete Advanced Shipment Notification Contents
@@ -54,7 +54,7 @@ This allows you to update a specific content in an advanced shipment notificatio
 | items | An array of items - see [ASNs Contents Items](ASNs_Contents_Items.md#update-asns-contents-items) | Array |  | NULL | N | N |
 | length | The length of the contents, in mm | Integer | Up to 10 digits long | NULL | N | N |
 | tracking_number | The tracking number of the contents | String | Up to 100 characters long | NULL | N | N |
-| weight | The total weight of the contents, including packaging, in g | Integer | Up to 10 digits long | NULL | N | N |
+| weight | The total weight of the contents, including outer packaging, excluding the items, in g | Integer | Up to 10 digits long | NULL | N | N |
 | width | The width of the contents, in mm | Integer | Up to 10 digits long | NULL | N | N |
 
 ## View Advanced Shipment Notification Contents
@@ -82,5 +82,5 @@ This allows you to list the contents belonging to the advanced shipment notifica
 | total_units_rejected | The total number of units rejected within the contents | Integer |  |
 | total_weight | The total weight of everything within the contents | Integer |  |
 | tracking_number | The tracking number of the contents | String | Up to 100 characters long |
-| weight | The total weight of the contents, including packaging, in g | Integer | Up to 10 digits long |
+| weight | The total weight of the contents, including outer packaging, excluding the items, in g | Integer | Up to 10 digits long |
 | width | The width of the contents, in mm | Integer | Up to 10 digits long |
