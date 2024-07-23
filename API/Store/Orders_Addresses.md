@@ -27,6 +27,7 @@ This allows you to create an address for an order
 | city | The city or town | String | Between 1 and 100 characters long | NULL | Y | N |
 | company_name | The name of the company where the recipient can be found | String | Between 1 and 100 characters long | NULL | N | N |
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long | NULL | Y | N |
+| ebay_vtn | The ebay VTN number related to the address | String | Up to 11 characters long | NULL | N | N |
 | email | An email address to contact the recipient with | String |  | NULL | N | N |
 | first_name | The first name of the recipient | String | Between 1 and 100 characters long | NULL | Y | N |
 | last_name | The last name/family name of the recipient | String | Between 1 and 100 characters long | NULL | Y | N |
@@ -66,6 +67,7 @@ This allows you to update a specific address in an order
 | city | The city or town | String | Between 1 and 100 characters long | NULL | Y | N |
 | company_name | The name of the company where the recipient can be found | String | Between 1 and 100 characters long | NULL | N | N |
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long | NULL | Y | N |
+| ebay_vtn | The ebay VTN number related to the address | String | Up to 11 characters long | NULL | Y | N |
 | email | An email address to contact the recipient with | String |  | NULL | N | N |
 | first_name | The first name of the recipient | String | Between 1 and 100 characters long | NULL | Y | N |
 | last_name | The last name/family name of the recipient | String | Between 1 and 100 characters long | NULL | Y | N |
@@ -100,6 +102,7 @@ This allows you to list the addresses belonging to the order
 | company_name | The name of the company where the recipient can be found | String | Between 1 and 100 characters long |
 | country | The name of the country | String | Up to 255 characters long |
 | country_iso2 | A ISO 2 letter country code | String | Exactly 2 characters long |
+| ebay_vtn | The ebay VTN related to the address | String | Up to 11 characters long |
 | email | An email address to contact the recipient with | String | Up to 100 characters long |
 | first_name | The first name of the recipient | String | Between 1 and 100 characters long |
 | full_name | The full name of the recipient | String | Between 3 and 201 characters long |
