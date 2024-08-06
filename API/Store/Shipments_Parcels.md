@@ -37,6 +37,8 @@ This allows you to add parcels to a shipment
 | label_data | A base 64 encoded string of the label. Maximum file size: 5MB. Accepted attachment extensions include: .gif, .jpg, & .png | String |  | NULL | N | N |
 | length | The length of the parcel, in millimetres | Integer | Up to 10 digits long | NULL | Y | N |
 | parcel_number | The parcel number, must be unique to the shipment | Integer | Up to 3 digits long | 1 | N | N |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | tracking_code | The couriers tracking code, if the parcel can be tracked | String | Up to 100 characters long | NULL | N | N |
 | tracking_status | The current tracking status of the parcel - can only be provided when tracking_code has a value | String | Up to 100 characters long | NULL | N | Y |
 | weight | The weight of the parcel, including packaging, in grams | Integer | Up to 10 digits long | NULL | Y | N |
@@ -70,6 +72,8 @@ This allows you to update a specific shipment parcel
 | has_liquid | Indicates whether the parcel contains a liquid item, or not | Boolean |  | false | N | N |
 | items | An array of items for the shipment parcel - see [Shipments Parcels Items](Shipments_Parcels_Items.md#update-shipments-parcels-items) | Array |  | NULL | N | N |
 | label_data | A base 64 encoded string of the label. Maximum file size: 5MB. Accepted attachment extensions include: .gif, .jpg, & .png | String |  | NULL | N | N |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | status | The status of the parcel | String | One of the following values: `closed`, `open`, `packed` | NULL | Y | N |
 | tracking_code | The couriers tracking code, if the parcel can be tracked | String | Up to 100 characters long | NULL | N | N |
 | tracking_status | The current tracking status of the parcel - can only be provided when tracking_code has a value | String | Up to 100 characters long | NULL | N | Y |
@@ -95,11 +99,14 @@ This allows you to list the parcels belonging to a shipment
 | has_hazardous | Indicates whether the parcel contains a hazardous item, or not | Boolean |  |
 | has_itemwithbattery | Indicates whether the parcel contains an item with a battery, or not | Boolean |  |
 | has_liquid | Indicates whether the parcel contains a liquid item, or not | Boolean |  |
+| is_customer_notified | Indicates whether the customer has been notified about the parcel, or not | Boolean |  |
 | is_mixed | Indicates whether the parcel contains mixed items, or not | Boolean |  |
 | items | An array of items for the shipment parcel - see [Shipments Parcels Items](Shipments_Parcels_Items.md#view-shipments-parcels-items) | Array |  |
 | label_file | The name of the saved file for the shipping label | String |  |
 | length | The length of the parcel, in millimetres | Integer | Up to 10 digits long |
 | parcel_number | The parcel number, must be unique to the shipment | Integer | Up to 3 digits long |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long |
 | shipment_reference | The unique reference for the shipment this parcel belongs to | String | Exactly 10 characters long |
 | status | The status of the parcel | String | One of the following values: `closed`, `open`, `packed` |
 | total_parcel_weight | The weight of all the items and packaging in the parcel, in grams | Integer | Up to 10 digits long |
