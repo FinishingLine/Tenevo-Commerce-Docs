@@ -173,6 +173,7 @@ This allows you to list products in the warehouse
 | is_liquid | Indicates whether the product is a liquid, or not | Boolean |  |
 | is_physical | Indicates whether the product is a physical product, or not | Boolean |  |
 | is_returnable | Indicates whether the product is returnable, or not | Boolean |  |
+| marketplace_ids | A list of Marketplace IDs that the product features within | String |  |
 | media_id | A valid Media ID - this will be used for the featured product image, search results, etc | Integer |  |
 | name | The name of the product | String | Up to 100 characters long |
 | page_description | Used for SEO, the description of the page - uses description when not set | String |  |

@@ -30,6 +30,8 @@ This allows you to add items to a shipment parcel
 | product_type | The type of product, used for customs declarations | String | Up to 100 characters long | NULL | N | N |
 | properties | A JSON encoded array of properties related to the item | String |  | NULL | N | N |
 | quantity | The quantity of units of this item within the parcel | Integer | Up to 10 digits long | NULL | Y | N |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | sku | The SKU of the item | String | Up to 255 characters long | NULL | N | N |
 | unit_price | The price of one unit of this item, inclusive of taxes, etc | Float | Up to 4 decimal places and no larger than 99999999.9999 | NULL | Y | N |
 | unit_tax | The tax of one unit of this item | Float | Up to 4 decimal places and no larger than 99999999.9999 | NULL | Y | N |
@@ -53,6 +55,8 @@ This allows you to update a specific shipment parcel item
 | manufactured_country_iso2 | A valid ISO 2 Country Code showing where the item was manufactured, used for customs declarations | String | Exactly 2 characters long | NULL | N | N |
 | product_type | The type of product, used for customs declarations | String | Up to 100 characters long | NULL | N | N |
 | quantity | The quantity of units of this item within the parcel | Integer | Up to 10 digits long | NULL | Y | N |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | sku | The SKU of the item | String | Up to 255 characters long | NULL | N | N |
 
 ## View Shipment Parcel Items
@@ -80,6 +84,8 @@ This allows you to list the items belonging to a shipment parcel
 | product_type | The type of product, used for customs declarations | String | Up to 100 characters long |
 | properties | A JSON encoded array of properties related to the item | String |  |
 | quantity | The quantity of units of this item within the parcel | Integer | Up to 10 digits long |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long |
 | serial_number | A comma seperated list of serial numbers | String |  |
 | sku | The SKU of the item | String | Up to 255 characters long |
 | total_price | The total price of all the units of this item, inclusive of taxes, etc | Float | Up to 2 decimal places and no larger than 99999999.99 |
