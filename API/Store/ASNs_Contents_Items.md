@@ -7,8 +7,8 @@ The below endpoints are available with this API
 
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
-| /asns/:asn/items/:item/contents | POST | This allows you to create items for an advanced shipment notification content | [Details](#create-advanced-shipment-notification-content-items) |
-| /asns/:asn/items/:item/contents/:content | DELETE | This allows you to delete items from an advanced shipment notification content | [Details](#delete-advanced-shipment-notification-content-items) |
+| /asns/:asn/contents/:content/items | POST | This allows you to create items for an advanced shipment notification content | [Details](#create-advanced-shipment-notification-content-items) |
+| /asns/:asn/contents/:content/items/:item | DELETE | This allows you to delete items from an advanced shipment notification content | [Details](#delete-advanced-shipment-notification-content-items) |
 | /asns/:asn/contents/:content/items/ | PUT | This allows you to update a specific item in an advanced shipment notification content | [Details](#update-advanced-shipment-notification-content-items) |
 | /asns/:asn/contents/:content/items/:item | PUT | This allows you to update a specific item in an advanced shipment notification content | [Details](#update-advanced-shipment-notification-content-items) |
 | /asns/:asn/contents/:content/items/ | GET | This allows you to list the items belonging to the advanced shipment notification content | [Details](#view-advanced-shipment-notification-content-items) |
@@ -17,7 +17,7 @@ The below endpoints are available with this API
 ## Create Advanced Shipment Notification Content Items
 This allows you to create items for an advanced shipment notification content
 
-**URL** : `/asns/:asn/items/:item/contents`
+**URL** : `/asns/:asn/contents/:content/items`
 
 **Method** : `POST`
 
@@ -38,7 +38,7 @@ This allows you to create items for an advanced shipment notification content
 ## Delete Advanced Shipment Notification Content Items
 This allows you to delete items from an advanced shipment notification content
 
-**URL** : `/asns/:asn/items/:item/contents/:content`
+**URL** : `/asns/:asn/contents/:content/items/:item`
 
 **Method** : `DELETE`
 

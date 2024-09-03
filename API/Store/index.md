@@ -114,6 +114,7 @@ The following APIs are available for Store
 | System Attribute Sets | Manages system attribute sets | [Details](System_Attribute_Sets.md) |
 | System Attribute Sets Groups | Manages system attribute set groups | [Details](System_Attribute_Sets_Groups.md) |
 | System Attribute Sets Groups Attributes | Manages system attribute set group attributes | [Details](System_Attribute_Sets_Groups_Attributes.md) |
+| System Order Checks |  | [Details](System_Order_Checks.md) |
 | Tags | Manages Tags | [Details](Tags.md) |
 | Tax Classes | Manages Tax Classes | [Details](Tax_Classes.md) |
 | Tax Rules | Manages Tax Rules | [Details](Tax_Rules.md) |
