@@ -23,6 +23,7 @@ jobs:
           create_branch: true
           commit_message: "Docs Update"
           tagging_message: "${{ github.ref_name }}"
+          push_options: '--force'
           
       - name: Create Pull Request
         id: cpr
