@@ -30,12 +30,16 @@ This allows you to create customers
 | company_name | The customers company name | String | Up to 100 characters long | NULL | N | N |
 | company_number | The customers company number | String | Up to 50 characters long | NULL | N | N |
 | customer_group_id | A valid Customer Group ID | Integer |  | NULL | N | N |
+| customer_type | The type that the customer is | String | One of the following values: `b2b`, `b2c` | b2c | N | N |
+| eori_number | The customers EORI number | String | Up to 20 characters long | NULL | N | N |
+| eu_movement_risk | Indicates if orders are at risk of entering the EU, or not | Boolean |  | false | N | N |
 | marketplaces | An array of marketplaces that this customer belongs to - see [Customers Marketplaces](Customers_Marketplaces.md#create-customers-marketplaces) | Array |  | NULL | N | N |
 | profiles | An array of profiles that this customer belongs to - see [Customers Profiles](Customers_Profiles.md#create-customers-profiles) | Array |  | NULL | N | N |
 | requires_approvedorders | Indicates whether or not the customer requires orders to have approval being being processed | Boolean |  | NULL | N | N |
 | status | The status of the customer | String | One of the following values: `active`, `hold` | active | N | N |
 | store_id | A valid Store ID | Integer |  | NULL | Y | N |
 | tax_class_id | A valid Tax Class ID | Integer |  | NULL | N | N |
+| ukims_number | The customers UKIMS number | String | Up to 40 characters long | NULL | N | N |
 | vat_number | The customers VAT number | String | Up to 50 characters long | NULL | N | N |
 
 ## Delete Customer
@@ -62,10 +66,14 @@ This allows you to update customers
 | company_name | The customers company name | String | Up to 100 characters long | NULL | N | N |
 | company_number | The customers company number | String | Up to 50 characters long | NULL | N | N |
 | customer_group_id | A valid Customer Group ID | Integer |  | NULL | N | N |
+| customer_type | The type that the customer is | String | One of the following values: `b2b`, `b2c` | b2c | N | N |
+| eori_number | The customers EORI number | String | Up to 20 characters long | NULL | N | N |
+| eu_movement_risk | Indicates if orders are at risk of entering the EU, or not | Boolean |  | false | N | N |
 | profiles | An array of profiles that this customer belongs to - see [Customers Profiles](Customers_Profiles.md#update-customers-profiles) | Array |  | NULL | N | N |
 | requires_approvedorders | Indicates whether or not the customer requires orders to have approval being being processed | Boolean |  | NULL | N | N |
 | status | The status of the customer | String | One of the following values: `active`, `hold` | active | N | N |
 | tax_class_id | A valid Tax Class ID | Integer |  | NULL | N | N |
+| ukims_number | The customers UKIMS number | String | Up to 40 characters long | NULL | N | N |
 | vat_number | The customers VAT number | String | Up to 50 characters long | NULL | N | N |
 
 ## View Customers
@@ -89,6 +97,9 @@ This allows you to list customers
 | created_at | A UTC datetime of when the customer was created | Datetime |  |
 | customer_group | The name of the Customer Group | String |  |
 | customer_group_id | A valid Customer Group ID | Integer |  |
+| customer_type | The type that the customer is | String | One of the following values: `b2b`, `b2c` |
+| eori_number | The customers EORI number | String | Up to 20 characters long |
+| eu_movement_risk | Indicates if orders are at risk of entering the EU, or not | Boolean |  |
 | marketplaces | An array of marketplaces that this customer belongs to - see [Customers Marketplaces](Customers_Marketplaces.md#view-customers-marketplaces) | Array |  |
 | primary_first_name | The first name of the primary account holder | String |  |
 | primary_full_name | The full name of the primary account holder | String |  |
@@ -101,5 +112,6 @@ This allows you to list customers
 | store_id | A valid Store ID | Integer |  |
 | tax_class | The name of the Tax Class | String | Up to 100 characters long |
 | tax_class_id | A valid Tax Class ID | Integer |  |
+| ukims_number | The customers UKIMS number | String | Up to 40 characters long |
 | updated_at | A UTC datetime of when the customer was updated | Datetime |  |
 | vat_number | The customers VAT number | String | Up to 50 characters long |
