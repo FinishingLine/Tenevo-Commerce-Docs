@@ -31,9 +31,12 @@ This allows you to create a shipment
 | currency | The ISO 3 character currency code that the order was purchased in | String | Exactly 3 characters long | GBP | N | N |
 | customer_id | A valid Customer ID | Integer |  | NULL | N | N |
 | customs_duty_terms | Customs duty terms | String | Up to 4 characters long | NULL | N | N |
-| eori | EORI | String | Up to 20 characters long | NULL | N | N |
+| eori | The EORI of the sender | String | Up to 20 characters long | NULL | N | N |
+| eori_recipient | The EORI of the recipient | String | Up to 20 characters long | NULL | N | N |
 | est_delivery_date | The estimated delivery date of the shipment | Date |  | NULL | N | N |
+| eu_movement_risk | Indicates if the shipment is at risk of entering the EU, or not | Boolean |  | false | N | N |
 | ioss_number | The IOSS Number used for the shipment | String | Exactly 12 characters long | NULL | N | N |
+| is_b2b | Indicates whether the shipment is a B2B shipment, or not | Boolean |  | 0 | N | N |
 | is_pallet | Indicates whether the shipment is a pallet shipment, or not | Boolean |  | 0 | N | N |
 | is_returns | Indicates whether the shipment is a returns shipment, or not | Boolean |  | 0 | N | N |
 | is_selflabelled | Indicates whether the shipment is self labelled, or not. | Boolean |  | 0 | N | N |
@@ -42,9 +45,13 @@ This allows you to create a shipment
 | owner_type | The type of Owner | String | One of the following values: `order`, `return` | NULL | Y | N |
 | pallets | An array of pallets for the shipment - see [Shipments Pallets](Shipments_Pallets.md#create-shipments-pallets) | Array |  | NULL | N | N |
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#create-shipments-parcels) | Array |  | NULL | N | N |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long | NULL | N | N |
 | shipped_at | A UTC datetime of when the shipment was shipped | Datetime |  | NULL | N | N |
-| status | The status of the shipment | String | One of the following values: `despatched`, `open` | NULL | N | N |
+| status | The status of the shipment | String | One of the following values: `despatched`, `labelled`, `open` | NULL | N | N |
+| ukims_recipient | The UKIMS number of the recipient | String | Up to 40 characters long | NULL | N | N |
+| ukims_sender | The UKIMS number of the sender | String | Up to 40 characters long | NULL | N | N |
 | updated_at | A UTC datetime of when the shipment was updated | Datetime |  | NULL | N | N |
 | vat_recipient | The VAT number of the recipient | String | Up to 20 characters long | NULL | N | N |
 | vat_sender | The VAT number of the sender | String | Up to 20 characters long | NULL | N | N |
@@ -73,9 +80,11 @@ This allows you to update a specific shipment
 | est_delivery_date | The estimated delivery date of the shipment | Date |  | NULL | N | N |
 | pallets | An array of pallets for the shipment - see [Shipments Pallets](Shipments_Pallets.md#update-shipments-pallets) | Array |  | NULL | N | N |
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#update-shipments-parcels) | Array |  | NULL | N | N |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long | NULL | N | N |
 | shipped_at | The date and time the order was marked as shipped | Datetime |  | NULL | N | N |
-| status | The status of the shipment | String | One of the following values: `open`, `despatched` | NULL | N | N |
+| status | The status of the shipment | String | One of the following values: `cancelled`, `despatched`, `labelled`, `open` | NULL | N | N |
 
 ## View Shipments
 This allows you to list the shipments belonging to the fulfillment
@@ -96,9 +105,13 @@ This allows you to list the shipments belonging to the fulfillment
 | currency | The ISO 3 character currency code that the order was purchased in | String | Exactly 3 characters long |
 | customer_id | A valid Customer ID | Integer |  |
 | customs_duty_terms | Customs duty terms | String | Up to 4 characters long |
-| eori | EORI | String | Up to 20 characters long |
+| eori | The EORI of the sender | String | Up to 20 characters long |
+| eori_recipient | The EORI of the recipient | String | Up to 20 characters long |
 | est_delivery_date | The estimated delivery date of the shipment | Date |  |
+| eu_movement_risk | Indicates if the shipment is at risk of entering the EU, or not | Boolean |  |
 | ioss_number | The IOSS Number used for the shipment | String | Exactly 12 characters long |
+| is_b2b | Indicates whether the shipment is a B2B shipment, or not | Boolean |  |
+| is_customer_notified | Indicates whether the customer has been fully notified about the shipment, or not | Boolean |  |
 | is_pallet | Indicates whether the shipment is a pallet shipment, or not | Boolean |  |
 | is_returns | Indicates whether the shipment is a returns shipment, or not | Boolean |  |
 | is_selflabelled | Indicates whether the shipment is self labelled, or not | Boolean |  |
@@ -108,9 +121,11 @@ This allows you to list the shipments belonging to the fulfillment
 | pallets | An array of pallets for the shipment - see [Shipments Pallets](Shipments_Pallets.md#view-shipments-pallets) | Array |  |
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#view-shipments-parcels) | Array |  |
 | reference | A unique reference for this shipment | String | Exactly 10 characters long |
+| returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long |
 | shipped_at | A UTC datetime of when the shipment was shipped | Datetime |  |
-| status | The status of the shipment | String | One of the following values: `despatched`, `open` |
+| status | The status of the shipment | String | One of the following values: `cancelled`, `despatched`, `labelled`, `open` |
 | store_id | A valid Store ID | Integer |  |
 | total_items | The total number of unique items in the shipment | Integer | Up to 10 digits long |
 | total_pallet_weight | The weight of all the pallets in the shipment, including packaging, in grams | Integer | Up to 10 digits long |
@@ -123,6 +138,8 @@ This allows you to list the shipments belonging to the fulfillment
 | total_units | The total number of units in the shipment | Integer | Up to 10 digits long |
 | total_uom_units | The total number of units in the shipment, in Unit of Measure terms | Integer | Up to 10 digits long |
 | total_weight | The total weight of all the items in the shipment, in grams | Integer | Up to 10 digits long |
+| ukims_recipient | The UKIMS number of the recipient | String | Up to 40 characters long |
+| ukims_sender | The UKIMS number of the sender | String | Up to 40 characters long |
 | updated_at | A UTC datetime of when the shipment was updated | Datetime |  |
 | vat_recipient | The VAT number of the recipient | String | Up to 20 characters long |
 | vat_sender | The VAT number of the sender | String | Up to 20 characters long |
