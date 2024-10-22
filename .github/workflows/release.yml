@@ -16,14 +16,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: "docs/update"
-
-      - run: |
-          git checkout -b "main"
-          git merge "docs/update"
           
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: "main"
+          branch: "docs/update"
           commit_message: "Docs Update"
           tagging_message: "${{ github.ref_name }}"
           push_options: '--force'
