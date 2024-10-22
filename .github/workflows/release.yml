@@ -20,6 +20,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
           branch: "docs/update"
+          delete-branch: true
           commit-message: "Docs Update"
           title: "Docs Update for ${{ github.ref_name }}"
           body: "Docs Update for ${{ github.ref_name }}"
