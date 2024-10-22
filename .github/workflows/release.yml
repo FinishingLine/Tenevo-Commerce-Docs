@@ -15,8 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          ref: ${{ github.head_ref }}
+          ref: main
+      - name: Reset main branch to match the specified tag
+        run: |
+          git fetch origin ${{ inputs.tag }}:${{ inputs.tag }}
+          git reset --hard ${{ inputs.tag }}
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v3
