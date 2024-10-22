@@ -28,6 +28,8 @@ This allows you to create customer addresses
 | company_name | The company name of where the addressee can be found | String | Between 1 and 100 characters long | NULL | N | N |
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long | NULL | Y | N |
 | email | An email address relating to the address | String | Between 1 and 100 characters long | NULL | N | N |
+| eori_number | The EORI number to use for this address, where null is provided the value from the customer record is used | String | Up to 20 characters long | NULL | N | N |
+| eu_movement_risk | Indicates if orders are at risk of entering the EU, or not, where null is provided the value from the customer record is used | Boolean |  | NULL | N | N |
 | first_name | The first name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
 | is_default | Indicates whether the address is the default for the given address type | Boolean |  | false | N | N |
 | last_name | The last name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
@@ -44,7 +46,9 @@ This allows you to create customer addresses
 | skip_picky_checks | Skip picky checks | Boolean |  | false | N | N |
 | skip_province_postcode_check | When true, will validate postcode on a country-level, where available | Boolean |  | false | N | N |
 | title | The title of the addressee | String | One of the following values: `dr`, `fr`, `lady`, `lord`, `madam`, `master`, `miss`, `mr`, `mrs`, `ms`, `mx`, `prof`, `rev`, `sir` | NULL | N | N |
+| ukims_number | The UKIMS number to use for this address, where null is provided the value from the customer record is used | String | Up to 40 characters long | NULL | N | N |
 | use_profile_name | Indicates whether a profile name can override the title, first_name, and last_name fields | Boolean |  | false | N | N |
+| vat_number | The VAT number to use for this address, where null is provided the value from the customer record is used | String | Up to 20 characters long | NULL | N | N |
 
 ## Delete Customer Address
 This allows you to delete a specified customer address
@@ -69,6 +73,8 @@ This allows you to update customer addresses
 | company_name | The company name of where the addressee can be found | String | Between 1 and 100 characters long | NULL | N | N |
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long | NULL | Y | N |
 | email | An email address relating to the address | String | Between 1 and 100 characters long | NULL | N | N |
+| eori_number | The EORI number to use for this address, where null is provided the value from the customer record is used | String | Up to 20 characters long | NULL | N | N |
+| eu_movement_risk | Indicates if orders are at risk of entering the EU, or not, where null is provided the value from the customer record is used | Boolean |  | NULL | N | N |
 | first_name | The first name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
 | is_default | Indicates whether the address is the default for the given address type | Boolean |  | false | N | N |
 | last_name | The last name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
@@ -85,7 +91,9 @@ This allows you to update customer addresses
 | skip_picky_checks | Skip picky checks | Boolean |  | false | N | N |
 | skip_province_postcode_check | When true, will validate postcode on a country-level, where available | Boolean |  | false | N | N |
 | title | The title of the addressee | String | One of the following values: `dr`, `fr`, `lady`, `lord`, `madam`, `master`, `miss`, `mr`, `mrs`, `ms`, `mx`, `prof`, `rev`, `sir` | NULL | N | N |
+| ukims_number | The UKIMS number to use for this address, where null is provided the value from the customer record is used | String | Up to 40 characters long | NULL | N | N |
 | use_profile_name | Indicates whether a profile name can override the title, first_name, and last_name fields | Boolean |  | false | N | N |
+| vat_number | The VAT number to use for this address, where null is provided the value from the customer record is used | String | Up to 20 characters long | NULL | N | N |
 
 ## View Customer Addresses
 This allows you to list customer addresses
@@ -105,10 +113,16 @@ This allows you to list customer addresses
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long |
 | created_at | A UTC datetime of when the address was created | Datetime |  |
 | email | An email address relating to the address | String | Between 1 and 100 characters long |
+| eori_number | The EORI number to use for this address | String | Up to 20 characters long |
+| eu_movement_risk | Indicates if orders are at risk of entering the EU, or not, where null is provided the value from the customer record is used | Boolean |  |
 | first_name | The first name of the addressee | String | Between 1 and 100 characters long |
 | full_name | The full name of the addressee | String | Between 3 and 201 characters long |
 | hash | A hash of the address | String | Exactly 64 characters long |
 | is_default | Indicates whether the address is the default for the given address type | Boolean |  |
+| is_eori_number_default | Indicates whether the default customer EORI number is used, or not | Boolean |  |
+| is_eu_movement_risk_default | Indicates whether the default customer EU movement risk flag is used, or not | Boolean |  |
+| is_ukims_number_default | Indicates whether the default customer UKIMS number is used, or not | Boolean |  |
+| is_vat_number_default | Indicates whether the default customer VAT number is used, or not | Boolean |  |
 | last_name | The last name of the addressee | String | Between 1 and 100 characters long |
 | line1 | The first line of the address | String | Between 1 and 200 characters long |
 | line2 | The second line of the address | String | Between 1 and 200 characters long |
@@ -122,5 +136,7 @@ This allows you to list customer addresses
 | province_iso | An ISO code for the province/state/county | String | Up to 10 characters long |
 | reference | A unique reference for this customer address | String | Exactly 10 characters long |
 | title | The title of the addressee | String | One of the following values: `dr`, `miss`, `mr`, `mrs`, `ms`, `mx` |
+| ukims_number | The UKIMS number to use for this address | String | Up to 40 characters long |
 | updated_at | A UTC datetime of when the address was updated | Datetime |  |
 | use_profile_name | Indicates whether a profile name can override the title, first_name, and last_name fields | Boolean |  |
+| vat_number | The VAT number to use for this address | String | Up to 20 characters long |
