@@ -18,8 +18,8 @@ jobs:
           ref: main
       - name: Reset main branch to match the specified tag
         run: |
-          git fetch origin ${{ inputs.tag }}:${{ inputs.tag }}
-          git reset --hard ${{ inputs.tag }}
+          git fetch origin ${{ github.head_ref }}:${{ github.head_ref }}
+          git reset --hard ${{ github.head_ref }}
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v3
