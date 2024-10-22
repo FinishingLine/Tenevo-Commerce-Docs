@@ -29,8 +29,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          base: "main"
-          branch: "docs/update"
+          base: "docs/update"
+          branch: "main"
           commit-message: "Docs Update"
           title: "Docs Update for ${{ github.ref_name }}"
           body: "Docs Update for ${{ github.ref_name }}"
