@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: "main"
+          branch: "docs/update"
           create_branch: true
           commit_message: "Docs Update"
           tagging_message: "${{ github.ref_name }}"
@@ -27,7 +27,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          branch: "main"
+          branch: "docs/update"
           commit-message: "Docs Update"
           title: "Docs Update for ${{ github.ref_name }}"
           body: "Docs Update for ${{ github.ref_name }}"
