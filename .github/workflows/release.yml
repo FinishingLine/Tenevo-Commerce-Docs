@@ -15,11 +15,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
-      - name: Reset main branch to match the specified tag
-        run: |
-          git fetch origin ${{ github.head_ref }}:${{ github.head_ref }}
-          git reset --hard ${{ github.head_ref }}
+          ref: main          
+
+      - run: |
+          git merge ${{ github.head_ref }}
+          
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: "docs/update"
+          create_branch: true
+          commit_message: "Docs Update"
+          tagging_message: "${{ github.ref_name }}"
+          push_options: '--force'
+          
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v3
