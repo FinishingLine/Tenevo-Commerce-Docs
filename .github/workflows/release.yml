@@ -18,7 +18,7 @@ jobs:
           ref: docs/update
 
       - run: |
-          git checkout main
+          git checkout -b main
           git merge docs/update
           
       - uses: stefanzweifel/git-auto-commit-action@v5
