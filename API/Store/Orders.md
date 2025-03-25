@@ -66,7 +66,7 @@ This allows you to create an order
 | resend_reason | The reason why a resend is being sent out, only when `is_resend` is true | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` | unknown | N | Y |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long | 0 | N | N |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long | NULL | N | N |
-| shipping_method_code | The code of the shipping method | String | Up to 20 characters long | NULL | Y | N |
+| shipping_method_code | The code of the shipping method | String | Up to 40 characters long | NULL | Y | N |
 | shipping_method_name | The name of the shipping method | String | Up to 100 characters long | NULL | Y | N |
 | shipping_tax | The total amount the recipient paid for tax for shipping | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | source | The source of the order | String | One of the following values: `admin`, `direct`, `marketplace` | direct | N | N |
@@ -124,7 +124,7 @@ This allows you to update a specific order
 | processed_at | A valid UTC datetime of when the order was last processed | Datetime |  | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long | 0 | N | N |
-| shipping_method_code | The code of the shipping method, can only be updated while the order is open or on hold | String | Up to 20 characters long | NULL | N | Y |
+| shipping_method_code | The code of the shipping method, can only be updated while the order is open or on hold | String | Up to 40 characters long | NULL | N | Y |
 | shipping_method_name | The name of the shipping method, can only be updated while the order is open or on hold | String | Up to 100 characters long | NULL | N | Y |
 | shipping_tax | The total amount of shipping tax for the order | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | skip_marketplace | Indicates whether a status change should not update on the marketplace, can only be uused with marketplace orders | Boolean |  | false | N | Y |
@@ -205,7 +205,7 @@ This allows you to list orders
 | resend_reason | The reason why a resend is being sent out | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long |
-| shipping_method_code | The code of the shipping method | String | Up to 20 characters long |
+| shipping_method_code | The code of the shipping method | String | Up to 40 characters long |
 | shipping_method_name | The name of the shipping method | String | Up to 100 characters long |
 | shipping_tax | The total amount the recipient paid for tax for shipping | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | source | The source of the order | String | One of the following values: `admin`, `direct`, `marketplace` |
