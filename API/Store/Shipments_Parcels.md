@@ -36,7 +36,7 @@ This allows you to add parcels to a shipment
 | items | An array of items for the shipment parcel - see [Shipments Parcels Items](Shipments_Parcels_Items.md#create-shipments-parcels-items) | Array |  | NULL | N | N |
 | label_data | A base 64 encoded string of the label. Maximum file size: 5MB. Accepted attachment extensions include: .gif, .jpg, & .png | String |  | NULL | N | N |
 | length | The length of the parcel, in millimetres | Integer | Up to 10 digits long | NULL | Y | N |
-| parcel_number | The parcel number, must be unique to the shipment | Integer | Up to 3 digits long | 1 | N | N |
+| parcel_number | The parcel number, must be unique to the shipment | Integer | Up to 4 digits long | 1 | N | N |
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | tracking_code | The couriers tracking code, if the parcel can be tracked | String | Up to 100 characters long | NULL | N | N |
@@ -104,7 +104,7 @@ This allows you to list the parcels belonging to a shipment
 | items | An array of items for the shipment parcel - see [Shipments Parcels Items](Shipments_Parcels_Items.md#view-shipments-parcels-items) | Array |  |
 | label_file | The name of the saved file for the shipping label | String |  |
 | length | The length of the parcel, in millimetres | Integer | Up to 10 digits long |
-| parcel_number | The parcel number, must be unique to the shipment | Integer | Up to 3 digits long |
+| parcel_number | The parcel number, must be unique to the shipment | Integer | Up to 4 digits long |
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long |
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long |
 | shipment_reference | The unique reference for the shipment this parcel belongs to | String | Exactly 10 characters long |
