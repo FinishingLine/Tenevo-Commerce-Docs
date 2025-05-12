@@ -32,6 +32,9 @@ This allows you to create an order
 | deliver_min | A date that the order needs to be delivered no earlier than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_on | A date that the order needs to be delivered on | Date |  | NULL | N | N |
 | delivery_instructions | Delivery instructions to pass onto the courier | String |  | NULL | N | N |
+| despatch_max | A date that the order needs to be despatched no later than | Date |  | NULL | N | N |
+| despatch_min | A date that the order needs to be despatched no earlier than | Date |  | NULL | N | N |
+| despatch_on | A date that the order needs to be despatched on | Date |  | NULL | N | N |
 | despatch_partorders | Indicates whether orders should be dispatched asap, regardless of if all items are available | Boolean |  | 0 | N | N |
 | discount_tax | The total amount of tax the recipient saves, due to discounts | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | gift_message | A gift message from the customer if the order is a gift order | String | Up to 255 characters long | NULL | N | N |
@@ -66,7 +69,7 @@ This allows you to create an order
 | resend_reason | The reason why a resend is being sent out, only when `is_resend` is true | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` | unknown | N | Y |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long | 0 | N | N |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long | NULL | N | N |
-| shipping_method_code | The code of the shipping method | String | Up to 20 characters long | NULL | Y | N |
+| shipping_method_code | The code of the shipping method | String | Up to 40 characters long | NULL | Y | N |
 | shipping_method_name | The name of the shipping method | String | Up to 100 characters long | NULL | Y | N |
 | shipping_tax | The total amount the recipient paid for tax for shipping | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | source | The source of the order | String | One of the following values: `admin`, `direct`, `marketplace` | direct | N | N |
@@ -106,6 +109,9 @@ This allows you to update a specific order
 | deliver_min | A date that the order needs to be delivered no earlier than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_on | A date that the order needs to be delivered on | Date |  | NULL | N | N |
 | delivery_instructions | Delivery instructions to pass onto the courier, can only be updated while the order is open or on hold | String |  | NULL | N | N |
+| despatch_max | A date that the order needs to be despatched no later than | Date |  | NULL | N | N |
+| despatch_min | A date that the order needs to be despatched no earlier than | Date |  | NULL | N | N |
+| despatch_on | A date that the order needs to be despatched on | Date |  | NULL | N | N |
 | despatch_partorders | Indicates whether orders should be dispatched asap, regardless of if all items are available | Boolean |  | 0 | N | N |
 | discount_tax | The total amount of tax the recipient saves, due to discounts | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | gift_message | A gift message from the customer if the order is a gift order | String | Up to 255 characters long | NULL | N | N |
@@ -124,7 +130,7 @@ This allows you to update a specific order
 | processed_at | A valid UTC datetime of when the order was last processed | Datetime |  | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long | 0 | N | N |
-| shipping_method_code | The code of the shipping method, can only be updated while the order is open or on hold | String | Up to 20 characters long | NULL | N | Y |
+| shipping_method_code | The code of the shipping method, can only be updated while the order is open or on hold | String | Up to 40 characters long | NULL | N | Y |
 | shipping_method_name | The name of the shipping method, can only be updated while the order is open or on hold | String | Up to 100 characters long | NULL | N | Y |
 | shipping_tax | The total amount of shipping tax for the order | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | skip_marketplace | Indicates whether a status change should not update on the marketplace, can only be uused with marketplace orders | Boolean |  | false | N | Y |
@@ -161,6 +167,9 @@ This allows you to list orders
 | deliver_on | A date that the order needs to be delivered on | Date |  |
 | delivery_instructions | The delivery instructions | String |  |
 | delivery_postcode | The postal code/zip code of where the order is being shipped to | String | Up to 20 characters long |
+| despatch_max | A date that the order needs to be despatched no later than | Date |  |
+| despatch_min | A date that the order needs to be despatched no earlier than | Date |  |
+| despatch_on | A date that the order needs to be despatched on | Date |  |
 | despatch_partorders | Indicates whether orders should be dispatched asap, regardless of if all items are available | Boolean |  |
 | discount_tax | The total amount of tax the recipient saves, due to discounts | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | first_name | The first name of the customer | String | Up to 255 characters long |
@@ -205,7 +214,7 @@ This allows you to list orders
 | resend_reason | The reason why a resend is being sent out | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long |
-| shipping_method_code | The code of the shipping method | String | Up to 20 characters long |
+| shipping_method_code | The code of the shipping method | String | Up to 40 characters long |
 | shipping_method_name | The name of the shipping method | String | Up to 100 characters long |
 | shipping_tax | The total amount the recipient paid for tax for shipping | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | source | The source of the order | String | One of the following values: `admin`, `direct`, `marketplace` |
