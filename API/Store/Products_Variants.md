@@ -25,6 +25,8 @@ This allows you to create product variants
 | --- | --- | --- | --- | --- | --- | --- |
 | barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long | NULL | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
+| case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
+| case_variant_id | A valid Product Variant ID that is used as a complete case for this variant, must be provided with `case_size` | Integer |  | NULL | N | Y |
 | components | An array of components for this product variant - see [Products Variants Components](Products_Variants_Components.md#create-products-variants-components) | Array |  | NULL | N | N |
 | cost | The cost to you of one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long | NULL | N | N |
@@ -76,6 +78,8 @@ This allows you to update product variants
 | --- | --- | --- | --- | --- | --- | --- |
 | barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long | NULL | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
+| case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
+| case_variant_id | A valid Product Variant ID that is used as a complete case for this variant, must be provided with `case_size` | Integer |  | NULL | N | Y |
 | components | An array of components for this product variant - see [Products Variants Components](Products_Variants_Components.md#update-products-variants-components) | Array |  | NULL | N | N |
 | cost | The cost to you of one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long | NULL | N | N |
@@ -121,6 +125,9 @@ This allows you to list product variants
 | barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value indicates the parent product `can_backorder` status will be used | Boolean |  |
 | can_purchase | Indicates whether the product can be purchased, or not (uses can_backorder as well as looking at variant stock levels) | Boolean |  |
+| case_size | The number of units with the given case | Integer | Between 1 and 10 digits long |
+| case_variant | The name of the Case Variant | String |  |
+| case_variant_id | A valid Product Variant ID that is used as a complete case for this variant | Integer |  |
 | components | An array of components for this product variant - see [Products Variants Components](Products_Variants_Components.md#view-products-variants-components) | Array |  |
 | cost | The cost to you of one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | created_at | A UTC datetime of when the variant was created | Datetime |  |

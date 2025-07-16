@@ -22,11 +22,11 @@ This allows you to create store shipping methods
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| code | A unique code to identify this shipping method, if not provided, uses name | String | Up to 20 characters long | NULL | N | Y |
+| code | A unique code to identify this shipping method, if not provided, uses name | String | Up to 40 characters long | NULL | N | Y |
 | details | Details about the shipping method | String | Up to 100 characters long | NULL | Y | N |
 | is_default | Indicates whether the shipping method is the default, or not | Boolean |  | 0 | N | N |
 | is_public | Indicates whether the shipping method is public, or not | Boolean |  | 0 | N | N |
-| name | The name of the shipping method | String | Up to 20 characters long | NULL | Y | N |
+| name | The name of the shipping method | String | Up to 40 characters long | NULL | Y | N |
 | price | The price to charge for using this shipping method | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | Y | N |
 
 ## Delete Store Shipping Method
@@ -50,7 +50,7 @@ This allows you to update store shipping methods
 | details | Details about the shipping method | String | Up to 100 characters long | NULL | Y | N |
 | is_default | Indicates whether the shipping method is the default, or not | Boolean |  | 0 | N | N |
 | is_public | Indicates whether the shipping method is public, or not | Boolean |  | 0 | N | N |
-| name | The name of the shipping method | String | Up to 20 characters long | NULL | Y | N |
+| name | The name of the shipping method | String | Up to 40 characters long | NULL | Y | N |
 | price | The price to charge for using this shipping method | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | Y | N |
 
 ## View Store Shipping Methods
@@ -64,9 +64,9 @@ This allows you to list store shipping methods
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
-| code | A unique code to identify this shipping method, if not provided, uses name | String | Up to 20 characters long |
+| code | A unique code to identify this shipping method, if not provided, uses name | String | Up to 40 characters long |
 | details | Details about the shipping method | String | Up to 100 characters long |
 | is_default | Indicates whether the shipping method is the default, or not | Boolean |  |
 | is_public | Indicates whether the shipping method is public, or not | Boolean |  |
-| name | The name of the shipping method | String | Up to 20 characters long |
+| name | The name of the shipping method | String | Up to 40 characters long |
 | price | The price to charge for using this shipping method | Float | Up to 2 decimal places and no larger than 99999999.99 |
