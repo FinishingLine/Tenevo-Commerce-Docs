@@ -53,6 +53,8 @@ This allows you to list the order grouping
 | --- | --- | --- | --- |
 | first_name | The first name of the grouping profile | String | Up to 255 characters long |
 | full_name | The full name of the grouping profile | String | Up to 255 characters long |
+| has_prerelease | Indicates whether the grouping has a pre-release item, or not | Boolean |  |
+| has_released | Indicates whether the grouping has a released item, or not | Boolean |  |
 | items | An array of items belonging to this grouping - see [Orders Groupings Items](Orders_Groupings_Items.md#view-orders-groupings-items) | Array |  |
 | last_name | The last name of the grouping profile | String | Up to 255 characters long |
 | profile_id | A valid Profile ID | Integer |  |
@@ -62,6 +64,7 @@ This allows you to list the order grouping
 | quantity_returned | The total number of units returned for the grouping | Integer | Up to 10 digits long |
 | quantity_returning | The total number of units being returned for the grouping | Integer | Up to 10 digits long |
 | reference | A reference for this grouping | String | Exactly 10 characters long |
+| release_at | Where the grouping contains a pre-release item, a UTC datetime of when the next item will be released | Datetime |  |
 | uom_quantity_fulfilled | The total number of units fulfilled for the grouping, in Unit of Measure terms | Integer | Up to 10 digits long |
 | uom_quantity_ordered | The total number of units ordered for the grouping, in Unit of Measure terms | Integer | Up to 10 digits long |
 | uom_quantity_outstanding | The total number of units outstanding for the grouping, in Unit of Measure terms | Integer | Up to 10 digits long |

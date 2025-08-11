@@ -121,6 +121,7 @@ This allows you to list the shipments belonging to the fulfillment
 | pallets | An array of pallets for the shipment - see [Shipments Pallets](Shipments_Pallets.md#view-shipments-pallets) | Array |  |
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#view-shipments-parcels) | Array |  |
 | reference | A unique reference for this shipment | String | Exactly 10 characters long |
+| reference_id | A reference that corresponds to the shipment at the Marketplace | String | Up to 255 characters long |
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long |
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long |
