@@ -65,6 +65,7 @@ This allows you to list the listings belonging to the marketplace
 | --- | --- | --- | --- |
 | attributes | An array of attributes for the marketplace listing - see [Marketplaces Listings Attributes](Marketplaces_Listings_Attributes.md#view-marketplaces-listings-attributes) | Array |  |
 | is_mapped | Indicates whether the marketplace listing is mapped to a Listing Variant | Boolean |  |
+| is_released | Indicates whether the product is a released item, or not | Boolean |  |
 | product_id | The linked Listing Variation's Product ID | Integer |  |
 | reference_id | The listing reference at the marketplace | String | Up to 255 characters long |
 | reference_parent_id | The listing's parent reference at the marketplace | String | Up to 255 characters long |
