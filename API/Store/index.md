@@ -56,6 +56,7 @@ The following APIs are available for Store
 | Notifications |  | [Details](Notifications.md) |
 | Orders | Manages Orders | [Details](Orders.md) |
 | Orders Addresses | Manages Orders Address | [Details](Orders_Addresses.md) |
+| Orders Documents | Manages Orders Documents | [Details](Orders_Documents.md) |
 | Orders Groupings | Manages Order Grouping | [Details](Orders_Groupings.md) |
 | Orders Groupings Items | Manages Order Grouping | [Details](Orders_Groupings_Items.md) |
 | Orders Summary | Manages Fulfillments Orders Summary | [Details](Orders_Summary.md) |
