@@ -87,6 +87,7 @@ This allows you to list the pallets belonging to a shipment
 | length | The length of the pallet, in millimetres | Integer | Up to 10 digits long |
 | pallet_number | The pallet number, must be unique to the shipment | Integer | Up to 3 digits long |
 | parcels | An array of parcels for the shipment pallet - see [Shipments Pallets Parcels](Shipments_Pallets_Parcels.md#view-shipments-pallets-parcels) | Array |  |
+| reference_id | A reference that corresponds to the pallet at the Marketplace | String | Up to 255 characters long |
 | shipment_reference | The unique reference for the shipment this pallet belongs to | String | Exactly 10 characters long |
 | status | The status of the pallet | String | One of the following values: `closed`, `open`, `packed` |
 | total_packaging_weight | The total weight of all the packaging on the pallet, in grams | Integer | Up to 10 digits long |

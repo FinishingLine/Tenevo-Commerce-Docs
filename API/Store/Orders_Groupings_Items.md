@@ -114,6 +114,8 @@ This allows you to list the order grouping items
 | is_exchangeable | Indicates whether the item is exchangeable, or not | Boolean |  |
 | is_gift | Indicates whether the item is a gift, or not | Boolean |  |
 | is_physical | Indicates whether the item is physical, or not | Boolean |  |
+| is_prerelease | Indicates whether the item is a pre-release item, or not | Boolean |  |
+| is_released | Indicates whether the item is a released item, or not | Boolean |  |
 | is_returnable | Indicates whether the item is returnable, or not | Boolean |  |
 | is_wrapped | Indicates whether the item should be wrapped, or not | Boolean |  |
 | line_discount | The total discount, including tax, given on the line for the items | Float | Up to 2 decimal places and no larger than 99999999.99 |
@@ -134,11 +136,13 @@ This allows you to list the order grouping items
 | quantity_returning | The total number units of this item being returned | Integer | Up to 10 digits long |
 | reference | A unique reference for this item | String | Exactly 10 characters long |
 | reference_id | A reference that corresponds to a Marketplace Order Item ID | String | Between 1 and 255 characters long |
+| release_at | Where item is a pre-release, a UTC datetime of when the item will be released | Datetime |  |
 | requires_rework | Indicates whether the item requires rework, or not | Boolean |  |
+| set_size | The size of the set to scale up to the ordered quantity | Integer | Up to 10 digits long |
 | sku | The original SKU of the ordered item | String | Up to 200 characters long |
 | status | The fulfillment status of the item | String | One of the following values: `closed`, `open` |
 | tax_rate | The rate of tax | Float | Up to 2 decimal places and no larger than 99999999.99 |
-| type | The type of item that the variant was | String | One of the following values: `bundle`, `simple` |
+| type | The type of item that the variant was | String | One of the following values: `bundle`, `set`, `simple` |
 | unit_discount | The total discount, including tax, given on one item, this is scaled down from line_discount | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | unit_discount_tax | The amount of tax that has been discounted given on one item, this is scaled down from line_discount_tax | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | unit_price | The price for unit of the item, before discounts and tax, this is scaled down from line_price | Float | Up to 4 decimal places and no larger than 99999999.9999 |
