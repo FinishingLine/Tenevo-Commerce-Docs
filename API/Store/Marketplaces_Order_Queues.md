@@ -24,6 +24,7 @@ This allows you to create an order queue for a marketplace
 | created_at | A date time stamp of when the order was created on the marketplace | Datetime |  | NOW | N | N |
 | items | An array of items for the marketplace order queues - see [Marketplaces Order Queues Items](Marketplaces_Order_Queues_Items.md#create-marketplaces-order-queues-items) | Array |  | NULL | N | N |
 | order_number | The order number of the order at the marketplace | String | Up to 255 characters long | NULL | Y | N |
+| reference_child_id | The child ID that the marketplace uses to reference the order | String | Up to 255 characters long | NULL | N | N |
 | reference_id | The ID that the marketplace uses to reference the order | String | Up to 255 characters long | NULL | Y | N |
 
 ## Delete Marketplace Order Queues
@@ -47,6 +48,7 @@ This allows you to list the order queues belonging to the marketplace
 | created_at | A date time stamp of when the order was created on the marketplace | Datetime |  |
 | items | An array of items for the marketplace order queues - see [Marketplaces Order Queues Items](Marketplaces_Order_Queues_Items.md#view-marketplaces-order-queues-items) | Array |  |
 | order_number | The order number of the order at the marketplace | String | Up to 255 characters long |
+| reference_child_id | The child ID that the marketplace uses to reference the order | String | Up to 255 characters long |
 | reference_id | The ID that the marketplace uses to reference the order | String | Up to 255 characters long |
 | status | The status of the order queue | String | One of the following values: `active`, `retry` |
 | system_created_at | A UTC datetime of when the order was added to the order queue | Datetime |  |
