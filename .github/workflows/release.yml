@@ -5,19 +5,23 @@ on:
 
 name: Create Release
 
+permissions:
+  pull-requests: write
+  contents: write
+
 jobs:
-  build:
-    name: Create Release
+  apply-tag:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout tagged commit
+        uses: actions/checkout@v4
         with:
-          ref: "docs/update"
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          persist-credentials: true
           
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit tag contents to branch
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: "docs/update"
           commit_message: "Docs Update"
@@ -29,8 +33,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          base: "docs/update"
-          branch: "main"
+          base: "main"
+          branch: "docs/update"
           commit-message: "Docs Update"
           title: "Docs Update for ${{ github.ref_name }}"
           body: "Docs Update for ${{ github.ref_name }}"
