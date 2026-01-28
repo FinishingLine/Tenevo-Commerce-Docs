@@ -37,9 +37,27 @@ jobs:
             echo "::warning::docs/update did not appear within timeout; continuing on checked-out tag"
           fi
 
+      - name: Check for changes vs main
+        id: check_changes
+        run: |
+          # Ensure we have main and docs/update refs locally
+          git fetch origin main:main || true
+          git fetch origin docs/update:docs/update || true
+
+          # Count changed files between main and docs/update
+          CHANGES=$(git diff --name-only origin/main...origin/docs/update | wc -l)
+          echo "files_changed=$CHANGES"
+
+          if [ "$CHANGES" -eq 0 ]; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create Pull Request
+        if: steps.check_changes.outputs.has_changes == 'true'
         id: cpr
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: "main"
