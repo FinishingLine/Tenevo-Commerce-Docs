@@ -40,33 +40,30 @@ jobs:
       - name: Check for changes vs main
         id: check_changes
         run: |
-          # Ensure we have main and docs/update refs locally
           git fetch origin main:main || true
           git fetch origin docs/update:docs/update || true
-
-          # Count changed files between main and docs/update
           CHANGES=$(git diff --name-only origin/main...origin/docs/update | wc -l)
           echo "files_changed=$CHANGES"
-
           if [ "$CHANGES" -eq 0 ]; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create Pull Request
+      - name: Create Pull Request (non-destructive)
         if: steps.check_changes.outputs.has_changes == 'true'
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: "main"
-          branch: "docs/update"
-          commit-message: "Docs Update"
+          branch: "auto/docs-update-${{ github.run_id }}"
+          commit-message: "Docs Update for ${{ github.ref_name }}"
           title: "Docs Update for ${{ github.ref_name }}"
           body: "Docs Update for ${{ github.ref_name }}"
           add-paths: |
             API/*
+          delete-branch: true
 
       - name: Enable Pull Request Automerge
         if: steps.cpr.outputs.pull-request-operation == 'created'
