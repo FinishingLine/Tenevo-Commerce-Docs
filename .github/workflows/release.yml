@@ -19,13 +19,24 @@ jobs:
           ref: ${{ github.ref }}
           fetch-depth: 0
           persist-credentials: true
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: "docs/update"
-          
+
+      - name: Wait for docs/update to appear on remote (up to 60s)
+        run: |
+          tries=0
+          max_tries=12
+          until git ls-remote --heads origin docs/update || [ $tries -ge $max_tries ]; do
+            tries=$((tries+1))
+            echo "docs/update not found, waiting 5s (try $tries/$max_tries)..."
+            sleep 5
+          done
+          if git ls-remote --heads origin docs/update; then
+            git fetch origin refs/heads/docs/update:refs/heads/docs/update || true
+            git checkout docs/update
+            git log -1 --oneline
+          else
+            echo "::warning::docs/update did not appear within timeout; continuing on checked-out tag"
+          fi
+
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v3
@@ -38,7 +49,7 @@ jobs:
           body: "Docs Update for ${{ github.ref_name }}"
           add-paths: |
             API/*
-            
+
       - name: Enable Pull Request Automerge
         if: steps.cpr.outputs.pull-request-operation == 'created'
         uses: peter-evans/enable-pull-request-automerge@v3
@@ -46,7 +57,7 @@ jobs:
           token: ${{ secrets.PAT }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
-          
+
       - name: Create Release
         if: steps.cpr.outputs.pull-request-operation == 'created'
         id: create_release
