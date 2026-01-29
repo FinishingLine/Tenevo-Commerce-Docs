@@ -56,6 +56,7 @@ The following APIs are available for Store
 | Notifications |  | [Details](Notifications.md) |
 | Orders | Manages Orders | [Details](Orders.md) |
 | Orders Addresses | Manages Orders Address | [Details](Orders_Addresses.md) |
+| Orders Documents | Manages Orders Documents | [Details](Orders_Documents.md) |
 | Orders Groupings | Manages Order Grouping | [Details](Orders_Groupings.md) |
 | Orders Groupings Items | Manages Order Grouping | [Details](Orders_Groupings_Items.md) |
 | Orders Summary | Manages Fulfillments Orders Summary | [Details](Orders_Summary.md) |
@@ -123,6 +124,8 @@ The following APIs are available for Store
 | Tax Zones Rates | Manages Tax Zone Rates | [Details](Tax_Zones_Rates.md) |
 | Teams | Manages Teams | [Details](Teams.md) |
 | Teams Members | Manages Team Members | [Details](Teams_Members.md) |
+| Tracking | Manages Tracking | [Details](Tracking.md) |
+| Tracking Events | Manages Tracking Events | [Details](Tracking_Events.md) |
 | Types | Manages Types | [Details](Types.md) |
 | Types Items | Manages Type Items | [Details](Types_Items.md) |
 | Webhook Queue Resend | Resends an item in the webhook queue | [Details](Webhook_Queue_Resend.md) |

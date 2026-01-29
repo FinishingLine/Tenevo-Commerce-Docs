@@ -51,7 +51,7 @@ This allows you to create products
 | name | The name of the product | String | Up to 100 characters long | NULL | Y | N |
 | page_description | Used for SEO, the description of the page - uses description when not set | String |  | NULL | N | N |
 | page_title | Used for SEO, the title of the page - uses title when not set | String | Up to 100 characters long | NULL | N | N |
-| release_date | A valid UTC datetime of when the product is being released | Array |  | NULL | N | N |
+| release_date | A valid UTC datetime of when the product is being released | Datetime |  | NULL | N | N |
 | requires_batchcapture | Indicates whether the product requires a batch number to be captured, or not | Boolean |  | false | N | N |
 | requires_expirycapture | Indicates whether the product requires an expiry date to be captured, or not | Boolean |  | false | N | N |
 | requires_serialcapture | Indicates whether the product requires a serial number to be captured, or not | Boolean |  | false | N | N |
@@ -66,7 +66,7 @@ This allows you to create products
 | uom_set_id | A valid UOM Set ID | Integer |  | NULL | Y | N |
 | url_key | The URL key of the product - will automatically derive from the product name if not specified | String | Up to 100 characters long | NULL | N | N |
 | variants | An array of variants of this product - see [Products Variants](Products_Variants.md#create-products-variants) | Array |  | NULL | N | N |
-| withdrawal_date | A valid UTC datetime of when the product is being withdrawn from the sale | Array |  | NULL | N | N |
+| withdrawal_date | A valid UTC datetime of when the product is being withdrawn from the sale | Datetime |  | NULL | N | N |
 
 ## Delete Product
 This allows you to delete a specified product
@@ -113,7 +113,7 @@ This allows you to update products
 | name | The name of the product | String | Up to 100 characters long | NULL | Y | N |
 | page_description | Used for SEO, the description of the page - uses description when not set | String |  | NULL | N | N |
 | page_title | Used for SEO, the title of the page - uses title when not set | String | Up to 100 characters long | NULL | N | N |
-| release_date | A valid UTC datetime of when the product is being released | String | Up to 100 characters long | NULL | N | N |
+| release_date | A valid UTC datetime of when the product is being released | Datetime |  | NULL | N | N |
 | requires_batchcapture | Indicates whether the product requires a batch number to be captured, or not | Boolean |  | false | N | N |
 | requires_expirycapture | Indicates whether the product requires an expiry date to be captured, or not | Boolean |  | false | N | N |
 | requires_serialcapture | Indicates whether the product requires a serial number to be captured, or not | Boolean |  | false | N | N |
@@ -127,7 +127,7 @@ This allows you to update products
 | uom_set_id | A valid UOM Set ID | Integer |  | NULL | Y | N |
 | url_key | The URL key of the product - will automatically derive from the product name if not specified | String | Up to 100 characters long | NULL | N | N |
 | variants | An array of variants of this product - see [Products Variants](Products_Variants.md#update-products-variants) | Array |  | NULL | N | N |
-| withdrawal_date | A valid UTC datetime of when the product is being withdrawn from the sale | Array |  | NULL | N | N |
+| withdrawal_date | A valid UTC datetime of when the product is being withdrawn from the sale | Datetime |  | NULL | N | N |
 
 ## View Products
 This allows you to list products in the warehouse
@@ -180,7 +180,7 @@ This allows you to list products in the warehouse
 | page_title | Used for SEO, the title of the page - uses title when not set | String | Up to 100 characters long |
 | price_max | The highest price of all variants | Float | Up to 3 decimal places and no larger than 9999999.999 |
 | price_min | The lowest price of all variants | Float | Up to 3 decimal places and no larger than 9999999.999 |
-| release_date | A valid UTC datetime of when the product is being released | String | Up to 100 characters long |
+| release_date | A valid UTC datetime of when the product is being released | Datetime |  |
 | requires_batchcapture | Indicates whether the product requires a batch number to be captured, or not | Boolean |  |
 | requires_expirycapture | Indicates whether the product requires an expiry date to be captured, or not | Boolean |  |
 | requires_serialcapture | Indicates whether the product requires a serial number to be captured, or not | Boolean |  |
@@ -202,4 +202,4 @@ This allows you to list products in the warehouse
 | url | The relative URL of the product | String |  |
 | url_key | The URL key of the product | String | Up to 100 characters long |
 | variants | An array of variants of this product - see [Products Variants](Products_Variants.md#view-products-variants) | Array |  |
-| withdrawal_date | A valid UTC datetime of when the product is being withdrawn from the sale | Array |  |
+| withdrawal_date | A valid UTC datetime of when the product is being withdrawn from the sale | Datetime |  |
