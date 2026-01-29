@@ -110,11 +110,9 @@ jobs:
 
       - name: Enable Pull Request Automerge
         if: steps.cpr.outputs.pr_created == 'true'
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.PAT }}
-          pull-request-number: ${{ steps.cpr.outputs.pr_number }}
-          merge-method: squash
+        run: gh pr merge --squash --auto "${{ steps.cpr.outputs.pr_number }}"
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
 
       - name: Create Release
         if: steps.cpr.outputs.pr_created == 'true'
