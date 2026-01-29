@@ -38,6 +38,7 @@ Fetch all items:
 ```
 $api->localAPI('/items', 'GET', '');
 ```
+
 Fetch the item with ID `123`
 
 ```
@@ -57,8 +58,9 @@ $api->localAPI('/items/123/subitems/456', 'GET', '');
 ```
 
 Fetch the sub item with ID `456` (in this case we may not know what the parent item ID is)
+
 ```
-$api->localAPI('/items/subitems/456', 'GET', '');'');
+$api->localAPI('/items/subitems/456', 'GET', '');
 ```
 
 Fetch all the subitems belonging to any item
@@ -113,14 +115,32 @@ $api->localAPI('/people, 'GET', 'query=[[first_name:"John"%20OR%20middle_name:"J
 We can also append `_min` and `_max` to the end of certain fields. For example, say we want to find everyone born in the 21st Century
 
 ```
-$api->localAPI('/people', 'GET', 'query=date_of_birth_min:"2000-01-01");
+$api->localAPI('/people', 'GET', 'query=date_of_birth_min:"2000-01-01"');
+```
+
+We can use filters to granularly filter fields by adding in comparators. For example, find anyone whose `first_name` name starts with `John` - this will also match `Johnny`. To do this we can add `[sw]` after the field name
+
+```
+$api->localAPI('/people', 'GET', 'query=first_name[sw]:"John"');
+```
+
+Similarly, we can search at the end of the field. For example, find anyone whose `last_name` ends with `son`. To do this we can add `[ew]` after the field name. This would match both `Jameson` and `Johnson`, but wouldn't match `Wilkinsons`
+
+```
+$api->localAPI('/people', 'GET', 'query=last_name[ew]:"son"');
+```
+
+Likewise, these can be joined together to where we may know the start and end of a string. For example, if a record had a `full_name` of `John William Smith` but we didn't know the middle name
+
+```
+$api->localAPI('/people', 'GET', 'query=full_name[sw]:"John"%20AND%20full_name[ew]:"Smith"');
 ```
 
 #### Limiting Fields
 
 By default, all fields, including sub-fields, are returned during an API call. This can be controlled by providing the `fields` attribute. By requesting only the fields that are needed, a response may be made faster.
 
-You *must* ensure that all the `fields` listed include fields specified within our paramters, such as `query`
+You _must_ ensure that all the `fields` listed include fields specified within our paramters, such as `query`
 
 For example, we may only want the `first_name` to be returned
 
