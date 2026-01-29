@@ -53,28 +53,71 @@ jobs:
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'
         id: cpr
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: "main"
-          branch: "auto/docs-update-${{ github.run_id }}"
-          commit-message: "Docs Update for ${{ github.ref_name }}"
-          title: "Docs Update for ${{ github.ref_name }}"
-          body: "Docs Update for ${{ github.ref_name }}"
-          add-paths: |
-            API/*
-          delete-branch: true
+        run: |
+          set -euo pipefail
+      
+          OWNER="FinishingLine"
+          REPO="Tenevo-Commerce-Docs"
+          BRANCH="docs/update"
+          BASE="main"
+          TITLE="Docs Update for ${{ github.ref_name }}"
+          BODY="Docs Update for ${{ github.ref_name }}"
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+      
+          # Ensure we have refs locally for diff check
+          git fetch origin main:main || true
+          git fetch origin "$BRANCH":"$BRANCH" || true
+      
+          # Only create PR if there are file diffs
+          CHANGED_FILES=$(git diff --name-only origin/main...origin/"$BRANCH" | wc -l)
+          echo "files_changed=$CHANGED_FILES"
+          if [ "$CHANGED_FILES" -eq 0 ]; then
+            echo "No changes vs main; skipping PR creation."
+            echo "pr_created=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+      
+          # Check for existing open PR from this head->base
+          prs=$(curl -s -H "Authorization: token $TOKEN" \
+            "https://api.github.com/repos/$OWNER/$REPO/pulls?head=${OWNER}:${BRANCH}&base=${BASE}&state=open")
+      
+          existing_pr_count=$(echo "$prs" | jq 'length')
+      
+          if [ "$existing_pr_count" -gt 0 ]; then
+            pr_number=$(echo "$prs" | jq -r '.[0].number')
+            echo "PR already exists: #$pr_number"
+            echo "pr_number=$pr_number" >> $GITHUB_OUTPUT
+            echo "pr_created=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+      
+          # Create the PR
+          create_resp=$(curl -s -X POST -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$OWNER/$REPO/pulls" \
+            -d "$(jq -n --arg t "$TITLE" --arg b "$BODY" --arg head "$BRANCH" --arg base "$BASE" '{title:$t, body:$b, head:$head, base:$base}')")
+      
+          pr_number=$(echo "$create_resp" | jq -r '.number // empty')
+      
+          if [ -z "$pr_number" ]; then
+            echo "Failed to create PR. Response:"
+            echo "$create_resp"
+            exit 1
+          fi
+      
+          echo "Created PR #$pr_number"
+          echo "pr_number=$pr_number" >> $GITHUB_OUTPUT
+          echo "pr_created=true" >> $GITHUB_OUTPUT
 
       - name: Enable Pull Request Automerge
-        if: steps.cpr.outputs.pull-request-operation == 'created'
+        if: steps.cpr.outputs.pr_created == 'true'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           token: ${{ secrets.PAT }}
-          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          pull-request-number: ${{ steps.cpr.outputs.pr_number }}
           merge-method: squash
 
       - name: Create Release
-        if: steps.cpr.outputs.pull-request-operation == 'created'
+        if: steps.cpr.outputs.pr_created == 'true'
         id: create_release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
