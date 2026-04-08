@@ -101,6 +101,7 @@ The following APIs are available for Store
 | Suppliers | Manages suppliers | [Details](Suppliers.md) |
 | Suppliers Addresses | Manages suppliers addresses | [Details](Suppliers_Addresses.md) |
 | Suppliers Items | Manages supplier items | [Details](Suppliers_Items.md) |
+| Supplier Services | Manages supplier services | [Details](Supplier_Services.md) |
 | Support | Manages Support | [Details](Support.md) |
 | Support Agents | Manages Support Agents | [Details](Support_Agents.md) |
 | Support Allow-Block | Manages Support Allow-Block | [Details](Support_Allow-Block.md) |
