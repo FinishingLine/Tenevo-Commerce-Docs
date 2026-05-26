@@ -72,7 +72,7 @@ This allows you to list the items belonging to a return
 | --- | --- | --- | --- |
 | country_of_manufacturer | The name of the country of where the product was manufacturered | String |  |
 | country_of_manufacturer_iso2 | A valid ISO2 Country Code of where the product was manufacturered | String | Exactly 2 characters long |
-| description | A description of the product | String |  |
+| description | A description of the product | String | Up to 200 characters long |
 | exchangevariant_id | The Variant ID of the variant being requested to exchange the variant for | Integer |  |
 | hs_tariff_code | The HS Tariff Code of the product | Integer |  |
 | image_alt_text | The alt text for the product variant image | String |  |
