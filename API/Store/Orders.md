@@ -25,7 +25,9 @@ This allows you to create an order
 | --- | --- | --- | --- | --- | --- | --- |
 | addresses | An array containing the addresses to send this order to - see [Orders Addresses](Orders_Addresses.md#create-orders-addresses) | Array |  | NULL | N | N |
 | admin_id | A valid Admin ID of whom created the order, only when source is admin | Integer |  | NULL | N | Y |
+| booking_date | The date for the booking of the order - required if `requires_booking` is set to true | Date |  | NULL | N | Y |
 | booking_instructions | The instructions for the booking of the order | String |  | NULL | N | N |
+| booking_time | The time for the booking of the order - required if `requires_booking` is set to true | Time |  | NULL | N | Y |
 | currency | A valid ISO 3 character currency code | String | Exactly 3 characters long | NULL | Y | N |
 | customer_id | A valid Customer ID that this order belongs to | Integer |  | NULL | Y | N |
 | deliver_max | A date that the order needs to be delivered no later than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
@@ -105,7 +107,9 @@ This allows you to update a specific order
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | addresses | An array containing the addresses to send this order to - see [Orders Addresses](Orders_Addresses.md#update-orders-addresses) | Array |  | NULL | N | N |
+| booking_date | A date that the order is booked for - required if `requires_booking` is set to true | Date |  | NULL | N | Y |
 | booking_instructions | The instructions for the booking of the order | String |  | NULL | N | N |
+| booking_time | A time that the order is booked for - required if `requires_booking` is set to true | Time |  | NULL | N | Y |
 | cancelled_at | A valid UTC datetime of when the order was cancelled | Datetime |  | NULL | N | N |
 | cancelled_reason | The reason for a cancelled order | String |  | NULL | N | N |
 | closed_at | A valid UTC datetime of when the order was closed | Datetime |  | NULL | N | N |
@@ -163,7 +167,9 @@ This allows you to list orders
 | addresses | An array containing the addresses to send this order to - see [Orders Addresses](Orders_Addresses.md#view-orders-addresses) | Array |  |
 | admin_id | A valid Admin ID of whom created the order | Integer |  |
 | approval_token | Where the order status is awaiting approval, the token required in order to approve the order | String | Exactly 64 characters long |
+| booking_date | A date that the order is booked for | Date |  |
 | booking_instructions | The instructions for the booking of the order | String |  |
+| booking_time | A time that the order is booked for | Time |  |
 | cancelled_at | A UTC datetime of when the order was cancelled | Datetime |  |
 | cancelled_reason | The reason why the order was cancelled | String |  |
 | closed_at | A UTC datetime of when the order was closed | Datetime |  |
