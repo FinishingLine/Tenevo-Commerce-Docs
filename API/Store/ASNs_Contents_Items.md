@@ -23,7 +23,7 @@ This allows you to create items for an advanced shipment notification content
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Up to 100 characters long | NULL | N | N |
+| barcode | The manufacturers barcode on the item | String | Up to 50 characters long | NULL | N | N |
 | batch_number | The batch number for the item | String | Up to 20 characters long | NULL | N | N |
 | expiry_date | The expiry date for the items | Date |  | NULL | N | N |
 | name | The name of the item; required if `variant_id` is not provided | String | Up to 100 characters long | NULL | N | Y |
@@ -53,7 +53,7 @@ This allows you to update a specific item in an advanced shipment notification c
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Up to 100 characters long | NULL | N | N |
+| barcode | The manufacturers barcode on the item | String | Up to 50 characters long | NULL | N | N |
 | batch_number | The batch number for the item | String | Up to 20 characters long | NULL | N | N |
 | expiry_date | The expiry date for the items | Date |  | NULL | N | N |
 | name | The name of the item | String | Up to 100 characters long | NULL | Y | N |
@@ -77,7 +77,7 @@ This allows you to list the items belonging to the advanced shipment notificatio
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Up to 100 characters long |
+| barcode | The manufacturers barcode on the item | String | Up to 50 characters long |
 | batch_number | The batch number for the item | String | Up to 20 characters long |
 | expiry_date | The expiry date for the items | Date |  |
 | name | The name of the item | String | Up to 100 characters long |

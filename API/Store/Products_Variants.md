@@ -23,7 +23,7 @@ This allows you to create product variants
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long | NULL | N | N |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | N | N |
 | buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
 | case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
@@ -77,7 +77,7 @@ This allows you to update product variants
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long | NULL | N | N |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | N | N |
 | buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
 | case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
@@ -124,7 +124,7 @@ This allows you to list product variants
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long |
 | buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value indicates the parent product `can_backorder` status will be used | Boolean |  |
 | can_purchase | Indicates whether the product can be purchased, or not (uses can_backorder as well as looking at variant stock levels) | Boolean |  |

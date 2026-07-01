@@ -30,7 +30,7 @@ This allows you to create products
 | country_of_manufacturer_iso2 | A valid ISO2 Country Code of where the product was manufacturered | String | Exactly 2 characters long | NULL | N | N |
 | customergroups | An array of customer groups that can access this product - see [Products Customer Groups](Products_Customer_Groups.md#create-products-customer-groups) | Array |  | NULL | N | N |
 | description | A description of the product | String |  | NULL | N | N |
-| export_description | A description of the product when exporting it | String |  | NULL | N | N |
+| export_description | A description of the product when exporting it | String | Up to 200 characters long | NULL | N | N |
 | export_product_type | The type of product being exported | String | Up to 100 characters long | NULL | N | N |
 | fabric_content | The main manufacturing material of the product | String | Up to 100 characters long | NULL | N | N |
 | fda_number | The FDA Number of the product, where shipping the product to the US | String | Up to 100 characters long | NULL | N | N |
@@ -92,7 +92,7 @@ This allows you to update products
 | country_of_manufacturer_iso2 | A valid ISO2 Country Code of where the product was manufacturered | String | Exactly 2 characters long | NULL | N | N |
 | customergroups | An array of customer groups that this product belongs to - see [Products Customer Groups](Products_Customer_Groups.md#update-products-customer-groups) | Array |  | NULL | N | N |
 | description | A description of the product | String |  | NULL | N | N |
-| export_description | A description of the product when exporting it | String |  | NULL | N | N |
+| export_description | A description of the product when exporting it | String | Up to 200 characters long | NULL | N | N |
 | export_product_type | The type of product being exported | String | Up to 100 characters long | NULL | N | N |
 | fabric_content | The main manufacturing material of the product | String | Up to 100 characters long | NULL | N | N |
 | fda_number | The FDA Number of the product, where shipping the product to the US | String | Up to 100 characters long | NULL | N | N |
@@ -152,7 +152,7 @@ This allows you to list products in the warehouse
 | customer_group_restriction | A comma seperated string of Customer Group IDs that can view the product, if empty, anyone can view the product | String |  |
 | customergroups | An array of customer groups that can access this product - see [Products Customer Groups](Products_Customer_Groups.md#view-products-customer-groups) | Array |  |
 | description | A description of the product | String |  |
-| export_description | A description of the product when exporting it | String |  |
+| export_description | A description of the product when exporting it | String | Up to 200 characters long |
 | export_product_type | The type of product being exported | String | Up to 100 characters long |
 | fabric_content | The main manufacturing material of the product | String | Up to 100 characters long |
 | fda_number | The FDA Number of the product, where shipping the product to the US | String | Up to 100 characters long |
