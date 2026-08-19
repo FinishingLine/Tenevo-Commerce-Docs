@@ -7,3 +7,7 @@ Welcome to the _Wiki_!
 Find out how the [API](API/index.md) works
 
 A PHP Client is availabe upon request - please contact your account manager for this
+
+## Webhooks
+
+Find out how [Webhooks](Webhooks/index.md) works
