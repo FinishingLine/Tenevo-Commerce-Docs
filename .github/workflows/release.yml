@@ -1,9 +1,9 @@
+name: Create Release
+
 on:
   push:
     tags:
       - 'v*'
-
-name: Create Release
 
 permissions:
   pull-requests: write
@@ -14,114 +14,67 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout tagged commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Wait for docs/update to appear on remote (up to 60s)
-        run: |
-          tries=0
-          max_tries=12
-          until git ls-remote --heads origin docs/update || [ $tries -ge $max_tries ]; do
-            tries=$((tries+1))
-            echo "docs/update not found, waiting 5s (try $tries/$max_tries)..."
-            sleep 5
-          done
-          if git ls-remote --heads origin docs/update; then
-            git fetch origin refs/heads/docs/update:refs/heads/docs/update || true
-            git checkout docs/update
-            git log -1 --oneline
-          else
-            echo "::warning::docs/update did not appear within timeout; continuing on checked-out tag"
-          fi
-
-      - name: Check for changes vs main
-        id: check_changes
-        run: |
-          git fetch origin main:main || true
-          git fetch origin docs/update:docs/update || true
-          CHANGES=$(git diff --name-only origin/main...origin/docs/update | wc -l)
-          echo "files_changed=$CHANGES"
-          if [ "$CHANGES" -eq 0 ]; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Create Pull Request
-        if: steps.check_changes.outputs.has_changes == 'true'
-        id: cpr
+      - name: Verify docs/update matches the tag
         run: |
           set -euo pipefail
-      
-          OWNER="FinishingLine"
-          REPO="Tenevo-Commerce-Docs"
-          BRANCH="docs/update"
-          BASE="main"
-          TITLE="Docs Update for ${{ github.ref_name }}"
-          BODY="Docs Update for ${{ github.ref_name }}"
-          TOKEN="${{ secrets.GITHUB_TOKEN }}"
-      
-          # Ensure we have refs locally for diff check
-          git fetch origin main:main || true
-          git fetch origin "$BRANCH":"$BRANCH" || true
-      
-          # Only create PR if there are file diffs
-          CHANGED_FILES=$(git diff --name-only origin/main...origin/"$BRANCH" | wc -l)
-          echo "files_changed=$CHANGED_FILES"
-          if [ "$CHANGED_FILES" -eq 0 ]; then
-            echo "No changes vs main; skipping PR creation."
-            echo "pr_created=false" >> $GITHUB_OUTPUT
+          TAG_SHA=$(git rev-parse HEAD)
+          for i in $(seq 1 12); do
+            git fetch origin --prune
+            BRANCH_SHA=$(git rev-parse origin/docs/update 2>/dev/null || echo none)
+            if [ "$BRANCH_SHA" = "$TAG_SHA" ]; then
+              echo "docs/update matches the tag ($TAG_SHA)"
+              exit 0
+            fi
+            echo "docs/update at $BRANCH_SHA, expected $TAG_SHA - waiting 5s ($i/12)"
+            sleep 5
+          done
+          echo "::error::docs/update does not match tag ${{ github.ref_name }}"
+          exit 1
+
+      - name: Create or reuse Pull Request
+        id: cpr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          CHANGED=$(git diff --name-only origin/main...origin/docs/update | wc -l)
+          echo "files_changed=$CHANGED"
+          if [ "$CHANGED" -eq 0 ]; then
+            echo "No docs changes vs main; skipping PR."
+            echo "pr_number=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-      
-          # Check for existing open PR from this head->base
-          prs=$(curl -s -H "Authorization: token $TOKEN" \
-            "https://api.github.com/repos/$OWNER/$REPO/pulls?head=${OWNER}:${BRANCH}&base=${BASE}&state=open")
-      
-          existing_pr_count=$(echo "$prs" | jq 'length')
-      
-          if [ "$existing_pr_count" -gt 0 ]; then
-            pr_number=$(echo "$prs" | jq -r '.[0].number')
-            echo "PR already exists: #$pr_number"
-            echo "pr_number=$pr_number" >> $GITHUB_OUTPUT
-            echo "pr_created=false" >> $GITHUB_OUTPUT
-            exit 0
+          pr_number=$(gh pr list --head docs/update --base main --state open \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$pr_number" ]; then
+            echo "Reusing open PR #$pr_number"
+          else
+            gh pr create --head docs/update --base main \
+              --title "Docs Update for ${{ github.ref_name }}" \
+              --body "Docs Update for ${{ github.ref_name }}"
+            pr_number=$(gh pr list --head docs/update --base main --state open \
+              --json number --jq '.[0].number')
+            echo "Created PR #$pr_number"
           fi
-      
-          # Create the PR
-          create_resp=$(curl -s -X POST -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/$OWNER/$REPO/pulls" \
-            -d "$(jq -n --arg t "$TITLE" --arg b "$BODY" --arg head "$BRANCH" --arg base "$BASE" '{title:$t, body:$b, head:$head, base:$base}')")
-      
-          pr_number=$(echo "$create_resp" | jq -r '.number // empty')
-      
-          if [ -z "$pr_number" ]; then
-            echo "Failed to create PR. Response:"
-            echo "$create_resp"
-            exit 1
-          fi
-      
-          echo "Created PR #$pr_number"
-          echo "pr_number=$pr_number" >> $GITHUB_OUTPUT
-          echo "pr_created=true" >> $GITHUB_OUTPUT
+          echo "pr_number=$pr_number" >> "$GITHUB_OUTPUT"
 
       - name: Enable Pull Request Automerge
-        if: steps.cpr.outputs.pr_created == 'true'
+        if: steps.cpr.outputs.pr_number != ''
         run: gh pr merge --squash --auto "${{ steps.cpr.outputs.pr_number }}"
         env:
           GH_TOKEN: ${{ secrets.PAT }}
 
       - name: Create Release
-        if: steps.cpr.outputs.pr_created == 'true'
-        id: create_release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: softprops/action-gh-release@v2
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.ref_name }}
+          name: "Release ${{ github.ref_name }}"
           prerelease: false
           draft: false
-          title: "Release ${{ github.ref_name }}"
-          files: |
-            API/*
