@@ -13,7 +13,7 @@ changes. The events available differ between the two systems
 
 ### Store System
 
-The [Store System](Store/index.md) webhooks cover the entities involved in selling online, such as products, stock,
+The [Tenevo Commerce (Store)](Store/index.md) webhooks cover the entities involved in selling online, such as products, stock,
 orders, ASNs, and returns
 
 ## Documentation
