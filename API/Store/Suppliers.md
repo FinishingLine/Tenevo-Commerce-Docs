@@ -28,6 +28,7 @@ This allows you to create a supplier
 | name | The name of the supplier | String | Between 1 and 50 characters long | NULL | Y | N |
 | reference | A reference that is used to identify the supplier | String | Up to 50 characters long | NULL | N | N |
 | status | The status of the supplier | String | One of the following values: `active`, `disabled` | active | N | N |
+| supplier_service_id | A valid Supplier Service ID | Integer |  | NULL | N | N |
 
 ## Delete Supplier
 This allows you to delete a supplier
@@ -53,6 +54,7 @@ This allows you to update a specific supplier
 | name | The name of the supplier | String | Between 1 and 50 characters long | NULL | Y | N |
 | reference | A reference that is used to identify the supplier | String | Up to 50 characters long | NULL | N | N |
 | status | The status of the supplier | String | One of the following values: `active`, `disabled` | active | N | N |
+| supplier_service_id | A valid Supplier Service ID | Integer |  | NULL | N | N |
 
 ## View Suppliers
 This allows you to list suppliers
@@ -72,4 +74,6 @@ This allows you to list suppliers
 | name | The name of the supplier | String | Between 1 and 50 characters long |
 | reference | A reference that is used to identify the supplier | String | Up to 50 characters long |
 | status | The status of the supplier | String | One of the following values: `active`, `disabled` |
+| supplier_service | The name of the Supplier Service | String | Up to 100 characters long |
+| supplier_service_id | A valid Supplier Service ID | Integer |  |
 | updated_at | A UTC datetime of when the supplier was last updated | Datetime |  |

@@ -27,7 +27,6 @@ The following APIs are available for Store
 | Customers Profiles | Manages customer profiles | [Details](Customers_Profiles.md) |
 | Customers Profiles Wishlist | Manages customer profile wishlist | [Details](Customers_Profiles_Wishlist.md) |
 | Domains | Manages Domains | [Details](Domains.md) |
-| FBA Label |  | [Details](FBA_Label.md) |
 | Fulfillment Services | Manages fulfillment services | [Details](Fulfillment_Services.md) |
 | Groups | Manages Groups | [Details](Groups.md) |
 | Groups Permissions | Manages Groups Permissions | [Details](Groups_Permissions.md) |
@@ -67,10 +66,6 @@ The following APIs are available for Store
 | Products Collections | Manages product collections | [Details](Products_Collections.md) |
 | Products Customer Groups | Manages product customer groups | [Details](Products_Customer_Groups.md) |
 | Products Images | Manages product images | [Details](Products_Images.md) |
-| Products Subscriptions | Manages product subscriptions | [Details](Products_Subscriptions.md) |
-| Products Subscriptions Conditions | Manages product subscription conditions | [Details](Products_Subscriptions_Conditions.md) |
-| Products Subscriptions Conditions Rules | Manages product subscription condition rules | [Details](Products_Subscriptions_Conditions_Rules.md) |
-| Products Subscriptions Gifts | Manages product subscription gifts | [Details](Products_Subscriptions_Gifts.md) |
 | Products Variants | Manages product variants | [Details](Products_Variants.md) |
 | Products Variants Components | Manages product variant components | [Details](Products_Variants_Components.md) |
 | Returns | Manages Returns | [Details](Returns.md) |
@@ -80,7 +75,6 @@ The following APIs are available for Store
 | Rules Conditions | Manages rule condition | [Details](Rules_Conditions.md) |
 | Rule Sets | Manages rule sets | [Details](Rule_Sets.md) |
 | Rule Sets Rules | Manages rule set rules | [Details](Rule_Sets_Rules.md) |
-| Self Labeller |  | [Details](Self_Labeller.md) |
 | Shipments | Manages Shipments | [Details](Shipments.md) |
 | Shipments Addresses | Manages Shipments Addresses | [Details](Shipments_Addresses.md) |
 | Shipments Pallets | Manages Shipments Pallets | [Details](Shipments_Pallets.md) |
@@ -96,11 +90,10 @@ The following APIs are available for Store
 | Stores Settings | Manages store settings | [Details](Stores_Settings.md) |
 | Stores Shipping Methods |  | [Details](Stores_Shipping_Methods.md) |
 | Stores Support Mailboxes |  | [Details](Stores_Support_Mailboxes.md) |
-| Subscriptions | Manages Subscriptions | [Details](Subscriptions.md) |
-| Subscriptions Addresses | Manages Subscriptions Addresses | [Details](Subscriptions_Addresses.md) |
 | Suppliers | Manages suppliers | [Details](Suppliers.md) |
 | Suppliers Addresses | Manages suppliers addresses | [Details](Suppliers_Addresses.md) |
 | Suppliers Items | Manages supplier items | [Details](Suppliers_Items.md) |
+| Supplier Services | Manages supplier services | [Details](Supplier_Services.md) |
 | Support | Manages Support | [Details](Support.md) |
 | Support Agents | Manages Support Agents | [Details](Support_Agents.md) |
 | Support Allow-Block | Manages Support Allow-Block | [Details](Support_Allow-Block.md) |
@@ -128,4 +121,3 @@ The following APIs are available for Store
 | Tracking Events | Manages Tracking Events | [Details](Tracking_Events.md) |
 | Types | Manages Types | [Details](Types.md) |
 | Types Items | Manages Type Items | [Details](Types_Items.md) |
-| Webhook Queue Resend | Resends an item in the webhook queue | [Details](Webhook_Queue_Resend.md) |

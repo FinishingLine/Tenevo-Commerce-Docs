@@ -23,7 +23,7 @@ This allows you to create product variants
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long | NULL | N | N |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | N | N |
 | buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
 | case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
@@ -51,7 +51,7 @@ This allows you to create product variants
 | rrp | The recommend retail price of the variant, usually set by the manufacturer, for one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | sku | The SKU of the variant, must be unique | String | Between 1 and 100 characters long | NULL | Y | N |
 | special_price | The price that the buyer pays for one unit of the variant, when the product is within a special price offering in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
-| status | The status of the variant | String | One of the following values: `active`, `hidden` | active | N | N |
+| status | The status of the variant | String | One of the following values: `active`, `discontinued`, `hidden` | active | N | N |
 | supplier_id | A valid Supplier ID; use `0` to inherit from the product | Integer |  | 0 | N | N |
 | supplier_sku | The SKU or reference that the supplier uses for this item | String | Up to 100 characters long | NULL | N | N |
 | uom_id | A valid UOM ID | Integer |  | NULL | Y | N |
@@ -77,7 +77,7 @@ This allows you to update product variants
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long | NULL | N | N |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | N | N |
 | buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
 | case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
@@ -105,7 +105,7 @@ This allows you to update product variants
 | rrp | The recommend retail price of the variant, usually set by the manufacturer, for one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | sku | The SKU of the variant, must be unique | String | Between 1 and 100 characters long | NULL | Y | N |
 | special_price | The price that the buyer pays for one unit of the variant, when the product is within a special price offering in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
-| status | The status of the variant | String | One of the following values: `active`, `hidden` | active | N | N |
+| status | The status of the variant | String | One of the following values: `active`, `discontinued`, `hidden` | active | N | N |
 | supplier_id | A valid Supplier ID; use `0` to inherit from the product | Integer |  | 0 | N | N |
 | supplier_sku | The SKU or reference that the supplier uses for this item | String | Up to 100 characters long | NULL | N | N |
 | uom_id | A valid UOM ID | Integer |  | NULL | Y | N |
@@ -124,7 +124,7 @@ This allows you to list product variants
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long |
 | buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value indicates the parent product `can_backorder` status will be used | Boolean |  |
 | can_purchase | Indicates whether the product can be purchased, or not (uses can_backorder as well as looking at variant stock levels) | Boolean |  |
@@ -173,7 +173,7 @@ This allows you to list product variants
 | rrp | The recommend retail price of the variant, usually set by the manufacturer, for one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | sku | The SKU of the variant | String | Between 1 and 100 characters long |
 | special_price | The price that the buyer pays for one unit of the variant, when the product is within a special price offering in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 |
-| status | The status of the variant | String | One of the following values: `active`, `hidden` |
+| status | The status of the variant | String | One of the following values: `active`, `discontinued`, `hidden` |
 | store_id | A valid Store ID | Integer |  |
 | supplier | The name of the supplier | String | Up to 50 characters long |
 | supplier_id | A valid Supplier ID; use `0` to inherit from the product | Integer |  |

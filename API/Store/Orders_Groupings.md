@@ -24,7 +24,7 @@ This allows you to create an order grouping
 | --- | --- | --- | --- | --- | --- | --- |
 | items | An array of items belonging to this grouping - see [Orders Groupings Items](Orders_Groupings_Items.md#create-orders-groupings-items) | Array |  | NULL | N | N |
 | profile_id | A valid Profile ID | Integer |  | NULL | Y | N |
-| reference | A reference for this grouping | String | Up to 200 characters long | NULL | Y | N |
+| reference | A reference for this grouping, if not provided automatically sets from Profile | String | Up to 200 characters long | NULL | N | N |
 
 ## Update Order Groupings
 This allows you to update a specific order grouping
@@ -63,7 +63,7 @@ This allows you to list the order grouping
 | quantity_outstanding | The total number of units outstanding for the grouping | Integer | Up to 10 digits long |
 | quantity_returned | The total number of units returned for the grouping | Integer | Up to 10 digits long |
 | quantity_returning | The total number of units being returned for the grouping | Integer | Up to 10 digits long |
-| reference | A reference for this grouping | String | Exactly 10 characters long |
+| reference | A reference for this grouping | String | Up to 200 characters long |
 | release_at | Where the grouping contains a pre-release item, a UTC datetime of when the next item will be released | Datetime |  |
 | uom_quantity_fulfilled | The total number of units fulfilled for the grouping, in Unit of Measure terms | Integer | Up to 10 digits long |
 | uom_quantity_ordered | The total number of units ordered for the grouping, in Unit of Measure terms | Integer | Up to 10 digits long |

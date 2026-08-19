@@ -59,7 +59,7 @@ This allows you to list product variant components
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value indicates the parent product `can_backorder` status will be used | Boolean |  |
 | can_purchase | Indicates whether the product can be purchased, or not (uses can_backorder as well as looking at variant stock levels) | Boolean |  |
 | can_shipindividually | Indicates whether the component can be shipped individually, or not | Boolean |  |

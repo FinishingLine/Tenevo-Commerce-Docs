@@ -30,7 +30,7 @@ This allows you to create products
 | country_of_manufacturer_iso2 | A valid ISO2 Country Code of where the product was manufacturered | String | Exactly 2 characters long | NULL | N | N |
 | customergroups | An array of customer groups that can access this product - see [Products Customer Groups](Products_Customer_Groups.md#create-products-customer-groups) | Array |  | NULL | N | N |
 | description | A description of the product | String |  | NULL | N | N |
-| export_description | A description of the product when exporting it | String |  | NULL | N | N |
+| export_description | A description of the product when exporting it | String | Up to 200 characters long | NULL | N | N |
 | export_product_type | The type of product being exported | String | Up to 100 characters long | NULL | N | N |
 | fabric_content | The main manufacturing material of the product | String | Up to 100 characters long | NULL | N | N |
 | fda_number | The FDA Number of the product, where shipping the product to the US | String | Up to 100 characters long | NULL | N | N |
@@ -57,7 +57,7 @@ This allows you to create products
 | requires_serialcapture | Indicates whether the product requires a serial number to be captured, or not | Boolean |  | false | N | N |
 | special_price_from | A valid UTC datetime of when to show the special price from | Datetime |  | NULL | N | N |
 | special_price_until | A valid UTC datetime of when to show the special price until | Datetime |  | NULL | N | N |
-| status | The status of the product | String | One of the following values: `active`, `hidden` | active | N | N |
+| status | The status of the product | String | One of the following values: `active`, `discontinued`, `hidden` | active | N | N |
 | store_id | A valid Store ID | Integer |  | NULL | Y | N |
 | supplier_id | A valid Supplier ID | Integer |  | NULL | N | N |
 | tax_class_id | A valid Tax Class ID | Integer |  | NULL | N | N |
@@ -92,7 +92,7 @@ This allows you to update products
 | country_of_manufacturer_iso2 | A valid ISO2 Country Code of where the product was manufacturered | String | Exactly 2 characters long | NULL | N | N |
 | customergroups | An array of customer groups that this product belongs to - see [Products Customer Groups](Products_Customer_Groups.md#update-products-customer-groups) | Array |  | NULL | N | N |
 | description | A description of the product | String |  | NULL | N | N |
-| export_description | A description of the product when exporting it | String |  | NULL | N | N |
+| export_description | A description of the product when exporting it | String | Up to 200 characters long | NULL | N | N |
 | export_product_type | The type of product being exported | String | Up to 100 characters long | NULL | N | N |
 | fabric_content | The main manufacturing material of the product | String | Up to 100 characters long | NULL | N | N |
 | fda_number | The FDA Number of the product, where shipping the product to the US | String | Up to 100 characters long | NULL | N | N |
@@ -119,7 +119,7 @@ This allows you to update products
 | requires_serialcapture | Indicates whether the product requires a serial number to be captured, or not | Boolean |  | false | N | N |
 | special_price_from | A valid UTC datetime of when to show the special price from | Datetime |  | NULL | N | N |
 | special_price_until | A valid UTC datetime of when to show the special price until | Datetime |  | NULL | N | N |
-| status | The status of the product | String | One of the following values: `active`, `hidden` | active | N | N |
+| status | The status of the product | String | One of the following values: `active`, `discontinued`, `hidden` | active | N | N |
 | supplier_id | A valid Supplier ID | Integer |  | NULL | N | N |
 | tax_class_id | A valid Tax Class ID | Integer |  | NULL | N | N |
 | theme_layout | The theme layout of the product | String | Up to 100 characters long | product | N | N |
@@ -152,7 +152,7 @@ This allows you to list products in the warehouse
 | customer_group_restriction | A comma seperated string of Customer Group IDs that can view the product, if empty, anyone can view the product | String |  |
 | customergroups | An array of customer groups that can access this product - see [Products Customer Groups](Products_Customer_Groups.md#view-products-customer-groups) | Array |  |
 | description | A description of the product | String |  |
-| export_description | A description of the product when exporting it | String |  |
+| export_description | A description of the product when exporting it | String | Up to 200 characters long |
 | export_product_type | The type of product being exported | String | Up to 100 characters long |
 | fabric_content | The main manufacturing material of the product | String | Up to 100 characters long |
 | fda_number | The FDA Number of the product, where shipping the product to the US | String | Up to 100 characters long |
@@ -186,10 +186,9 @@ This allows you to list products in the warehouse
 | requires_serialcapture | Indicates whether the product requires a serial number to be captured, or not | Boolean |  |
 | special_price_from | A valid UTC datetime of when to show the special price from | Datetime |  |
 | special_price_until | A valid UTC datetime of when to show the special price until | Datetime |  |
-| status | The status of the product | String | One of the following values: `active`, `hidden` |
+| status | The status of the product | String | One of the following values: `active`, `discontinued`, `hidden` |
 | store | The name of the Store | String | Up to 100 characters long |
 | store_id | A valid Store ID | Integer |  |
-| subscriptions | An array of subscriptions of this product - see [Products Subscriptions](Products_Subscriptions.md#view-products-subscriptions) | Array |  |
 | supplier | The name of the Supplier | String | Up to 50 characters long |
 | supplier_id | A valid Supplier ID | Integer |  |
 | tax_class | The name of the Tax Class | String | Up to 100 characters long |
