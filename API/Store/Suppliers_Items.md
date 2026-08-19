@@ -23,7 +23,7 @@ This allows you to update supplier items
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long | NULL | Y | N |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | Y | N |
 | cost | The cost to you of one unit of the item in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long | NULL | N | N |
 | depth | The depth of one unit of the item, in millimetres, required when item is physical | Integer | Between 1 and 10 digits long | 0 | N | Y |
@@ -49,7 +49,7 @@ This allows you to list supplier items
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 100 characters long |
+| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long |
 | cost | The cost to you of one unit of the item in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long |
 | depth | The depth of one unit of the item, in millimetres, required when supplier is physical | Integer | Between 1 and 10 digits long |

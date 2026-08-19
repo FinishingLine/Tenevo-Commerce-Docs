@@ -25,6 +25,7 @@ This allows you to create a permissions group
 | --- | --- | --- | --- | --- | --- | --- |
 | name | The name of the Permissions Group | String | Between 1 and 255 characters long | NULL | Y | N |
 | permissions | An array of permissions - see [Groups Permissions](Groups_Permissions.md#create-groups-permissions) | Array |  | NULL | N | N |
+| policy_id | A valid Password Policy ID applied for the Group | Integer |  | NULL | Y | N |
 | type | The type of permissions group | String | One of the following values: `admin_standard`, `admin_super` | NULL | Y | N |
 
 ## Delete Group
@@ -47,6 +48,7 @@ This allows you to update a specific group
 | --- | --- | --- | --- | --- | --- | --- |
 | name | The name of the Permissions Group | String | Between 1 and 255 characters long | NULL | Y | N |
 | permissions | An array of permissions - see [Groups Permissions](Groups_Permissions.md#update-groups-permissions) | Array |  | NULL | N | N |
+| policy_id | A valid Password Policy ID applied for the Group | Integer |  | NULL | Y | N |
 | type | The type of permissions group | String | One of the following values: `admin_standard`, `admin_super` | NULL | Y | N |
 
 ## View Groups
@@ -62,5 +64,6 @@ This allows you to list the groups
 | --- | --- | --- | --- |
 | name | The name of the Permissions Group | String | Between 1 and 255 characters long |
 | permissions | An array of permissions - see [Groups Permissions](Groups_Permissions.md#view-groups-permissions) | Array |  |
+| policy_id | A valid Password Policy ID applied for the Group | Integer |  |
 | type | The type of permissions group | String | One of the following values: `admin_standard`, `admin_super` |
 | uses | The number of uses the group is used | Integer |  |

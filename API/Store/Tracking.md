@@ -21,6 +21,7 @@ This allows you to list the tracking of a parcel
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
+| consignment_reference | The reference for the consignment | String | Up to 100 characters long |
 | courier | The name of the courier being used | String | Up to 50 characters long |
 | courier_code | A valid Tenevo courier code | String | Up to 100 characters long |
 | courier_service | The name of the courier service | String | Up to 100 characters long |

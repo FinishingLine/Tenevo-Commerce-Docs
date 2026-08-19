@@ -34,7 +34,7 @@ This allows you to create an address for an advanced shipping notice
 | line3 | Third line of addresses | String | Up to 200 characters long | NULL | N | N |
 | mobile | The mobile phone number of the contact at the address | String | Up to 20 characters long | NULL | N | N |
 | owner_id | The Owner ID of this address; required with `owner_type` | Integer |  | NULL | N | Y |
-| owner_type | The Owner Type of this address; required with `owner_id`. When provided, `supplieraddress` must be used when `address_type` is `from` and `fulfillmentservice` must be used when `address_type` is `to` | String | One of the following values: `fulfillmentservice`, `supplieraddress` | NULL | N | Y |
+| owner_type | The Owner Type of this address; required with `owner_id`. When provided, `supplieraddress` or `supplierservice` must be used when `address_type` is `from`; `fulfillmentservice` must be used when `address_type` is `to` | String | One of the following values: `fulfillmentservice`, `supplieraddress`, `supplierservice` | NULL | N | Y |
 | phone | The phone number of the contact at the address | String | Up to 20 characters long | NULL | N | N |
 | postcode | The postal code/zip code; not required when `owner_id` and `owner_type` is provided | String | Up to 20 characters long | NULL | N | Y |
 | province | The name of the province/state/county | String | Between 1 and 100 characters long | NULL | N | N |
@@ -100,8 +100,9 @@ This allows you to list the addresses belonging to the advanced shipment notific
 | line2 | Second line of addresses | String | Up to 200 characters long |
 | line3 | Third line of addresses | String | Up to 200 characters long |
 | mobile | The mobile phone number of the contact at the address | String | Up to 20 characters long |
+| network_reference | The client network reference (when `owner_type` is `fulfillmentservice` or `supplierservice`) | String | Exactly 10 characters long |
 | owner_id | The Owner ID of this address | Integer |  |
-| owner_type | The Owner Type of this address | String | One of the following values: `fulfillmentservice`, `supplieraddress` |
+| owner_type | The Owner Type of this address | String | One of the following values: `fulfillmentservice`, `supplieraddress`, `supplierservice` |
 | phone | The phone number of the contact at the address | String | Up to 20 characters long |
 | postcode | The postal code/zip code | String | Up to 20 characters long |
 | province | The name of the province/state/county | String | Between 1 and 100 characters long |
