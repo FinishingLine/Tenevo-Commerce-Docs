@@ -32,7 +32,7 @@ This allows you to create a type
 | name | The name of the type | String | Between 1 and 50 characters long | NULL | Y | N |
 | type | The kind of type | String | One of the following values: `billingprofile`, `data` | NULL | Y | N |
 | value_label | The label to use for the value, required where `can_itemshavevalue` true | String | Between 1 and 50 characters long | NULL | N | Y |
-| value_type | The type of value to use to check the value, required where `can_itemshavevalue` true | String | One of the following values: `float`, `number` | NULL | N | Y |
+| value_type | The type of value to use to check the value, required where `can_itemshavevalue` true | String | One of the following values: `float`, `number`, `string` | NULL | N | Y |
 
 ## Delete Type
 This allows you to delete a type
@@ -75,4 +75,4 @@ This allows you to list types
 | name | The name of the type | String | Between 1 and 50 characters long |
 | type | The kind of type | String | One of the following values: `billingprofile`, `data` |
 | value_label | The label to use for the value | String | Between 1 and 50 characters long |
-| value_type | The type of value to use to check the value | String | One of the following values: `float`, `number` |
+| value_type | The type of value to use to check the value | String | One of the following values: `float`, `number`, `string` |
