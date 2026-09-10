@@ -26,6 +26,7 @@ This allows you to create issues
 | customer_id | A valid Customer ID | Integer |  | NULL | Y | N |
 | issue_type_id | A valid Issue Type ID | Integer | Up to 10 digits long | NULL | Y | N |
 | item_id | The ID of the item that has an issue that needs to be resolved | Integer |  | NULL | Y | N |
+| item_reference | A reference identifying the item further, where the item's ID cannot describe it alone - such as the SKU of a stranded SKU issue | String | Up to 255 characters long | NULL | N | N |
 | item_type | The type of item that has an issue that needs to be resolved | String | One of the following values: `customer`, `marketplace`, `order`, `return` | NULL | Y | N |
 | store_id | A valid Store ID | Integer |  | NULL | Y | N |
 
@@ -72,7 +73,9 @@ This allows you to list issues
 | issue_type | The name of the Issue Type | String | Up to 100 characters long |
 | issue_type_id | A valid Issue Type ID | Integer | Up to 10 digits long |
 | item_id | The ID of the item that has an issue that needs to be resolved | Integer |  |
+| item_reference | A reference identifying the item further, where the item's ID cannot describe it alone - such as the SKU of a stranded SKU issue | String | Up to 255 characters long |
 | item_type | The type of item that has an issue that needs to be resolved | String | One of the following values: `customer`, `marketplace`, `order`, `return` |
+| marketplace | The name of the marketplace the issue is about, where it is about a marketplace rather than a customer's order | String | Up to 255 characters long |
 | notes | Notes relating to the issue | String |  |
 | primary_first_name | The first name of the primary account holder of the customer | String |  |
 | primary_full_name | The full name of the primary account holder of the customer | String |  |

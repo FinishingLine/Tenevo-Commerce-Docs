@@ -140,8 +140,8 @@ This allows you to list product variants
 | image_alt_text | The alt text for the product variant image | String |  |
 | image_id | A valid Product Image ID | Integer |  |
 | image_url | The relative URL to the product variant image | String |  |
-| inventory_allocated | The amount of the variant that has been allocated to orders in primary Unit of Measure units | Integer | Between 1 and 10 digits long |
-| inventory_available | The amount of the variant that is available to be purchased in primary Unit of Measure units (inventory_quantity - inventory_allocated - buffer_stock_level) | Integer | Between 1 and 10 digits long |
+| inventory_allocated | The amount of the variant that has been allocated to orders in primary Unit of Measure units. For a bundle this is derived from its components rather than counted from orders placed against the bundle itself - it is the bundle quantity lost to component buffers and component allocations, so a part-buildable bundle counts as allocated | Integer | Between 1 and 10 digits long |
+| inventory_available | The amount of the variant that is available to be purchased in primary Unit of Measure units (inventory_quantity - inventory_allocated - buffer_stock_level). For a bundle this is the lowest number of whole bundles its components can build, after component buffers and component allocations, less the bundle's own buffer_stock_level | Integer | Between 1 and 10 digits long |
 | inventory_quantity | The amount of the variant that is held in stock in primary Unit of Measure units | Integer | Between 1 and 10 digits long |
 | inventory_reserved | The amount of the variant that is reserved in a basket/checkout, this is included within inventory_available in primary Unit of Measure units | Integer | Between 1 and 10 digits long |
 | is_released | Indicates whether the variant is a released item, or not | Boolean |  |
@@ -182,8 +182,8 @@ This allows you to list product variants
 | uom_buffer_stock_level | The amount of stock to hold back as a buffer, in Unit of Measure terms | Integer | Between 1 and 10 digits long |
 | uom_cost | The cost to you of one unit of the variant, in Unit of Measure terms | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | uom_id | A valid UOM ID | Integer |  |
-| uom_inventory_allocated | The amount of the variant that has been allocated to orders, in Unit of Measure terms | Integer | Between 1 and 10 digits long |
-| uom_inventory_available | The amount of the variant that is available to be purchased, in Unit of Measure terms(uom_inventory_quantity - uom_inventory_allocated - uom_buffer_stock_level) | Integer | Between 1 and 10 digits long |
+| uom_inventory_allocated | The amount of the variant that has been allocated to orders, in Unit of Measure terms. For a bundle this is derived from its components rather than counted from orders placed against the bundle itself - see inventory_allocated | Integer | Between 1 and 10 digits long |
+| uom_inventory_available | The amount of the variant that is available to be purchased, in Unit of Measure terms(uom_inventory_quantity - uom_inventory_allocated - uom_buffer_stock_level). For a bundle this is derived from its components - see inventory_available | Integer | Between 1 and 10 digits long |
 | uom_inventory_quantity | The amount of the variant that is held in stock, in Unit of Measure terms | Integer | Between 1 and 10 digits long |
 | uom_inventory_reserved | The amount of the variant that is reserved in a basket/checkout, this is included within uom_inventory_available, in Unit of Measure terms | Integer | Between 1 and 10 digits long |
 | uom_price | The price that the buyer pays for one unit of the variant, in Unit of Measure terms | Float | Up to 2 decimal places and no larger than 99999999.99 |

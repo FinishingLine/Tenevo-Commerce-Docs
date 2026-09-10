@@ -126,6 +126,7 @@ This allows you to list the order grouping items
 | line_total | The total price paid on the line for the items, after discounts including tax | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | name | The original name of the ordered item | String | Up to 255 characters long |
 | parent_id | A valid Order Group Item that this item belongs to | Integer | Up to 10 digits long |
+| product_id | A valid Product ID that the item's variant belongs to | Integer |  |
 | properties | A JSON encoded array of properties related to the item | String |  |
 | quantity_fulfillable | The total number units of this item that can be fulfilled | Integer | Up to 10 digits long |
 | quantity_fulfilled | The total number units of this item fulfilled | Integer | Up to 10 digits long |
