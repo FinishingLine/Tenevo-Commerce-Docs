@@ -13,7 +13,6 @@ The below endpoints are available with this API
 | /shipments/:shipment/parcels/:parcel/ | PUT | This allows you to update a specific shipment parcel | [Details](#update-shipment-parcels) |
 | /shipments/:shipment/parcels/ | GET | This allows you to list the parcels belonging to a shipment | [Details](#view-shipment-parcel) |
 | /shipments/:shipment/parcels/:parcel/ | GET | This allows you to list the parcels belonging to a shipment | [Details](#view-shipment-parcel) |
-| /shipments/:shipment/parcels/:parcel | DELETE | This allows you to delete a shipment parcel | [Details](#delete-shipment-parcel) |
 
 ## Create Shipment Parcels
 This allows you to add parcels to a shipment
@@ -121,10 +120,3 @@ This allows you to list the parcels belonging to a shipment
 | updated_at | A UTC datetime of when the parcel was updated | Datetime |  |
 | weight | The weight of the parcel, including packaging, in grams | Integer | Up to 10 digits long |
 | width | The width of the parcel, in millimetres | Integer | Up to 10 digits long |
-
-## Delete Shipment Parcel
-This allows you to delete a shipment parcel
-
-**URL** : `/shipments/:shipment/parcels/:parcel`
-
-**Method** : `DELETE`

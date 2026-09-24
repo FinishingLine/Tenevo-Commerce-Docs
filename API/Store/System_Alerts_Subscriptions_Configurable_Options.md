@@ -8,7 +8,7 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /system/alerts/:alert/subscriptions/:subscription/configurableoptions/ | POST | This allows you to create alert subscription configurable options | [Details](#create-system-alert-subscription-configurable-options) |
-| /system/alerts/:alert/subscriptions/:subscription/:subscription/configurableoptions/:configurableoption/ | DELETE | This allows you to delete a specified alert subscription configurable options | [Details](#delete-alert-subscription-configurable-option) |
+| /system/alerts/:alert/subscriptions/:subscription/configurableoptions/:configurableoption/ | DELETE | This allows you to delete a specified alert subscription configurable options | [Details](#delete-alert-subscription-configurable-option) |
 | /system/alerts/:alert/subscriptions/:subscription/configurableoptions/ | PUT | This allows you to update alert subscription configurable options | [Details](#update-system-alert-subscription-configurable-options) |
 | /system/alerts/:alert/subscriptions/:subscription/configurableoptions/:configurableoption/ | PUT | This allows you to update alert subscription configurable options | [Details](#update-system-alert-subscription-configurable-options) |
 | /system/alerts/:alert/subscriptions/:subscription/configurableoptions/ | GET | This allows you to list alert subscription configurable options | [Details](#view-system-alert-subscription-configurable-options) |
@@ -29,7 +29,7 @@ This allows you to create alert subscription configurable options
 ## Delete Alert Subscription Configurable Option
 This allows you to delete a specified alert subscription configurable options
 
-**URL** : `/system/alerts/:alert/subscriptions/:subscription/:subscription/configurableoptions/:configurableoption/`
+**URL** : `/system/alerts/:alert/subscriptions/:subscription/configurableoptions/:configurableoption/`
 
 **Method** : `DELETE`
 

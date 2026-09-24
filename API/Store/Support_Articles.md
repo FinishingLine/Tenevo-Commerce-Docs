@@ -7,7 +7,7 @@ The below endpoints are available with this API
 
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
-| /support_articles/ | POST | This allows you to create a support article | [Details](#create-support-article) |
+| /support/articles/ | POST | This allows you to create a support article | [Details](#create-support-article) |
 | /support/articles/:article/ | DELETE | This allows you to delete an article | [Details](#delete-article) |
 | /support/articles/ | PUT | This allows you to update a specific support article | [Details](#update-support-articles) |
 | /support/articles/:article/ | PUT | This allows you to update a specific support article | [Details](#update-support-articles) |
@@ -17,7 +17,7 @@ The below endpoints are available with this API
 ## Create Support Article
 This allows you to create a support article
 
-**URL** : `/support_articles/`
+**URL** : `/support/articles/`
 
 **Method** : `POST`
 

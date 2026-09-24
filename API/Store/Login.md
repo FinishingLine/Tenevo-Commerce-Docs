@@ -10,7 +10,6 @@ The below endpoints are available with this API
 | /login/ | POST | This creates a new login session for a user | [Details](#creates-a-new-login-session) |
 | /login/ | DELETE | This allows you to delete a login session | [Details](#delete-a-login-session) |
 | /login/ | GET | This allows you to list the login | [Details](#validate-that-a-given-token-is-valid) |
-| /login/:group/ | GET | This allows you to list the login | [Details](#validate-that-a-given-token-is-valid) |
 
 ## Creates a new login session
 This creates a new login session for a user
@@ -36,8 +35,6 @@ This allows you to delete a login session
 This allows you to list the login
 
 **URL** : `/login/`
-
-**URL** : `/login/:group/`
 
 **Method** : `GET`
 

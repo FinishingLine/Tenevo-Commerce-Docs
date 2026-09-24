@@ -10,6 +10,8 @@ The following APIs are available for Store
 | API Interfaces | Manages API Interfaces | [Details](API_Interfaces.md) |
 | API Interfaces Meta | Manages API Interface Meta | [Details](API_Interfaces_Meta.md) |
 | API Interfaces Settings | Manages API Interface Settings | [Details](API_Interfaces_Settings.md) |
+| API Rotate | Lets an API user replace its own keys | [Details](API_Rotate.md) |
+| API Users | Manages the API users that reach this API - the tenant's own, and those belonging to its extensions | [Details](API_Users.md) |
 | ASNs | Manages Advanced Shipment Notifications | [Details](ASNs.md) |
 | ASNs Addresses | Manages advanced shipment notification addresses | [Details](ASNs_Addresses.md) |
 | ASNs Contents | Manages advanced shipment notification contents | [Details](ASNs_Contents.md) |
@@ -52,13 +54,13 @@ The following APIs are available for Store
 | Messages Gateways | Manages message gateways | [Details](Messages_Gateways.md) |
 | Messages Gateways Methods | Manages message gateway methods | [Details](Messages_Gateways_Methods.md) |
 | Messages Templates | Manages the templates that can be used for messaging | [Details](Messages_Templates.md) |
-| Notifications |  | [Details](Notifications.md) |
+| Notifications | Manages Notifications | [Details](Notifications.md) |
 | Orders | Manages Orders | [Details](Orders.md) |
 | Orders Addresses | Manages Orders Address | [Details](Orders_Addresses.md) |
 | Orders Documents | Manages Orders Documents | [Details](Orders_Documents.md) |
 | Orders Groupings | Manages Order Grouping | [Details](Orders_Groupings.md) |
-| Orders Groupings Items | Manages Order Grouping | [Details](Orders_Groupings_Items.md) |
-| Orders Summary | Manages Fulfillments Orders Summary | [Details](Orders_Summary.md) |
+| Orders Groupings Items | Manages Order Grouping Items | [Details](Orders_Groupings_Items.md) |
+| Orders Summary | Manages Orders Summary | [Details](Orders_Summary.md) |
 | Orders Taxes | Manages Orders Tax | [Details](Orders_Taxes.md) |
 | Pages | Manages Pages | [Details](Pages.md) |
 | Pages Stores | Manages Page Stores | [Details](Pages_Stores.md) |
@@ -85,11 +87,11 @@ The following APIs are available for Store
 | Stores | Manages Stores | [Details](Stores.md) |
 | Stores Collections | Manages store collections | [Details](Stores_Collections.md) |
 | Stores Pages | Manages Store Pages | [Details](Stores_Pages.md) |
-| Stores Payment Methods |  | [Details](Stores_Payment_Methods.md) |
-| Stores Returns Reasons |  | [Details](Stores_Returns_Reasons.md) |
+| Stores Payment Methods | Manages Stores Payment Methods | [Details](Stores_Payment_Methods.md) |
+| Stores Returns Reasons | Manages Stores Returns Reasons | [Details](Stores_Returns_Reasons.md) |
 | Stores Settings | Manages store settings | [Details](Stores_Settings.md) |
-| Stores Shipping Methods |  | [Details](Stores_Shipping_Methods.md) |
-| Stores Support Mailboxes |  | [Details](Stores_Support_Mailboxes.md) |
+| Stores Shipping Methods | Manages Stores Shipping Methods | [Details](Stores_Shipping_Methods.md) |
+| Stores Support Mailboxes | Manages Stores Support Mailboxes | [Details](Stores_Support_Mailboxes.md) |
 | Suppliers | Manages suppliers | [Details](Suppliers.md) |
 | Suppliers Addresses | Manages suppliers addresses | [Details](Suppliers_Addresses.md) |
 | Suppliers Items | Manages supplier items | [Details](Suppliers_Items.md) |
@@ -108,7 +110,7 @@ The following APIs are available for Store
 | System Attribute Sets | Manages system attribute sets | [Details](System_Attribute_Sets.md) |
 | System Attribute Sets Groups | Manages system attribute set groups | [Details](System_Attribute_Sets_Groups.md) |
 | System Attribute Sets Groups Attributes | Manages system attribute set group attributes | [Details](System_Attribute_Sets_Groups_Attributes.md) |
-| System Order Checks |  | [Details](System_Order_Checks.md) |
+| System Order Checks | Manages System Order Checks | [Details](System_Order_Checks.md) |
 | Tags | Manages Tags | [Details](Tags.md) |
 | Tax Classes | Manages Tax Classes | [Details](Tax_Classes.md) |
 | Tax Rules | Manages Tax Rules | [Details](Tax_Rules.md) |

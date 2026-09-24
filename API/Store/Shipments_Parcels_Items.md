@@ -8,6 +8,7 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /shipments/:shipment/parcels/:parcel/items/ | POST | This allows you to add items to a shipment parcel | [Details](#create-shipment-parcels-items) |
+| /shipments/:shipment/parcels/:parcel/items/:item | DELETE | This allows you to delete a shipment parcel item | [Details](#delete-shipment-parcel-item) |
 | /shipments/:shipment/parcels/:parcel/items/ | PUT | This allows you to update a specific shipment parcel item | [Details](#update-shipment-parcel-items) |
 | /shipments/:shipment/parcels/:parcel/items/:item/ | PUT | This allows you to update a specific shipment parcel item | [Details](#update-shipment-parcel-items) |
 | /shipments/:shipment/parcels/:parcel/items/ | GET | This allows you to list the items belonging to a shipment parcel | [Details](#view-shipment-parcel-items) |
@@ -38,6 +39,13 @@ This allows you to add items to a shipment parcel
 | unit_weight | The weight of one unit of this item | Integer | Up to 10 digits long | NULL | Y | N |
 | uom | The Unit of Measure used for the given UOM Size | String | Up to 100 characters long | NULL | N | N |
 | uom_size | The size of the corresponding Unit of Measure used | Integer | Up to 10 digits long | 1 | N | N |
+
+## Delete Shipment Parcel Item
+This allows you to delete a shipment parcel item
+
+**URL** : `/shipments/:shipment/parcels/:parcel/items/:item`
+
+**Method** : `DELETE`
 
 ## Update Shipment Parcel Items
 This allows you to update a specific shipment parcel item

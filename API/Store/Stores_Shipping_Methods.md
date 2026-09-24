@@ -1,6 +1,7 @@
 # Stores Shipping Methods
 [Home](../../index.md) > [API](../index.md) > [Store](index.md)
-
+## Intro
+Manages Stores Shipping Methods
 ## Endpoints
 The below endpoints are available with this API
 

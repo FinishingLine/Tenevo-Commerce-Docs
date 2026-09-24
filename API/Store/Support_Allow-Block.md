@@ -9,8 +9,8 @@ The below endpoints are available with this API
 | --- | --- | --- | --- |
 | /support/allowblock/ | POST | This allows you to create a Support Allow-Block | [Details](#create-support-allow-block) |
 | /support/allowblock/:allowblock/ | DELETE | This allows you to delete a Support Allow-Block | [Details](#delete-support-allow-block) |
-| /support/alloblock/ | GET | This allows you to list Support Allow-Block | [Details](#view-support-allow-block) |
-| /support/alloblock/:allowblock/ | GET | This allows you to list Support Allow-Block | [Details](#view-support-allow-block) |
+| /support/allowblock/ | GET | This allows you to list Support Allow-Block | [Details](#view-support-allow-block) |
+| /support/allowblock/:allowblock/ | GET | This allows you to list Support Allow-Block | [Details](#view-support-allow-block) |
 
 ## Create Support Allow-Block
 This allows you to create a Support Allow-Block
@@ -37,9 +37,9 @@ This allows you to delete a Support Allow-Block
 ## View Support Allow-Block
 This allows you to list Support Allow-Block
 
-**URL** : `/support/alloblock/`
+**URL** : `/support/allowblock/`
 
-**URL** : `/support/alloblock/:allowblock/`
+**URL** : `/support/allowblock/:allowblock/`
 
 **Method** : `GET`
 

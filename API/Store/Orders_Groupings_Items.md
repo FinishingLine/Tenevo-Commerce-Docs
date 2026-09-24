@@ -1,26 +1,18 @@
 # Orders Groupings Items
 [Home](../../index.md) > [API](../index.md) > [Store](index.md)
 ## Intro
-Manages Order Grouping
+Manages Order Grouping Items
 ## Endpoints
 The below endpoints are available with this API
 
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
-| /orders/:order/groupings/:grouping/items/:item | DELETE | This allows you to delete an order grouping item | [Details](#delete-order-grouping-item) |
 | /orders/:order/groupings/:grouping/items/ | POST | This allows you to create an order grouping item | [Details](#create-order-grouping-items) |
 | /orders/:order/groupings/:grouping/items/:item | DELETE | This allows you to delete an order grouping item | [Details](#delete-order-grouping-item) |
 | /orders/:order/groupings/:grouping/items/ | PUT | This allows you to update a specific order grouping item | [Details](#update-order-groupings-items) |
 | /orders/:order/groupings/:grouping/items/:item/ | PUT | This allows you to update a specific order grouping item | [Details](#update-order-groupings-items) |
 | /orders/:order/groupings/:grouping/items/ | GET | This allows you to list the order grouping items | [Details](#view-order-grouping-items) |
 | /orders/:order/groupings/:grouping/items/:item | GET | This allows you to list the order grouping items | [Details](#view-order-grouping-items) |
-
-## Delete Order Grouping Item
-This allows you to delete an order grouping item
-
-**URL** : `/orders/:order/groupings/:grouping/items/:item`
-
-**Method** : `DELETE`
 
 ## Create Order Grouping Items
 This allows you to create an order grouping item

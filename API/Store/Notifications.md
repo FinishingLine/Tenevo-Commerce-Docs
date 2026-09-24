@@ -1,6 +1,7 @@
 # Notifications
 [Home](../../index.md) > [API](../index.md) > [Store](index.md)
-
+## Intro
+Manages Notifications
 ## Endpoints
 The below endpoints are available with this API
 
@@ -10,8 +11,8 @@ The below endpoints are available with this API
 | /notifications/:notification/ | DELETE | This allows you to delete a specified notification | [Details](#delete-notification) |
 | /notifications/ | PUT | This allows you to update notifications | [Details](#update-notifications) |
 | /notifications/:notification/ | PUT | This allows you to update notifications | [Details](#update-notifications) |
-| /notifications/notifications/ | GET | This allows you to list notifications | [Details](#view-notifications) |
-| /notifications/notifications/:notification/ | GET | This allows you to list notifications | [Details](#view-notifications) |
+| /notifications/ | GET | This allows you to list notifications | [Details](#view-notifications) |
+| /notifications/:notification/ | GET | This allows you to list notifications | [Details](#view-notifications) |
 
 ## Create Notifications
 This allows you to manage notifications
@@ -50,9 +51,9 @@ This allows you to update notifications
 ## View Notifications
 This allows you to list notifications
 
-**URL** : `/notifications/notifications/`
+**URL** : `/notifications/`
 
-**URL** : `/notifications/notifications/:notification/`
+**URL** : `/notifications/:notification/`
 
 **Method** : `GET`
 
