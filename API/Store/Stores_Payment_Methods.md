@@ -1,6 +1,7 @@
 # Stores Payment Methods
 [Home](../../index.md) > [API](../index.md) > [Store](index.md)
-
+## Intro
+Manages Stores Payment Methods
 ## Endpoints
 The below endpoints are available with this API
 

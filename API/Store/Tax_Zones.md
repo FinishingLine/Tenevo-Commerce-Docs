@@ -12,7 +12,7 @@ The below endpoints are available with this API
 | /tax/zones/ | PUT | This allows you to update a specific tax zone | [Details](#update-tax-zones) |
 | /tax/zones/:zone/ | PUT | This allows you to update a specific tax zone | [Details](#update-tax-zones) |
 | /tax/zones/ | GET | This allows you to list tax zones | [Details](#view-tax-zones) |
-| /tax/zones/:tax | GET | This allows you to list tax zones | [Details](#view-tax-zones) |
+| /tax/zones/:zone/ | GET | This allows you to list tax zones | [Details](#view-tax-zones) |
 
 ## Create Tax Zone
 This allows you to create a tax zone
@@ -54,7 +54,7 @@ This allows you to list tax zones
 
 **URL** : `/tax/zones/`
 
-**URL** : `/tax/zones/:tax`
+**URL** : `/tax/zones/:zone/`
 
 **Method** : `GET`
 

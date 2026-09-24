@@ -7,16 +7,16 @@ The below endpoints are available with this API
 
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
-| /messages/gateways/:gateway/method/ | POST | This allows you to create a message gateway method | [Details](#create-message-gateway-method) |
-| /messages/gateways/:gateway/method/:method/ | DELETE | This allows you to remove a message gateway method | [Details](#delete-message-gateway-method) |
-| /messages/gateways/:gateway/method/:method/ | PUT | This allows you to update a message gateway method | [Details](#update-message-gateway-method) |
-| /messages/gateways/:gateway/method/ | GET | This allows you to list message gateway methods | [Details](#view-message-gateway-method) |
-| /messages/gateways/:gateway/method/:method/ | GET | This allows you to list message gateway methods | [Details](#view-message-gateway-method) |
+| /messages/gateways/:gateway/methods/ | POST | This allows you to create a message gateway method | [Details](#create-message-gateway-method) |
+| /messages/gateways/:gateway/methods/:method/ | DELETE | This allows you to remove a message gateway method | [Details](#delete-message-gateway-method) |
+| /messages/gateways/:gateway/methods/:method/ | PUT | This allows you to update a message gateway method | [Details](#update-message-gateway-method) |
+| /messages/gateways/:gateway/methods/ | GET | This allows you to list message gateway methods | [Details](#view-message-gateway-method) |
+| /messages/gateways/:gateway/methods/:method/ | GET | This allows you to list message gateway methods | [Details](#view-message-gateway-method) |
 
 ## Create Message Gateway Method
 This allows you to create a message gateway method
 
-**URL** : `/messages/gateways/:gateway/method/`
+**URL** : `/messages/gateways/:gateway/methods/`
 
 **Method** : `POST`
 
@@ -29,14 +29,14 @@ This allows you to create a message gateway method
 ## Delete Message Gateway Method
 This allows you to remove a message gateway method
 
-**URL** : `/messages/gateways/:gateway/method/:method/`
+**URL** : `/messages/gateways/:gateway/methods/:method/`
 
 **Method** : `DELETE`
 
 ## Update Message Gateway Method
 This allows you to update a message gateway method
 
-**URL** : `/messages/gateways/:gateway/method/:method/`
+**URL** : `/messages/gateways/:gateway/methods/:method/`
 
 **Method** : `PUT`
 
@@ -49,9 +49,9 @@ This allows you to update a message gateway method
 ## View Message Gateway Method
 This allows you to list message gateway methods
 
-**URL** : `/messages/gateways/:gateway/method/`
+**URL** : `/messages/gateways/:gateway/methods/`
 
-**URL** : `/messages/gateways/:gateway/method/:method/`
+**URL** : `/messages/gateways/:gateway/methods/:method/`
 
 **Method** : `GET`
 

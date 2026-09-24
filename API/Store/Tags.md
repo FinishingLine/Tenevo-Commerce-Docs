@@ -10,7 +10,7 @@ The below endpoints are available with this API
 | /tags/ | POST | This allows you to create a tag | [Details](#create-tag) |
 | /tags/:tag/ | DELETE | This allows you to delete a tag | [Details](#delete-tag) |
 | /tags/ | GET | This allows you to list tag | [Details](#view-tags) |
-| /tag/:tag/ | GET | This allows you to list tag | [Details](#view-tags) |
+| /tags/:tag/ | GET | This allows you to list tag | [Details](#view-tags) |
 
 ## Create Tag
 This allows you to create a tag
@@ -37,7 +37,7 @@ This allows you to list tag
 
 **URL** : `/tags/`
 
-**URL** : `/tag/:tag/`
+**URL** : `/tags/:tag/`
 
 **Method** : `GET`
 

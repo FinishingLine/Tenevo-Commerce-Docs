@@ -1,15 +1,15 @@
 # Orders Summary
 [Home](../../index.md) > [API](../index.md) > [Store](index.md)
 ## Intro
-Manages Fulfillments Orders Summary
+Manages Orders Summary
 ## Endpoints
 The below endpoints are available with this API
 
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
-| /orders/:order/summary/ | GET | This allows you to get a summary of an order | [Details](#view-forder-summary) |
+| /orders/:order/summary/ | GET | This allows you to get a summary of an order | [Details](#view-order-summary) |
 
-## View FOrder Summary
+## View Order Summary
 This allows you to get a summary of an order
 
 **URL** : `/orders/:order/summary/`

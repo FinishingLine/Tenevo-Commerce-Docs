@@ -30,6 +30,7 @@ This allows you to create an order
 | booking_time | The time for the booking of the order - required if `requires_booking` is set to true | Time |  | NULL | N | Y |
 | currency | A valid ISO 3 character currency code | String | Exactly 3 characters long | NULL | Y | N |
 | customer_id | A valid Customer ID that this order belongs to | Integer |  | NULL | Y | N |
+| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `default`, `dap`, `ddp`, `dtp` | default | N | N |
 | deliver_max | A date that the order needs to be delivered no later than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_min | A date that the order needs to be delivered no earlier than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_on | A date that the order needs to be delivered on | Date |  | NULL | N | N |
@@ -114,6 +115,7 @@ This allows you to update a specific order
 | cancelled_reason | The reason for a cancelled order | String |  | NULL | N | N |
 | closed_at | A valid UTC datetime of when the order was closed | Datetime |  | NULL | N | N |
 | currency | A valid ISO 3 character currency code | String | Exactly 3 characters long | NULL | Y | N |
+| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `default`, `dap`, `ddp`, `dtp` | NULL | N | N |
 | deliver_max | A date that the order needs to be delivered no later than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_min | A date that the order needs to be delivered no earlier than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_on | A date that the order needs to be delivered on | Date |  | NULL | N | N |
@@ -177,6 +179,7 @@ This allows you to list orders
 | created_at | A UTC datetime of when the order was created | Datetime |  |
 | currency | The ISO 3 character currency code | String | Exactly 3 characters long |
 | customer_id | The Customer ID of the customer the order belongs to | Integer |  |
+| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `default`, `dap`, `ddp`, `dtp` |
 | deliver_max | A date that the order needs to be delivered no later than | Date |  |
 | deliver_min | A date that the order needs to be delivered no earlier than | Date |  |
 | deliver_on | A date that the order needs to be delivered on | Date |  |

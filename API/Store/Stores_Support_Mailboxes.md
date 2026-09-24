@@ -1,6 +1,7 @@
 # Stores Support Mailboxes
 [Home](../../index.md) > [API](../index.md) > [Store](index.md)
-
+## Intro
+Manages Stores Support Mailboxes
 ## Endpoints
 The below endpoints are available with this API
 

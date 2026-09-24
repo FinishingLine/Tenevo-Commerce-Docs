@@ -12,7 +12,7 @@ The below endpoints are available with this API
 | /tax/classes/ | PUT | This allows you to update a specific tax class | [Details](#update-tax-classes) |
 | /tax/classes/:class/ | PUT | This allows you to update a specific tax class | [Details](#update-tax-classes) |
 | /tax/classes/ | GET | This allows you to list tax classes | [Details](#view-tax-classes) |
-| /tax/classes/:tax | GET | This allows you to list tax classes | [Details](#view-tax-classes) |
+| /tax/classes/:class/ | GET | This allows you to list tax classes | [Details](#view-tax-classes) |
 
 ## Create Tax Class
 This allows you to create a tax class
@@ -51,7 +51,7 @@ This allows you to list tax classes
 
 **URL** : `/tax/classes/`
 
-**URL** : `/tax/classes/:tax`
+**URL** : `/tax/classes/:class/`
 
 **Method** : `GET`
 

@@ -8,6 +8,7 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /orders/:order/groupings/ | POST | This allows you to create an order grouping | [Details](#create-order-grouping) |
+| /orders/:order/groupings/:grouping | DELETE | This allows you to delete an order grouping | [Details](#delete-order-grouping) |
 | /orders/:order/groupings/ | PUT | This allows you to update a specific order grouping | [Details](#update-order-groupings) |
 | /orders/:order/groupings/:grouping/ | PUT | This allows you to update a specific order grouping | [Details](#update-order-groupings) |
 | /orders/:order/groupings/ | GET | This allows you to list the order grouping | [Details](#view-order-grouping) |
@@ -25,6 +26,13 @@ This allows you to create an order grouping
 | items | An array of items belonging to this grouping - see [Orders Groupings Items](Orders_Groupings_Items.md#create-orders-groupings-items) | Array |  | NULL | N | N |
 | profile_id | A valid Profile ID | Integer |  | NULL | Y | N |
 | reference | A reference for this grouping, if not provided automatically sets from Profile | String | Up to 200 characters long | NULL | N | N |
+
+## Delete Order Grouping
+This allows you to delete an order grouping
+
+**URL** : `/orders/:order/groupings/:grouping`
+
+**Method** : `DELETE`
 
 ## Update Order Groupings
 This allows you to update a specific order grouping

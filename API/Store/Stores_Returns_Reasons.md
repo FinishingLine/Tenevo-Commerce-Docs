@@ -1,6 +1,7 @@
 # Stores Returns Reasons
 [Home](../../index.md) > [API](../index.md) > [Store](index.md)
-
+## Intro
+Manages Stores Returns Reasons
 ## Endpoints
 The below endpoints are available with this API
 
