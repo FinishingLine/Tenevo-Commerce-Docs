@@ -18,6 +18,7 @@ Requests are sent as `POST`, with `Content-Type: application/json`, and a JSON o
 | `event_url`       | Base URL of the system that sent the event                             |
 | `code`            | The code of the webhook the request was sent from                      |
 | `event_id`        | Unique id of the queued event                                          |
+| `event_sequence`  | Increasing number giving the order events were queued in - see below    |
 | `timestamp`       | Unix timestamp of when this delivery attempt was made                  |
 | `hmac`            | Signature of the request - see [Verification](Verification.md)          |
 
@@ -38,6 +39,16 @@ event sent again on request.
 
 Treat it as an idempotency key and ignore any id you have already processed.
 
+## Event sequence
+
+`event_sequence` goes up with every event queued, so it says which of two events came later - which `event_timestamp`
+cannot always do, as two changes can share a second. Events for the same thing (e.g. the same shipment) are sent in
+order, but a retry or a resend can still arrive after a newer event, so keep the highest `event_sequence` you have seen
+for each thing and ignore anything lower.
+
+Today it carries the same number as `event_id`. Rely on each for its own purpose - `event_id` to recognise an event
+seen before, `event_sequence` to order them - as `event_id` may become an opaque identifier.
+
 ## Example
 
 ```json
@@ -51,6 +62,7 @@ Treat it as an idempotency key and ignore any id you have already processed.
   "event_url": "https://login.example.tenevo.co.uk",
   "code": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
   "event_id": 369,
+  "event_sequence": 369,
   "timestamp": 1786965801,
   "hmac": "9f2c1adf4b8e0c7a15d3e6b29f84c05713ae6d2f8b41c09e7a5d3f6b28c14e0d"
 }

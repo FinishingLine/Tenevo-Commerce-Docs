@@ -28,6 +28,16 @@ client, so not every event listed here is available on every Store.
 | Returns          | `create_returns`     | A Return is created                                                                           |
 |                  | `delete_returns`     | A Return is deleted                                                                           |
 |                  | `update_returns`     | A change is saved to an existing Return                                                       |
+| Shipments        | `create_shipments`   | A Shipment is created for an Order                                                            |
+|                  | `update_shipments`   | A change is saved to an existing Shipment, including its status                                |
+| Tracking Events  | `create_trackingevents` | Each step a parcel takes, from labelled to delivered - see [Tracking Events](Tracking_Events.md) |
+|                  | `create_trackingevents.<status>` | As above, for a single status, e.g. `create_trackingevents.delivered`                  |
+
+Tracking is sent through the shipment rather than the order: `update_shipments` is also sent when a shipment's delivery
+changes - its `delivery_status`, `has_delivery_exception` or `delivered_at`, or one of its parcels' `delivery_status`.
+An order's delivery fields are kept up to date as well, and its `fulfillments` - every parcel (or pallet) sent for it,
+with its tracking and delivery status - can be read with `GET /orders/:order/fulfillments/`, which can also be queried
+across every order (e.g. by `tracking_code`).
 
 ## Overlapping events
 

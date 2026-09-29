@@ -7,44 +7,8 @@ The below endpoints are available with this API
 
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
-| /system/attributesets/:attributeset/groups/:group/attributes/ | POST | This allows you to create attribute set group attributes | [Details](#create-system-attribute-set-group-attributes) |
-| /system/attributesets/:attributeset/groups/:group/attributes/:attribute/ | DELETE | This allows you to delete a specified attribute set group attributes | [Details](#delete-attribute-set-group-attribute) |
-| /system/attributesets/:attributeset/groups/:group/attributes/ | PUT | This allows you to update attribute set group attributes | [Details](#update-system-attribute-set-group-attributes) |
-| /system/attributesets/:attributeset/groups/:group/attributes/:attribute | PUT | This allows you to update attribute set group attributes | [Details](#update-system-attribute-set-group-attributes) |
 | /system/attributesets/:attributeset/groups/:group/attributes/ | GET | This allows you to list attribute set group attributes | [Details](#view-system-attribute-set-group-attributes) |
 | /system/attributesets/:attributeset/groups/:group/attributes/:attribute/ | GET | This allows you to list attribute set group attributes | [Details](#view-system-attribute-set-group-attributes) |
-
-## Create System Attribute Set Group Attributes
-This allows you to create attribute set group attributes
-
-**URL** : `/system/attributesets/:attributeset/groups/:group/attributes/`
-
-**Method** : `POST`
-
-| Field | Description | Type | Requirements | Default | Required? | Conditional? |
-| --- | --- | --- | --- | --- | --- | --- |
-| attribute_id | A valid Attribute ID | Integer |  | NULL | Y | N |
-| sort_order | The default sort order | Integer | Up to 3 digits long | 0 | N | N |
-
-## Delete Attribute Set Group Attribute
-This allows you to delete a specified attribute set group attributes
-
-**URL** : `/system/attributesets/:attributeset/groups/:group/attributes/:attribute/`
-
-**Method** : `DELETE`
-
-## Update System Attribute Set Group Attributes
-This allows you to update attribute set group attributes
-
-**URL** : `/system/attributesets/:attributeset/groups/:group/attributes/`
-
-**URL** : `/system/attributesets/:attributeset/groups/:group/attributes/:attribute`
-
-**Method** : `PUT`
-
-| Field | Description | Type | Requirements | Default | Required? | Conditional? |
-| --- | --- | --- | --- | --- | --- | --- |
-| sort_order | The default sort order | Integer | Up to 3 digits long | 0 | N | N |
 
 ## View System Attribute Set Group Attributes
 This allows you to list attribute set group attributes
