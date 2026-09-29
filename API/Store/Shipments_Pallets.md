@@ -73,10 +73,14 @@ This allows you to list the pallets belonging to a shipment
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
 | courier_reference | The couriers reference for the pallet, this could be the same as the tracking_code | String | Up to 100 characters long |
+| delivered_at | A UTC datetime of when the carrier delivered the pallet | Datetime |  |
+| delivery_status | Where the pallet has got to, worked out from its latest tracking event and the shipment status | String | One of the following values: `attempted_delivery`, `cancelled`, `delayed`, `delivered`, `despatched`, `failure`, `in_transit`, `labelled`, `out_for_delivery`, `pending` |
 | depth | The depth of the pallet, in millimetres | Integer | Up to 10 digits long |
+| first_attempted_at | A UTC datetime of the first delivery attempt made by the carrier | Datetime |  |
 | has_aerosol | Indicates whether the pallet contains an aerosol, or not | Boolean |  |
 | has_battery | Indicates whether the pallet contains a battery, or not | Boolean |  |
 | has_corrosive | Indicates whether the pallet contains a corrosive item, or not | Boolean |  |
+| has_delivery_exception | Indicates whether the latest tracking event needs someone to act on it (e.g. lost, refused, or returning to sender), or not | Boolean |  |
 | has_fragile | Indicates whether the pallet contains a fragile item, or not | Boolean |  |
 | has_hazardous | Indicates whether the pallet contains a hazardous item, or not | Boolean |  |
 | has_itemwithbattery | Indicates whether the pallet contains an item with a battery, or not | Boolean |  |
@@ -90,6 +94,7 @@ This allows you to list the pallets belonging to a shipment
 | reference_id | A reference that corresponds to the pallet at the Marketplace | String | Up to 255 characters long |
 | shipment_reference | The unique reference for the shipment this pallet belongs to | String | Exactly 10 characters long |
 | status | The status of the pallet | String | One of the following values: `closed`, `open`, `packed` |
+| total_delivery_attempts | The total number of delivery attempts made by the carrier | Integer | Up to 10 digits long |
 | total_packaging_weight | The total weight of all the packaging on the pallet, in grams | Integer | Up to 10 digits long |
 | total_pallet_weight | The weight of the base pallet and all the items and packaging on the pallet, in grams | Integer | Up to 10 digits long |
 | total_parcels | The total number of parcels on the pallet | Integer | Up to 10 digits long |
@@ -99,7 +104,10 @@ This allows you to list the pallets belonging to a shipment
 | total_uom_units | The total number of units in the pallet, in Unit of Measure terms | Integer | Up to 10 digits long |
 | total_weight | The total weight of all the items in the pallet, in grams | Integer | Up to 10 digits long |
 | tracking_code | The couriers tracking code, if the pallet can be tracked | String | Up to 100 characters long |
+| tracking_event_at | A UTC datetime of when the latest tracking event occurred | Datetime |  |
+| tracking_event_code | The event code of the latest tracking event - see the tracking event codes | Integer |  |
 | tracking_status | The current tracking status of the pallet | String | Up to 100 characters long |
+| tracking_subevent_code | The sub event code of the latest tracking event - see the tracking event codes | Integer |  |
 | updated_at | A UTC datetime of when the pallet was updated | Datetime |  |
 | weight | The weight of the pallet, including packaging, in grams | Integer | Up to 10 digits long |
 | width | The width of the pallet, in millimetres | Integer | Up to 10 digits long |

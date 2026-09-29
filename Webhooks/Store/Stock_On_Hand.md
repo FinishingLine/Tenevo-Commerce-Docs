@@ -78,6 +78,7 @@ update time, so the field would report a stale time on exactly the events where 
   "event_url": "https://login.example.tenevo.co.uk",
   "code": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
   "event_id": 369,
+  "event_sequence": 369,
   "timestamp": 1786965801,
   "hmac": "9f2c1adf4b8e0c7a15d3e6b29f84c05713ae6d2f8b41c09e7a5d3f6b28c14e0d"
 }

@@ -183,8 +183,10 @@ This allows you to list orders
 | deliver_max | A date that the order needs to be delivered no later than | Date |  |
 | deliver_min | A date that the order needs to be delivered no earlier than | Date |  |
 | deliver_on | A date that the order needs to be delivered on | Date |  |
+| delivered_at | A UTC datetime of when the last parcel (or pallet) of the order was delivered, once the order has been delivered in full | Datetime |  |
 | delivery_instructions | The delivery instructions | String |  |
 | delivery_postcode | The postal code/zip code of where the order is being shipped to | String | Up to 20 characters long |
+| delivery_status | Where the order has got to, worked out from all of its shipments - only delivered once the whole order has shipped and every parcel (or pallet) has been delivered | String | One of the following values: `attempted_delivery`, `cancelled`, `delayed`, `delivered`, `despatched`, `failure`, `in_transit`, `labelled`, `out_for_delivery`, `part_delivered`, `pending` |
 | despatch_date_action | The action to perform where a despatch date is provided, which can act as a processing override - required with `deliver_min` or `deliver_on` | String | One of the following values: `packhold`, `ship`, `wait` |
 | despatch_max | A date that the order needs to be despatched no later than | Date |  |
 | despatch_min | A date that the order needs to be despatched no earlier than | Date |  |
@@ -193,11 +195,13 @@ This allows you to list orders
 | discount_tax | The total amount of tax the recipient saves, due to discounts | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | documents | An array containing the documents related to this order - see [Orders Documents](Orders_Documents.md#view-orders-documents) | Array |  |
 | first_name | The first name of the customer | String | Up to 255 characters long |
+| fulfillments | An array of every parcel (or pallet, on a pallet shipment) sent for the order, with its tracking and delivery status - see [Orders Fulfillments](Orders_Fulfillments.md#view-orders-fulfillments) | Array |  |
 | full_name | The full name of the customer | String | Up to 255 characters long |
 | gift_message | Message from the buyer if the order is a gift | String | Up to 255 characters long |
 | globale_reference | Where an order is being sent via Global-e, provide the Global-e reference | String | Up to 20 characters long |
 | group_sameaddress | Indicates whether orders going to the same address should be grouped, or not | Boolean |  |
 | groupings | An array of groupings belonging to this order - see [Orders Groupings](Orders_Groupings.md#view-orders-groupings) | Array |  |
+| has_delivery_exception | Indicates whether any parcel (or pallet) of the order has a tracking event needing someone to act on it (e.g. lost, refused, or returning to sender), or not | Boolean |  |
 | has_prerelease | Indicates whether the order has a pre-release item, or not | Boolean |  |
 | has_released | Indicates whether the order has a released item, or not | Boolean |  |
 | has_resends | Indicates whether the order has been resent | Boolean |  |
@@ -243,6 +247,7 @@ This allows you to list orders
 | shipping_lock | Indicates whether the order shipping is locked, or not | Boolean |  |
 | shipping_method_code | The code of the shipping method | String | Up to 40 characters long |
 | shipping_method_name | The name of the shipping method | String | Up to 100 characters long |
+| shipping_status | Whether the units of the order have been shipped - shipped once every unit ordered is in a shipment | String | One of the following values: `not_shipped`, `part_shipped`, `shipped` |
 | shipping_tax | The total amount the recipient paid for tax for shipping | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | source | The source of the order | String | One of the following values: `admin`, `direct`, `marketplace` |
 | status | The status of the order | String | One of the following values: `awaiting approval`, `cancelled`, `closed`, `hold`, `in progress`, `open`, `part fulfilled` |
@@ -273,4 +278,5 @@ This allows you to list orders
 | total_wrapped_items | The total number of items that are wrapped | Integer | Up to 10 digits long |
 | total_wrapped_units | The total number of units that are wrapped | Integer | Up to 10 digits long |
 | total_wrapped_uom_units | The total number of units that are wrapped, in Unit of Measure terms | Integer | Up to 10 digits long |
+| transit_at | A UTC datetime of when the first shipment of the order was despatched | Datetime |  |
 | updated_at | A UTC datetime of when the order was last updated | Datetime |  |

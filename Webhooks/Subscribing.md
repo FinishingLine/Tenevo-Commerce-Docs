@@ -12,6 +12,10 @@ A webhook is an endpoint you own, plus the set of events you want sent to it. Bo
 Each event you can subscribe to is identified by a **scope**, stored in the form `<create|delete|update>_<entity>` - for
 example `update_products`.
 
+Some scopes can be narrowed with a **sub-scope**, in the form `<scope>.<sub-scope>` - for example
+`create_trackingevents.delivered`. Subscribing to the scope receives every event; subscribing to sub-scopes receives only
+those events. An endpoint subscribes to one or the other, not both.
+
 The interface groups these by resource, so a scope may be presented under a friendlier heading than its stored name. The
 stored scope is what travels on the wire as `event_type`.
 

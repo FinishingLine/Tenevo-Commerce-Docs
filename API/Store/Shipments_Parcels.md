@@ -90,10 +90,14 @@ This allows you to list the parcels belonging to a shipment
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
 | courier_reference | The couriers reference for the parcel, this could be the same as the tracking_code | String | Up to 100 characters long |
+| delivered_at | A UTC datetime of when the carrier delivered the parcel | Datetime |  |
+| delivery_status | Where the parcel has got to, worked out from its latest tracking event and the shipment status | String | One of the following values: `attempted_delivery`, `cancelled`, `delayed`, `delivered`, `despatched`, `failure`, `in_transit`, `labelled`, `out_for_delivery`, `pending` |
 | depth | The depth of the parcel, in millimetres | Integer | Up to 10 digits long |
+| first_attempted_at | A UTC datetime of the first delivery attempt made by the carrier | Datetime |  |
 | has_aerosol | Indicates whether the parcel contains an aerosol, or not | Boolean |  |
 | has_battery | Indicates whether the parcel contains a battery, or not | Boolean |  |
 | has_corrosive | Indicates whether the parcel contains a corrosive item, or not | Boolean |  |
+| has_delivery_exception | Indicates whether the latest tracking event needs someone to act on it (e.g. lost, refused, or returning to sender), or not | Boolean |  |
 | has_fragile | Indicates whether the parcel contains a fragile item, or not | Boolean |  |
 | has_hazardous | Indicates whether the parcel contains a hazardous item, or not | Boolean |  |
 | has_itemwithbattery | Indicates whether the parcel contains an item with a battery, or not | Boolean |  |
@@ -109,6 +113,7 @@ This allows you to list the parcels belonging to a shipment
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long |
 | shipment_reference | The unique reference for the shipment this parcel belongs to | String | Exactly 10 characters long |
 | status | The status of the parcel | String | One of the following values: `closed`, `open`, `packed` |
+| total_delivery_attempts | The total number of delivery attempts made by the carrier | Integer | Up to 10 digits long |
 | total_parcel_weight | The weight of all the items and packaging in the parcel, in grams | Integer | Up to 10 digits long |
 | total_price | The total price of all the items in the parcel, inclusive of taxes, etc | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | total_tax | The total tax of all the items in the parcel | Float | Up to 2 decimal places and no larger than 99999999.99 |
@@ -116,7 +121,10 @@ This allows you to list the parcels belonging to a shipment
 | total_uom_units | The total number of units in the parcel, in Unit of Measure terms | Integer | Up to 10 digits long |
 | total_weight | The total weight of all the items in the parcel, in grams | Integer | Up to 10 digits long |
 | tracking_code | The couriers tracking code, if the parcel can be tracked | String | Up to 100 characters long |
+| tracking_event_at | A UTC datetime of when the latest tracking event occurred | Datetime |  |
+| tracking_event_code | The event code of the latest tracking event - see the tracking event codes | Integer |  |
 | tracking_status | The current tracking status of the parcel | String | Up to 100 characters long |
+| tracking_subevent_code | The sub event code of the latest tracking event - see the tracking event codes | Integer |  |
 | updated_at | A UTC datetime of when the parcel was updated | Datetime |  |
 | weight | The weight of the parcel, including packaging, in grams | Integer | Up to 10 digits long |
 | width | The width of the parcel, in millimetres | Integer | Up to 10 digits long |

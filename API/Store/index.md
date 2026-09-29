@@ -7,9 +7,6 @@ The following APIs are available for Store
 | --- | --- | --- |
 | Administrators | Manages Administrators | [Details](Administrators.md) |
 | Administrators Filters | Manages Administrators Filters | [Details](Administrators_Filters.md) |
-| API Interfaces | Manages API Interfaces | [Details](API_Interfaces.md) |
-| API Interfaces Meta | Manages API Interface Meta | [Details](API_Interfaces_Meta.md) |
-| API Interfaces Settings | Manages API Interface Settings | [Details](API_Interfaces_Settings.md) |
 | API Rotate | Lets an API user replace its own keys | [Details](API_Rotate.md) |
 | API Users | Manages the API users that reach this API - the tenant's own, and those belonging to its extensions | [Details](API_Users.md) |
 | ASNs | Manages Advanced Shipment Notifications | [Details](ASNs.md) |
@@ -33,8 +30,6 @@ The following APIs are available for Store
 | Groups | Manages Groups | [Details](Groups.md) |
 | Groups Permissions | Manages Groups Permissions | [Details](Groups_Permissions.md) |
 | Issues | Manages issues | [Details](Issues.md) |
-| Login | Provides login functionality for users (only accessible by systems) | [Details](Login.md) |
-| Logs | Manages Logs | [Details](Logs.md) |
 | Marketplaces | Manages Marketplaces | [Details](Marketplaces.md) |
 | Marketplaces Conditions | Manages Marketplaces Conditions | [Details](Marketplaces_Conditions.md) |
 | Marketplaces Listings | Manages Marketplaces Listings | [Details](Marketplaces_Listings.md) |
@@ -49,15 +44,11 @@ The following APIs are available for Store
 | Marketplaces Properties | Manages Marketplaces Properties | [Details](Marketplaces_Properties.md) |
 | Marketplaces Settings | Manages marketplace settings | [Details](Marketplaces_Settings.md) |
 | Media | Manage media | [Details](Media.md) |
-| Messages | Manages messages | [Details](Messages.md) |
-| Messages Recipients | Manages message recipients | [Details](Messages_Recipients.md) |
-| Messages Gateways | Manages message gateways | [Details](Messages_Gateways.md) |
-| Messages Gateways Methods | Manages message gateway methods | [Details](Messages_Gateways_Methods.md) |
-| Messages Templates | Manages the templates that can be used for messaging | [Details](Messages_Templates.md) |
 | Notifications | Manages Notifications | [Details](Notifications.md) |
 | Orders | Manages Orders | [Details](Orders.md) |
 | Orders Addresses | Manages Orders Address | [Details](Orders_Addresses.md) |
 | Orders Documents | Manages Orders Documents | [Details](Orders_Documents.md) |
+| Orders Fulfillments | Lists the parcels (or pallets) sent for orders, with their tracking and delivery status | [Details](Orders_Fulfillments.md) |
 | Orders Groupings | Manages Order Grouping | [Details](Orders_Groupings.md) |
 | Orders Groupings Items | Manages Order Grouping Items | [Details](Orders_Groupings_Items.md) |
 | Orders Summary | Manages Orders Summary | [Details](Orders_Summary.md) |
@@ -101,16 +92,10 @@ The following APIs are available for Store
 | Support Allow-Block | Manages Support Allow-Block | [Details](Support_Allow-Block.md) |
 | Support Articles | Manages Support Articles | [Details](Support_Articles.md) |
 | Support Tickets | Manages Support Tickets | [Details](Support_Tickets.md) |
-| System | Manages System | [Details](System.md) |
-| System Alerts | Manages system alerts | [Details](System_Alerts.md) |
-| System Alerts Subscriptions | Manages system alerts subscriptions | [Details](System_Alerts_Subscriptions.md) |
-| System Alerts Subscriptions Configurable Options | Manages system alerts subscription configurable options | [Details](System_Alerts_Subscriptions_Configurable_Options.md) |
-| System Alerts Triggers | Manages system alerts triggers | [Details](System_Alerts_Triggers.md) |
 | System Attributes | Manages system attributes | [Details](System_Attributes.md) |
 | System Attribute Sets | Manages system attribute sets | [Details](System_Attribute_Sets.md) |
 | System Attribute Sets Groups | Manages system attribute set groups | [Details](System_Attribute_Sets_Groups.md) |
 | System Attribute Sets Groups Attributes | Manages system attribute set group attributes | [Details](System_Attribute_Sets_Groups_Attributes.md) |
-| System Order Checks | Manages System Order Checks | [Details](System_Order_Checks.md) |
 | Tags | Manages Tags | [Details](Tags.md) |
 | Tax Classes | Manages Tax Classes | [Details](Tax_Classes.md) |
 | Tax Rules | Manages Tax Rules | [Details](Tax_Rules.md) |

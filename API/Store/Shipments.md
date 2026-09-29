@@ -105,10 +105,13 @@ This allows you to list the shipments belonging to the fulfillment
 | currency | The ISO 3 character currency code that the order was purchased in | String | Exactly 3 characters long |
 | customer_id | A valid Customer ID | Integer |  |
 | customs_duty_terms | Customs duty terms | String | Up to 4 characters long |
+| delivered_at | A UTC datetime of when the last parcel (or pallet) of the shipment was delivered, once they all have been | Datetime |  |
+| delivery_status | Where the shipment has got to, worked out from all of its parcels (or pallets) | String | One of the following values: `attempted_delivery`, `cancelled`, `delayed`, `delivered`, `despatched`, `failure`, `in_transit`, `labelled`, `out_for_delivery`, `part_delivered`, `pending` |
 | eori | The EORI of the sender | String | Up to 20 characters long |
 | eori_recipient | The EORI of the recipient | String | Up to 20 characters long |
 | est_delivery_date | The estimated delivery date of the shipment | Date |  |
 | eu_movement_risk | Indicates if the shipment is at risk of entering the EU, or not | Boolean |  |
+| has_delivery_exception | Indicates whether any parcel (or pallet) of the shipment has a tracking event needing someone to act on it, or not | Boolean |  |
 | ioss_number | The IOSS Number used for the shipment | String | Exactly 12 characters long |
 | is_b2b | Indicates whether the shipment is a B2B shipment, or not | Boolean |  |
 | is_customer_notified | Indicates whether the customer has been fully notified about the shipment, or not | Boolean |  |
