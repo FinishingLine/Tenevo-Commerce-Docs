@@ -24,11 +24,11 @@ This allows you to create a store
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | domain_id | The Domain ID that the store uses | Integer |  | NULL | Y | N |
-| name | The name of the store | String | Up to 100 characters long | NULL | Y | N |
+| name | The name of the store | String | Between 1 and 100 characters long | NULL | Y | N |
 | offline_message | An offline message to show when the store is restricted | String | Up to 200 characters long | NULL | N | N |
 | settings | An array containing the stores settings - see [Stores Settings](Stores_Settings.md#create-stores-settings) | Array |  | NULL | Y | N |
 | status | The status of the store | String | One of the following values: `active`, `restricted` | active | N | N |
-| theme | The theme that the store uses | String | Up to 100 characters long | NULL | Y | N |
+| theme | The theme that the store uses, required when `uses_domain` is true | String | Between 1 and 100 characters long | NULL | N | Y |
 | uses_domain | Indicates whether the Store uses a domain, or not | Boolean |  | true | N | N |
 
 ## Delete Store
@@ -50,11 +50,11 @@ This allows you to update a specific store
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | domain_id | The Domain ID that the store uses | Integer |  | NULL | Y | N |
-| name | The name of the store | String | Up to 100 characters long | NULL | Y | N |
+| name | The name of the store | String | Between 1 and 100 characters long | NULL | Y | N |
 | offline_message | An offline message to show when the store is restricted | String | Up to 200 characters long | NULL | N | N |
 | settings | An array containing the stores settings - see [Stores Settings](Stores_Settings.md#update-stores-settings) | Array |  | NULL | Y | N |
 | status | The status of the store | String | One of the following values: `active`, `restricted` | active | N | N |
-| theme | The theme that the store uses | String | Up to 100 characters long | NULL | Y | N |
+| theme | The theme that the store uses, required when `uses_domain` is true | String | Between 1 and 100 characters long | NULL | N | Y |
 | uses_domain | Indicates whether the Store uses a domain, or not | Boolean |  | true | N | N |
 
 ## View Stores

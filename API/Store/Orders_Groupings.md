@@ -46,7 +46,7 @@ This allows you to update a specific order grouping
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | items | An array of items belonging to this grouping - see [Orders Groupings Items](Orders_Groupings_Items.md#update-orders-groupings-items) | Array |  | NULL | N | N |
-| reference | A reference for this grouping | String | Up to 200 characters long | NULL | Y | N |
+| reference | A reference for this grouping | String | Between 1 and 200 characters long | NULL | Y | N |
 
 ## View Order Grouping
 This allows you to list the order grouping

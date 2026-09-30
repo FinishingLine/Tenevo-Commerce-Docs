@@ -24,7 +24,7 @@ This allows you to create a variation for a marketplace product
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | attributes | An array of attributes for the marketplace product variation - see [Marketplaces Products Variations Attributes](Marketplaces_Products_Variations_Attributes.md#create-marketplaces-products-variations-attributes) | Array |  | NULL | N | N |
-| reference | The variation reference at the marketplace | String | Up to 30 characters long | NULL | Y | N |
+| reference | The variation reference at the marketplace | String | Between 1 and 30 characters long | NULL | Y | N |
 | variation_id | The linked Product Variation ID | Integer |  | NULL | N | N |
 
 ## Delete Marketplace Product Variation

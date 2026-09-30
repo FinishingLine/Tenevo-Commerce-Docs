@@ -23,10 +23,10 @@ This allows you to create a document for an order
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| copies | Number of copies | Integer |  | 1 | N | N |
+| copies | Number of copies | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 1 | N | N |
 | data | A base 64 encoded string of the document | String |  | NULL | Y | N |
 | format | Document format | String | One of the following values: `pdf`, `zpl` | NULL | Y | N |
-| name | The document name | String | Up to 100 characters long | NULL | Y | N |
+| name | The document name | String | Between 1 and 100 characters long | NULL | Y | N |
 | size | Document size | String | One of the following values: `6x4inch`, `a4` | NULL | Y | N |
 | type | The document type | String | One of the following values: `fba_labels`, `carrier_labels`, `other_label`, `pallet_labels`, `pallet_carrier_labels`, `commercial_invoice`, `despatch_note` | NULL | Y | N |
 
@@ -48,8 +48,8 @@ This allows you to update a specific document in an order
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| copies | Number of copies | Integer |  | 1 | N | N |
-| name | The document name | String | Up to 100 characters long | NULL | Y | N |
+| copies | Number of copies | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 1 | N | N |
+| name | The document name | String | Between 1 and 100 characters long | NULL | Y | N |
 | size | Document size | String | One of the following values: `6x4inch`, `a4` | NULL | Y | N |
 | type | The document type | String | One of the following values: `fba_labels`, `carrier_labels`, `other_label`, `pallet_labels`, `pallet_carrier_labels`, `commercial_invoice`, `despatch_note` | NULL | Y | N |
 

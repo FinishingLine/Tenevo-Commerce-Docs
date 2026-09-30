@@ -25,7 +25,7 @@ This allows you to create product variant components
 | --- | --- | --- | --- | --- | --- | --- |
 | can_shipindividually | Indicates whether the component can be shipped individually, or not | Boolean |  | false | N | N |
 | component_variant_id | A valid Product Variant ID, must be unique to variant | Integer |  | NULL | Y | N |
-| quantity | The number of the variant to include | Integer |  | NULL | Y | N |
+| quantity | The number of the variant to include | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
 
 ## Delete Product Variant Component
 This allows you to delete a specified product variant component
@@ -46,7 +46,7 @@ This allows you to update product variant components
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | can_shipindividually | Indicates whether the component can be shipped individually, or not | Boolean |  | false | N | N |
-| quantity | The number of the variant to include | Integer |  | NULL | Y | N |
+| quantity | The number of the variant to include | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
 
 ## View Product Variant Components
 This allows you to list product variant components

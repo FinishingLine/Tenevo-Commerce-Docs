@@ -23,13 +23,13 @@ This allows you to create contents for an adanced shipping notification
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| depth | The depth of the content, in mm | Integer | Up to 10 digits long | NULL | N | N |
+| depth | The depth of the content, in mm | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
 | is_stackable | Indicates if the content are stackable, or not | Boolean |  | false | N | N |
 | items | An array of items - see [ASNs Contents Items](ASNs_Contents_Items.md#create-asns-contents-items) | Array |  | NULL | N | N |
-| length | The length of the content, in mm | Integer | Up to 10 digits long | NULL | N | N |
+| length | The length of the content, in mm | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
 | tracking_number | The tracking number of the content | String | Up to 100 characters long | NULL | N | N |
-| weight | The total weight of the content, including outer packaging, excluding the items, in g | Integer | Up to 10 digits long | NULL | N | N |
-| width | The width of the content, in mm | Integer | Up to 10 digits long | NULL | N | N |
+| weight | The total weight of the content, including outer packaging, excluding the items, in g | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
+| width | The width of the content, in mm | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
 
 ## Delete Advanced Shipment Notification Contents
 This allows you to delete content from an advanced shipment notification
@@ -49,13 +49,13 @@ This allows you to update a specific content in an advanced shipment notificatio
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| depth | The depth of the contents, in mm | Integer | Up to 10 digits long | NULL | N | N |
+| depth | The depth of the contents, in mm | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
 | is_stackable | Indicates if the contents are stackable, or not | Boolean |  | false | N | N |
 | items | An array of items - see [ASNs Contents Items](ASNs_Contents_Items.md#update-asns-contents-items) | Array |  | NULL | N | N |
-| length | The length of the contents, in mm | Integer | Up to 10 digits long | NULL | N | N |
+| length | The length of the contents, in mm | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
 | tracking_number | The tracking number of the contents | String | Up to 100 characters long | NULL | N | N |
-| weight | The total weight of the contents, including outer packaging, excluding the items, in g | Integer | Up to 10 digits long | NULL | N | N |
-| width | The width of the contents, in mm | Integer | Up to 10 digits long | NULL | N | N |
+| weight | The total weight of the contents, including outer packaging, excluding the items, in g | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
+| width | The width of the contents, in mm | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | N |
 
 ## View Advanced Shipment Notification Contents
 This allows you to list the contents belonging to the advanced shipment notification

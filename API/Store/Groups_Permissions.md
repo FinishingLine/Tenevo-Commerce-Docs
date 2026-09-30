@@ -21,7 +21,7 @@ This allows you to create a permissions group permission - note, all permissions
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| permission | The permission number | Integer | Between 1 and 4 digits long | NULL | Y | N |
+| permission | The permission number | Integer | Between 1 and 4 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
 
 ## Delete Permissions Group Permissions
 This allows you to delete all permissions within a permissions group
@@ -39,7 +39,7 @@ This allows you to update a permissions group permission - note, all permissions
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| permission | The permission number | Integer | Between 1 and 4 digits long | NULL | Y | N |
+| permission | The permission number | Integer | Between 1 and 4 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
 
 ## View Group Permissions
 This allows you to list a groups permissions

@@ -23,7 +23,7 @@ This allows you to create product images
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| alt_text | The alt text for the image, uses media alt_text when empty | String | Between 1 and 100 characters long | NULL | N | N |
+| alt_text | The alt text for the image, uses media alt_text when empty | String | Up to 100 characters long | NULL | N | N |
 | media_id | A valid Media ID | Integer |  | NULL | Y | N |
 | sort_order | The sort order of the images, where required | Integer | Up to 3 digits long | 999 | N | N |
 
@@ -45,7 +45,7 @@ This allows you to update product images
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| alt_text | The alt text for the image, uses media alt_text when empty | String | Between 1 and 100 characters long | NULL | N | N |
+| alt_text | The alt text for the image, uses media alt_text when empty | String | Up to 100 characters long | NULL | N | N |
 | sort_order | The sort order of the images, where required | Integer | Up to 3 digits long | 999 | N | N |
 
 ## View Product Images

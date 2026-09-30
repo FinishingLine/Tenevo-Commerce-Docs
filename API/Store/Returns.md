@@ -30,20 +30,20 @@ This allows you to create a return
 | items | An array of items for the return - see [Returns Items](Returns_Items.md#create-returns-items) | Array |  | NULL | N | N |
 | method | The returns method the Customer will use to return the items | String | One of the following values: `dropoff`, `pickup`, `rts`, `self` | NULL | Y | N |
 | notes | Notes relating to the return | String |  | NULL | N | N |
-| parcel_depth | The depth of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
-| parcel_length | The length of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
-| parcel_width | The width of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
+| parcel_depth | The depth of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
+| parcel_length | The length of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
+| parcel_width | The width of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
 | pickup_from | A valid UTC datetime of when the return should be picked up from - only when `method` is pickup | Datetime |  | NULL | N | N |
 | pickup_until | A valid UTC datetime of when the return should be picked up until - only when `method` is pickup | Datetime |  | NULL | N | N |
 | profile_id | A valid Profile ID of whom raised the return | Integer |  | NULL | Y | N |
 | received_at | The date and time the return was marked as arriving - only used when status is received | Datetime |  | NULL | N | Y |
-| rma | A unique reference for the return, only when `status` is received | Integer | Exactly 10 digits long | NULL | N | Y |
+| rma | A unique reference for the return, only when `status` is received | Integer | Exactly 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | Y |
 | service_level | The service level to be used - only when `method` is dropoff or pickup | String | Up to 50 characters long | NULL | N | N |
 | source | The source of the return | String | One of the following values: `admin`, `direct`, `unexpected` | direct | Y | N |
 | status | in progress] The status of the return | String | One of the following values: `application in progress`, `received` | application in progress | N | N |
-| total_parcels | The total number of parcels being sent - required when `method` is dropoff or pickup | Integer | Up to 3 digits long | 1 | N | Y |
+| total_parcels | The total number of parcels being sent - required when `method` is dropoff or pickup | Integer | Up to 3 digits long</br>Value must be greater than or equal to 1 | 1 | N | Y |
 | vat_sender | The VAT number of the sender | String | Up to 20 characters long | NULL | N | N |
-| weight | The weight of the parcel minus the weight of the items in grams - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
+| weight | The weight of the parcel minus the weight of the items in grams - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
 
 ## Delete return
 This allows you to delete an return
@@ -69,20 +69,20 @@ This allows you to update a specific return
 | decided_at | The date and time the return was accepted or rejected | Datetime |  | NULL | N | N |
 | items | An array of items for the return - see [Returns Items](Returns_Items.md#update-returns-items) | Array |  | NULL | N | N |
 | notes | Notes relating to the return | String |  | NULL | N | N |
-| parcel_depth | The depth of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
-| parcel_length | The length of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
-| parcel_width | The width of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
+| parcel_depth | The depth of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
+| parcel_length | The length of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
+| parcel_width | The width of the parcel in millimetres - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
 | pickup_from | A valid UTC datetime of when the return should be picked up from | Datetime |  | NULL | N | N |
 | pickup_until | A valid UTC datetime of when the return should be picked up until | Datetime |  | NULL | N | N |
 | profile_id | A valid Profile ID of whom raised the return, can only update when null | Integer |  | NULL | N | Y |
 | received_at | The date and time the return was marked as arriving | Datetime |  | NULL | N | N |
-| rma | A unique reference for the return, can only set if not already set | Integer | Exactly 10 digits long | NULL | N | Y |
+| rma | A unique reference for the return, can only set if not already set | Integer | Exactly 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | Y |
 | service_level | The service level to be used - only when `method` is dropoff or pickup | String | Up to 50 characters long | NULL | N | N |
 | status | The status of the return | String | One of the following values: `application in progress`, `awaiting approval`, `awaiting items`, `cancelled`, `closed`, `provisionally approved`, `received`, `rejected`, `request approved` | NULL | N | N |
 | unexpected_resolution | The resolution to use when a return is unexpectedly received - required when source is unexpected and status is to be closed | String | One of the following values: `resend`, `restock` | NULL | N | Y |
 | updated_at | The date and time the return was last updated | Datetime |  | NULL | N | N |
 | vat_sender | The VAT number of the sender | String | Up to 20 characters long | NULL | N | N |
-| weight | The weight of the parcel minus the weight of the items in grams - required when `method` is dropoff or pickup | Integer | Up to 10 digits long | 0 | N | Y |
+| weight | The weight of the parcel minus the weight of the items in grams - required when `method` is dropoff or pickup | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | Y |
 
 ## View Returns
 This allows you to list the returns

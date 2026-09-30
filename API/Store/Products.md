@@ -48,7 +48,7 @@ This allows you to create products
 | is_physical | Indicates whether the product is a physical product, or not | Boolean |  | true | N | N |
 | is_returnable | Indicates whether the product is returnable, or not | Boolean |  | true | N | N |
 | media_id | A valid Media ID - this will be used for the featured product image, search results, etc | Integer |  | NULL | N | N |
-| name | The name of the product | String | Up to 100 characters long | NULL | Y | N |
+| name | The name of the product | String | Between 1 and 100 characters long | NULL | Y | N |
 | page_description | Used for SEO, the description of the page - uses description when not set | String |  | NULL | N | N |
 | page_title | Used for SEO, the title of the page - uses title when not set | String | Up to 100 characters long | NULL | N | N |
 | release_date | A valid UTC datetime of when the product is being released | Datetime |  | NULL | N | N |
@@ -110,7 +110,7 @@ This allows you to update products
 | is_physical | Indicates whether the product is a physical product, or not | Boolean |  | true | N | N |
 | is_returnable | Indicates whether the product is returnable, or not | Boolean |  | true | N | N |
 | media_id | A valid Media ID - this will be used for the featured product image, search results, etc | Integer |  | NULL | N | N |
-| name | The name of the product | String | Up to 100 characters long | NULL | Y | N |
+| name | The name of the product | String | Between 1 and 100 characters long | NULL | Y | N |
 | page_description | Used for SEO, the description of the page - uses description when not set | String |  | NULL | N | N |
 | page_title | Used for SEO, the title of the page - uses title when not set | String | Up to 100 characters long | NULL | N | N |
 | release_date | A valid UTC datetime of when the product is being released | Datetime |  | NULL | N | N |

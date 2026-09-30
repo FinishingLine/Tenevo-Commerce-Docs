@@ -25,7 +25,7 @@ This allows you to create store support mailboxes
 | --- | --- | --- | --- | --- | --- | --- |
 | group_id | A valid Support Group ID, used to automatically route a new ticket to a group | Integer | Up to 10 digits long | NULL | N | N |
 | is_default | Indicates whether the mailbox is the default, or not | Boolean |  | 0 | N | N |
-| mailbox | The name of the mailbox, as appearing before the @ symbol in an email address - must be unique | String | Up to 20 characters long | NULL | Y | N |
+| mailbox | The name of the mailbox, as appearing before the @ symbol in an email address - must be unique | String | Between 1 and 20 characters long | NULL | Y | N |
 | outgoing_name | The name that appears when sending an email out | String | Up to 50 characters long | NULL | N | N |
 
 ## Delete Store Support Mailbox
@@ -48,7 +48,7 @@ This allows you to update store support mailboxes
 | --- | --- | --- | --- | --- | --- | --- |
 | group_id | A valid Support Group ID, used to automatically route a new ticket to a group | Integer | Up to 10 digits long | NULL | N | N |
 | is_default | Indicates whether the mailbox is the default, or not | Boolean |  | 0 | N | N |
-| mailbox | The name of the mailbox, as appearing before the @ symbol in an email address - must be unique | String | Up to 20 characters long | NULL | Y | N |
+| mailbox | The name of the mailbox, as appearing before the @ symbol in an email address - must be unique | String | Between 1 and 20 characters long | NULL | Y | N |
 | outgoing_name | The name that appears when sending an email out | String | Up to 50 characters long | NULL | N | N |
 
 ## View Store Support Mailboxes

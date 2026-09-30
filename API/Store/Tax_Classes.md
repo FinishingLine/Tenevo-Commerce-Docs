@@ -23,7 +23,7 @@ This allows you to create a tax class
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| name | The name for the tax class | String | Up to 100 characters long | NULL | Y | N |
+| name | The name for the tax class | String | Between 1 and 100 characters long | NULL | Y | N |
 | type | The type of tax class | String | One of the following values: `customer`, `product` | NULL | Y | N |
 
 ## Delete Tax Class
@@ -44,7 +44,7 @@ This allows you to update a specific tax class
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| name | The name for the tax class | String | Up to 100 characters long | NULL | Y | N |
+| name | The name for the tax class | String | Between 1 and 100 characters long | NULL | Y | N |
 
 ## View Tax Classes
 This allows you to list tax classes

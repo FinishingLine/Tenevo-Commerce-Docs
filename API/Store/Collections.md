@@ -26,7 +26,7 @@ This allows you to create a collection
 | auto_url_key | Indicates whether or not the url_key should be automatically generated, or not | Boolean |  | false | N | N |
 | description | The description of the collection | String |  | NULL | N | N |
 | media_id | A valid Media ID - this will be used for the featured collection image | Integer |  | NULL | N | N |
-| name | The name of the collection | String | Up to 100 characters long | NULL | Y | N |
+| name | The name of the collection | String | Between 1 and 100 characters long | NULL | Y | N |
 | status | The status of the collection | String | One of the following values: `active`, `hidden` | active | N | N |
 | theme_layout | The theme layout of the collection | String | Up to 100 characters long | collection | N | N |
 | url_key | The URL key of the collection, required if auto_url_key is false | String | Up to 100 characters long | NULL | N | Y |
@@ -51,10 +51,10 @@ This allows you to update collections
 | --- | --- | --- | --- | --- | --- | --- |
 | description | The description of the collection | String |  | NULL | N | N |
 | media_id | A valid Media ID - this will be used for the featured collection image | Integer |  | NULL | N | N |
-| name | The name of the collection | String | Up to 100 characters long | NULL | Y | N |
+| name | The name of the collection | String | Between 1 and 100 characters long | NULL | Y | N |
 | status | The status of the collection | String | One of the following values: `active`, `hidden` | active | N | N |
 | theme_layout | The theme layout of the collection | String | Up to 100 characters long | collection | N | N |
-| url_key | The URL key of the collection | String | Up to 100 characters long | NULL | Y | N |
+| url_key | The URL key of the collection | String | Between 1 and 100 characters long | NULL | Y | N |
 
 ## View Collections
 This allows you to view a list of collections

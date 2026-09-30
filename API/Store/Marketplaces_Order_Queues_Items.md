@@ -21,8 +21,8 @@ This allows you to create items for marketplace order queues
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| product_reference_id | The ID of the ordered product as per at the marketplace | String | Up to 255 characters long | NULL | Y | N |
-| reference_id | The ID that the marketplace uses to reference the order item | String | Up to 255 characters long | NULL | Y | N |
+| product_reference_id | The ID of the ordered product as per at the marketplace | String | Between 1 and 255 characters long | NULL | Y | N |
+| reference_id | The ID that the marketplace uses to reference the order item | String | Between 1 and 255 characters long | NULL | Y | N |
 | sku | The SKU of the order item | String | Up to 255 characters long | NULL | N | N |
 
 ## Delete Marketplaces Order Queues Item

@@ -24,9 +24,9 @@ This allows you to create a listing for a marketplace
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | attributes | An array of attributes for the marketplace listing - see [Marketplaces Listings Attributes](Marketplaces_Listings_Attributes.md#create-marketplaces-listings-attributes) | Array |  | NULL | N | N |
-| reference_id | The ID that the marketplace uses to reference the product | String | Up to 255 characters long | NULL | Y | N |
+| reference_id | The ID that the marketplace uses to reference the product | String | Between 1 and 255 characters long | NULL | Y | N |
 | reference_parent_id | The ID that the marketplace uses to reference the product's parent | String | Up to 255 characters long | NULL | N | N |
-| sku | The SKU of the product | String | Up to 255 characters long | NULL | Y | N |
+| sku | The SKU of the product | String | Between 1 and 255 characters long | NULL | Y | N |
 | variant_id | The linked Listing Variation ID | Integer |  | NULL | N | N |
 
 ## Delete Marketplace Listing
@@ -48,7 +48,7 @@ This allows you to update a specific listing for a marketplace
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | attributes | An array of attributes for the marketplace listing - see [Marketplaces Listings Attributes](Marketplaces_Listings_Attributes.md#update-marketplaces-listings-attributes) | Array |  | NULL | N | N |
-| sku | The SKU of the product | String | Up to 255 characters long | NULL | Y | N |
+| sku | The SKU of the product | String | Between 1 and 255 characters long | NULL | Y | N |
 | status | The status of the listing | String | One of the following values: `active`, `hidden` | NULL | Y | N |
 | variant_id | The linked Listing Variation ID | Integer |  | NULL | N | N |
 

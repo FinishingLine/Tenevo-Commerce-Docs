@@ -31,8 +31,8 @@ This allows you to create a page
 | keywords | The keywords of the page | String | Up to 100 characters long | NULL | N | N |
 | stores | An array of stores that can access the page - see [Pages Stores](Pages_Stores.md#create-pages-stores) | Array |  | NULL | Y | N |
 | theme_layout | The theme layout of the page | String | Up to 100 characters long | page | N | N |
-| title | The title of the page | String | Up to 100 characters long | NULL | Y | N |
-| url_key | The URL key of the page | String | Up to 100 characters long | NULL | Y | N |
+| title | The title of the page | String | Between 1 and 100 characters long | NULL | Y | N |
+| url_key | The URL key of the page | String | Between 1 and 100 characters long | NULL | Y | N |
 
 ## Delete Page
 This allows you to delete a page
@@ -60,8 +60,8 @@ This allows you to update pages
 | keywords | The keywords of the page | String | Up to 100 characters long | NULL | N | N |
 | stores | An array of stores that can access the page - see [Pages Stores](Pages_Stores.md#update-pages-stores) | Array |  | NULL | Y | N |
 | theme_layout | The theme layout of the page | String | Up to 100 characters long | page | N | N |
-| title | The title of the page | String | Up to 100 characters long | NULL | Y | N |
-| url_key | The URL key of the page | String | Up to 100 characters long | NULL | Y | N |
+| title | The title of the page | String | Between 1 and 100 characters long | NULL | Y | N |
+| url_key | The URL key of the page | String | Between 1 and 100 characters long | NULL | Y | N |
 
 ## View Pages
 This allows you to view a list of pages

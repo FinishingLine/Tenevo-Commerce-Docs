@@ -23,11 +23,11 @@ This allows you to create store returns reasons
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| reason_long | A long version of the returns reason, could also be used as a description | String | Up to 200 characters long | NULL | Y | N |
-| reason_short | A short version of the returns reason | String | Up to 50 characters long | NULL | Y | N |
+| reason_long | A long version of the returns reason, could also be used as a description | String | Between 1 and 200 characters long | NULL | Y | N |
+| reason_short | A short version of the returns reason | String | Between 1 and 50 characters long | NULL | Y | N |
 | requires_details | Indicates whether or not the reason requires further details to be provided by the returnee | Boolean |  | false | N | N |
 | resolution | Indicates how the return needs to be resolved | String | One of the following values: `credit`, `exchange`, `refund`, `replacement`, `unknown` | NULL | Y | N |
-| sort_order | The sort order of the reason | Integer | Up to 3 digits long | 0 | N | N |
+| sort_order | The sort order of the reason | Integer | Up to 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 
 ## Delete Store Returns Reason
 This allows you to delete a specified store returns reason
@@ -47,11 +47,11 @@ This allows you to update store returns reasons
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| reason_long | A long version of the returns reason, could also be used as a description | String | Up to 200 characters long | NULL | Y | N |
-| reason_short | A short version of the returns reason | String | Up to 50 characters long | NULL | Y | N |
+| reason_long | A long version of the returns reason, could also be used as a description | String | Between 1 and 200 characters long | NULL | Y | N |
+| reason_short | A short version of the returns reason | String | Between 1 and 50 characters long | NULL | Y | N |
 | requires_details | Indicates whether or not the reason requires further details to be provided by the returnee | Boolean |  | false | N | N |
 | resolution | Indicates how the return needs to be resolved | String | One of the following values: `credit`, `exchange`, `refund`, `replacement`, `unknown` | NULL | Y | N |
-| sort_order | The sort order of the reason | Integer | Up to 3 digits long | 0 | N | N |
+| sort_order | The sort order of the reason | Integer | Up to 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | status | The status of the returns reason | String | One of the following values: `active`, `disabled` | NULL | Y | N |
 
 ## View Store Returns Reasons

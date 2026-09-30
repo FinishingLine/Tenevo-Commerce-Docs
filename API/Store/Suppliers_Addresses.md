@@ -34,8 +34,8 @@ This allows you to create an address for a supplier
 | line3 | Third line of addresses | String | Up to 200 characters long | NULL | N | N |
 | mobile | The mobile phone number of the contact at the supplier | String | Up to 20 characters long | NULL | N | N |
 | phone | The phone number of the contact at the supplier | String | Up to 20 characters long | NULL | N | N |
-| postcode | The postal code/zip code | String | Up to 20 characters long | NULL | Y | N |
-| province | The name of the province/state/county | String | Between 1 and 100 characters long | NULL | N | N |
+| postcode | The postal code/zip code, required where the address's country requires one | String | Between 1 and 20 characters long | NULL | N | Y |
+| province | The name of the province/state/county | String | Up to 100 characters long | NULL | N | N |
 | province_code | The code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | province_iso | An ISO code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | skip_checks | Skip certain checks to ensure the address is inserted | Boolean |  | false | N | N |
@@ -69,8 +69,8 @@ This allows you to update a specific address in a supplier
 | line3 | Third line of addresses | String | Up to 200 characters long | NULL | N | N |
 | mobile | The mobile phone number of the contact at the supplier | String | Up to 20 characters long | NULL | N | N |
 | phone | The phone number of the contact at the supplier | String | Up to 20 characters long | NULL | N | N |
-| postcode | The postal code/zip code | String | Up to 20 characters long | NULL | Y | N |
-| province | The name of the province/state/county | String | Between 1 and 100 characters long | NULL | N | N |
+| postcode | The postal code/zip code, required where the address's country requires one | String | Between 1 and 20 characters long | NULL | N | Y |
+| province | The name of the province/state/county | String | Up to 100 characters long | NULL | N | N |
 | province_code | The code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | province_iso | An ISO code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | skip_checks | Skip certain checks to ensure the address is inserted | Boolean |  | false | N | N |

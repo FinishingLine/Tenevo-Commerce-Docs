@@ -24,7 +24,7 @@ This allows you to create a product for a marketplace
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | attributes | An array of attributes for the marketplace product - see [Marketplaces Products Attributes](Marketplaces_Products_Attributes.md#create-marketplaces-products-attributes) | Array |  | NULL | N | N |
-| reference | The product reference at the marketplace | String | Up to 30 characters long | NULL | Y | N |
+| reference | The product reference at the marketplace | String | Between 1 and 30 characters long | NULL | Y | N |
 | variation_id | The linked Product Variation ID | Integer |  | NULL | N | N |
 
 ## Delete Marketplace Product

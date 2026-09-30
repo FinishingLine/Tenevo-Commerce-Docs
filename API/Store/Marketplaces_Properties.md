@@ -23,8 +23,8 @@ This allows you to create a property for a marketplace
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| field | The field that the property gets its value from | String | Up to 200 characters long | NULL | Y | N |
-| name | The name of the property | String | Up to 200 characters long | NULL | Y | N |
+| field | The field that the property gets its value from | String | Between 1 and 200 characters long | NULL | Y | N |
+| name | The name of the property | String | Between 1 and 200 characters long | NULL | Y | N |
 | type | The type of property | String | Must have the value: `orderitem` | NULL | Y | N |
 
 ## Delete Marketplace Property
@@ -45,8 +45,8 @@ This allows you to update a specific property for a marketplace
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| field | The field that the property gets its value from | String | Up to 200 characters long | NULL | Y | N |
-| name | The name of the property | String | Up to 200 characters long | NULL | Y | N |
+| field | The field that the property gets its value from | String | Between 1 and 200 characters long | NULL | Y | N |
+| name | The name of the property | String | Between 1 and 200 characters long | NULL | Y | N |
 
 ## View Marketplace Properties
 This allows you to list the properties belonging to the marketplace

@@ -37,7 +37,7 @@ This allows you to create a support ticket
 | source | The source of where the ticket was created from | String | One of the following values: `admin`, `call`, `direct`, `email` | NULL | Y | N |
 | status | The status of the ticket | String | One of the following values: `new`, `open`, `pending`, `solved` | new | N | N |
 | store_id | A valid Store ID | Integer | Up to 10 digits long | NULL | Y | N |
-| subject | A subject for the ticket | String | Up to 100 characters long | NULL | Y | N |
+| subject | A subject for the ticket | String | Between 1 and 100 characters long | NULL | Y | N |
 | submitter_id | A valid ID for the given submitter_type | Integer | Up to 10 digits long | NULL | Y | N |
 | submitter_type | The type of submitter that submitted the ticket | String | One of the following values: `admin`, `contact`, `profile` | NULL | Y | N |
 | tags | An array containing tags related to this ticket - see [Tags](Tags.md#create-tags) | Array |  | NULL | N | N |
@@ -74,7 +74,7 @@ This allows you to update a specific support ticket
 | resolver_id | A valid ID for the given resolver_type, only when status is solved | Integer | Up to 10 digits long | NULL | N | Y |
 | resolver_type | The type of resolver that requested the ticket to be opened, only when status is solved | String | One of the following values: `admin`, `contact`, `profile` | NULL | N | Y |
 | status | The status of the ticket | String | One of the following values: `open`, `pending`, `hold`, `solved`, `closed` | NULL | Y | N |
-| subject | A subject for the ticket | String | Up to 100 characters long | NULL | Y | N |
+| subject | A subject for the ticket | String | Between 1 and 100 characters long | NULL | Y | N |
 | type | The type of ticket, only updatable if value is not problem and the problem is linked to incidents | String | One of the following values: `incident`, `problem`, `question`, `task` | NULL | N | Y |
 
 ## View Support Tickets

@@ -38,7 +38,7 @@ This allows you to create an advanced shipment notification
 | notes | Notes related to this ASN | String |  | NULL | N | N |
 | pickup_from | A UTC datetime of when to pickup the items from; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
 | pickup_until | A UTC datetime of when to pickup the items until; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
-| reference | A unique reference used to identify the ASN | String | Up to 50 characters long | NULL | Y | N |
+| reference | A unique reference used to identify the ASN | String | Between 1 and 50 characters long | NULL | Y | N |
 | status | The status of the ASN | String | One of the following values: `draft`, `pending` | draft | N | N |
 | supplier_id | A valid Supplier ID | Integer |  | NULL | N | N |
 
@@ -78,7 +78,7 @@ This allows you to update a specific advanced shipment notification
 | pickup_from | A UTC datetime of when to pickup the items from; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
 | pickup_until | A UTC datetime of when to pickup the items until; required when `is_pickup_managed` is `true` | Datetime |  | NULL | N | Y |
 | received_at | A UTC datetime of when the items were received | Datetime |  | NOW | N | N |
-| reference | A unique reference used to identify the ASN | String | Up to 50 characters long | NULL | Y | N |
+| reference | A unique reference used to identify the ASN | String | Between 1 and 50 characters long | NULL | Y | N |
 | status | The status of the ASN | String | One of the following values: `cancelled`, `completed`, `draft`, `in transit`, `part received`, `pending`, `received` | draft | N | N |
 
 ## View Advanced Shipment Notifications
