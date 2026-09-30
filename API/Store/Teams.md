@@ -26,7 +26,7 @@ This allows you to create a team
 | description | A description of the team | String |  | NULL | Y | N |
 | is_default | Indicates that the team is the default group | Boolean |  | false | N | N |
 | members | An array containing the members of the group - see [Teams Members](Teams_Members.md#create-teams-members) | Array |  | NULL | N | N |
-| name | The name for the team | String | Up to 50 characters long | NULL | Y | N |
+| name | The name for the team | String | Between 1 and 50 characters long | NULL | Y | N |
 | type | The type of team | String | One of the following values: `any`, `support` | any | N | N |
 
 ## Delete Team
@@ -49,7 +49,7 @@ This allows you to update a specific team
 | --- | --- | --- | --- | --- | --- | --- |
 | description | A description of the team | String |  | NULL | Y | N |
 | is_default | Indicates that the team is the default group | Boolean |  | false | N | N |
-| name | The name for the team | String | Up to 50 characters long | NULL | Y | N |
+| name | The name for the team | String | Between 1 and 50 characters long | NULL | Y | N |
 
 ## View Teams
 This allows you to list teams

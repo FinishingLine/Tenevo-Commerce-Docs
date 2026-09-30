@@ -21,7 +21,7 @@ This allows you to create customer marketplaces
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| marketplace_customer_id | The Customer ID that the marketplace has given the customer - must be unique to the marketplace | String | Up to 64 characters long | NULL | Y | N |
+| marketplace_customer_id | The Customer ID that the marketplace has given the customer - must be unique to the marketplace | String | Between 1 and 64 characters long | NULL | Y | N |
 | marketplace_id | A valid Marketplace ID | Integer |  | NULL | Y | N |
 
 ## Delete Customer Marketplace

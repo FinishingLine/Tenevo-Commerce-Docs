@@ -22,7 +22,7 @@ This allows you to create a support agent
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | admin_id | A valid Administrator ID | Integer | Up to 10 digits long | NULL | Y | N |
-| reference | A reference for the agent | String | Up to 100 characters long | NULL | Y | N |
+| reference | A reference for the agent | String | Between 1 and 100 characters long | NULL | Y | N |
 
 ## Delete Support Agent
 This allows you to delete a support agent

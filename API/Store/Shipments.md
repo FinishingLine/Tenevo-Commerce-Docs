@@ -81,7 +81,7 @@ This allows you to update a specific shipment
 | pallets | An array of pallets for the shipment - see [Shipments Pallets](Shipments_Pallets.md#update-shipments-pallets) | Array |  | NULL | N | N |
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#update-shipments-parcels) | Array |  | NULL | N | N |
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
-| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 30 characters long | NULL | N | N |
 | shipment_reference | The reference that was given to the shipment | String | Up to 50 characters long | NULL | N | N |
 | shipped_at | The date and time the order was marked as shipped | Datetime |  | NULL | N | N |
 | status | The status of the shipment | String | One of the following values: `cancelled`, `despatched`, `labelled`, `open` | NULL | N | N |

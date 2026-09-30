@@ -32,7 +32,7 @@ This allows you to create a comment
 | parent_id | A valid ID for the given parent_type | Integer | Up to 10 digits long | NULL | Y | N |
 | parent_type | The type of parent | String | Must have the value: `ticket` | NULL | Y | N |
 | source | The source of the comment | String | One of the following values: `call_inbound`, `call_outbound`, `email`, `web_admin`, `web_customer`, `web_form` | NULL | Y | N |
-| time_spent | The amount of time spent on the comment, in seconds | Integer | Up to 10 digits long | 0 | N | N |
+| time_spent | The amount of time spent on the comment, in seconds | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | N |
 | type | The type of comment | String | Must have the value: `comment` | NULL | Y | N |
 
 ## Delete Comment

@@ -34,8 +34,8 @@ This allows you to create an order grouping item
 | line_total | The total price paid on the line for the items, after discounts including tax, ignored if `is_unit_pricing` is true | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | name | The original name of the ordered item, uses the variant name if not provided | String | Up to 255 characters long | NULL | N | N |
 | properties | A JSON encoded array of properties related to the item | String |  | NULL | N | N |
-| quantity_ordered | The total number of this item ordered | Integer | Up to 10 digits long | 0 | Y | N |
-| reference_id | A reference that corresponds to a Marketplace Order Item ID | String | Between 1 and 255 characters long | NULL | N | N |
+| quantity_ordered | The total number of this item ordered | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | Y | N |
+| reference_id | A reference that corresponds to a Marketplace Order Item ID | String | Up to 255 characters long | NULL | N | N |
 | requires_rework | Indicates whether the item requires rework, or not | Boolean |  | false | N | N |
 | tax_rate | The rate of tax | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | unit_discount | The total discount, including tax, given on one item, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
@@ -44,7 +44,7 @@ This allows you to create an order grouping item
 | unit_tax | The amount of tax paid for the item, before discounts, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_total | The total price paid for one unit of the item, after discounts including tax, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | uom | The Unit of Measure used for the given UOM Size - will use value from corresponding `variant_id` when not provided | String | Up to 100 characters long | NULL | N | N |
-| uom_size | The size of the corresponding Unit of Measure used - will use value from corresponding `variant_id` when not provided | Integer | Up to 10 digits long | 1 | N | N |
+| uom_size | The size of the corresponding Unit of Measure used - will use value from corresponding `variant_id` when not provided | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 1 | N | N |
 | variant_id | A valid Variant ID | Integer |  | NULL | Y | N |
 
 ## Delete Order Grouping Item
@@ -82,7 +82,7 @@ This allows you to update a specific order grouping item
 | unit_tax | The amount of tax paid for the item, before discounts, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_total | The total price paid for one unit of the item, after discounts including tax, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | uom | The Unit of Measure used for the given UOM Size - will use value from corresponding `variant_id` when not provided | String | Up to 100 characters long | NULL | N | N |
-| uom_size | The size of the corresponding Unit of Measure used - will use value from corresponding `variant_id` when not provided | Integer | Up to 10 digits long | 1 | N | N |
+| uom_size | The size of the corresponding Unit of Measure used - will use value from corresponding `variant_id` when not provided | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 1 | N | N |
 
 ## View Order Grouping Items
 This allows you to list the order grouping items

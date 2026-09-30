@@ -23,8 +23,8 @@ This allows you to create a mapping for a marketplace
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| from | The value we are mapping from | String | Up to 200 characters long | NULL | Y | N |
-| to | The value we are mapping the from value to | String | Up to 200 characters long | NULL | Y | N |
+| from | The value we are mapping from | String | Between 1 and 200 characters long | NULL | Y | N |
+| to | The value we are mapping the from value to | String | Between 1 and 200 characters long | NULL | Y | N |
 | type | The type of mapping | String | One of the following values: `order`, `orderitem`, `product`, `shipping` | NULL | Y | N |
 
 ## Delete Marketplace Mapping
@@ -45,8 +45,8 @@ This allows you to update a specific mapping for a marketplace
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| from | The value we are mapping from | String | Up to 200 characters long | NULL | Y | N |
-| to | The value we are mapping the from value to | String | Up to 200 characters long | NULL | Y | N |
+| from | The value we are mapping from | String | Between 1 and 200 characters long | NULL | Y | N |
+| to | The value we are mapping the from value to | String | Between 1 and 200 characters long | NULL | Y | N |
 
 ## View Marketplace Mappings
 This allows you to list the mappings belonging to the marketplace

@@ -23,7 +23,7 @@ This allows you to create a Support Allow-Block
 | --- | --- | --- | --- | --- | --- | --- |
 | action | The action that is performed when a match occurs | String | One of the following values: `allow`, `block` | NULL | Y | N |
 | admin_id | A valid Administrator ID of whom created the action | Integer | Up to 10 digits long | NULL | Y | N |
-| detail | The detail, related to the subtype | String | Up to 200 characters long | NULL | Y | N |
+| detail | The detail, related to the subtype | String | Between 1 and 200 characters long | NULL | Y | N |
 | subtype | The subtype of thing that is being allowed/blocked | String | One of the following values: `domain`, `email` | NULL | Y | N |
 | type | The type of thing that is being allowed/blocked | String | Must have the value: `email` | NULL | Y | N |
 

@@ -25,20 +25,20 @@ This allows you to create customer addresses
 | --- | --- | --- | --- | --- | --- | --- |
 | address_type | The type of address | String | One of the following values: `delivery`, `invoice`, `other` | other | N | N |
 | city | The city or town of where the address can be found | String | Between 1 and 100 characters long | NULL | Y | N |
-| company_name | The company name of where the addressee can be found | String | Between 1 and 100 characters long | NULL | N | N |
+| company_name | The company name of where the addressee can be found | String | Up to 100 characters long | NULL | N | N |
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long | NULL | Y | N |
-| email | An email address relating to the address | String | Between 1 and 100 characters long | NULL | N | N |
+| email | An email address relating to the address | String | Up to 100 characters long | NULL | N | N |
 | eori_number | The EORI number to use for this address, where null is provided the value from the customer record is used | String | Up to 20 characters long | NULL | N | N |
 | eu_movement_risk | Indicates if orders are at risk of entering the EU, or not, where null is provided the value from the customer record is used | Boolean |  | NULL | N | N |
 | first_name | The first name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
 | is_default | Indicates whether the address is the default for the given address type | Boolean |  | false | N | N |
 | last_name | The last name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
 | line1 | The first line of the address | String | Between 1 and 200 characters long | NULL | Y | N |
-| line2 | The second line of the address | String | Between 1 and 200 characters long | NULL | N | N |
-| line3 | The third line of the address | String | Between 1 and 200 characters long | NULL | N | N |
-| mobile | The mobile number relating to the address | String | Up to 20 characters long | NULL | Y | N |
-| phone | The phone number relating to the address | String | Up to 20 characters long | NULL | Y | N |
-| postcode | The postal code/zip code of the address | String | Up to 20 characters long | NULL | Y | N |
+| line2 | The second line of the address | String | Up to 200 characters long | NULL | N | N |
+| line3 | The third line of the address | String | Up to 200 characters long | NULL | N | N |
+| mobile | The mobile number relating to the address | String | Up to 20 characters long | NULL | N | N |
+| phone | The phone number relating to the address | String | Up to 20 characters long | NULL | N | N |
+| postcode | The postal code/zip code of the address | String | Between 1 and 20 characters long | NULL | N | Y |
 | province | The name of the province/state/county, where province_id is not available to be provided for the given country_iso2 | String | Between 1 and 100 characters long | NULL | N | Y |
 | province_code | The code for the province/state/county, used to lookup province_id when not provided | String | Up to 10 characters long | NULL | N | N |
 | province_id | The ID of the province/state/county | Integer | Up to 3 digits long | NULL | Y | N |
@@ -70,20 +70,20 @@ This allows you to update customer addresses
 | --- | --- | --- | --- | --- | --- | --- |
 | address_type | The type of address | String | One of the following values: `delivery`, `invoice`, `other` | other | N | N |
 | city | The city or town of where the address can be found | String | Between 1 and 100 characters long | NULL | Y | N |
-| company_name | The company name of where the addressee can be found | String | Between 1 and 100 characters long | NULL | N | N |
+| company_name | The company name of where the addressee can be found | String | Up to 100 characters long | NULL | N | N |
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long | NULL | Y | N |
-| email | An email address relating to the address | String | Between 1 and 100 characters long | NULL | N | N |
+| email | An email address relating to the address | String | Up to 100 characters long | NULL | N | N |
 | eori_number | The EORI number to use for this address, where null is provided the value from the customer record is used | String | Up to 20 characters long | NULL | N | N |
 | eu_movement_risk | Indicates if orders are at risk of entering the EU, or not, where null is provided the value from the customer record is used | Boolean |  | NULL | N | N |
 | first_name | The first name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
 | is_default | Indicates whether the address is the default for the given address type | Boolean |  | false | N | N |
 | last_name | The last name of the addressee | String | Between 1 and 100 characters long | NULL | Y | N |
 | line1 | The first line of the address | String | Between 1 and 200 characters long | NULL | Y | N |
-| line2 | The second line of the address | String | Between 1 and 200 characters long | NULL | N | N |
-| line3 | The third line of the address | String | Between 1 and 200 characters long | NULL | N | N |
-| mobile | The mobile number relating to the address | String | Up to 20 characters long | NULL | Y | N |
-| phone | The phone number relating to the address | String | Up to 20 characters long | NULL | Y | N |
-| postcode | The postal code/zip code of the address | String | Up to 20 characters long | NULL | Y | N |
+| line2 | The second line of the address | String | Up to 200 characters long | NULL | N | N |
+| line3 | The third line of the address | String | Up to 200 characters long | NULL | N | N |
+| mobile | The mobile number relating to the address | String | Up to 20 characters long | NULL | N | N |
+| phone | The phone number relating to the address | String | Up to 20 characters long | NULL | N | N |
+| postcode | The postal code/zip code of the address | String | Between 1 and 20 characters long | NULL | N | Y |
 | province | The name of the province/state/county, where province_id is not available to be provided for the given country_iso2 | String | Between 1 and 100 characters long | NULL | N | Y |
 | province_code | The code for the province/state/county, used to lookup province_id when not provided | String | Up to 10 characters long | NULL | N | N |
 | province_id | The ID of the province/state/county | Integer | Up to 3 digits long | NULL | Y | N |

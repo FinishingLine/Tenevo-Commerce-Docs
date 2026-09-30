@@ -28,7 +28,7 @@ This allows you to create rule sets
 | description | A description about this rule set | String |  | NULL | Y | N |
 | failure_message_administrator | A failure message when the ruleset does not pass when being applied to an administrator | String |  | NULL | N | N |
 | failure_message_customer | A failure message when the ruleset does not pass when being applied to a customer | String |  | NULL | N | N |
-| name | The name for this rule set | String | Up to 50 characters long | NULL | Y | N |
+| name | The name for this rule set | String | Between 1 and 50 characters long | NULL | Y | N |
 | owner_id | A valid Owner ID for matching the type specified with owner_type | Integer |  | NULL | Y | N |
 | owner_type | A valid type of Owner | String | One of the following values: `automation`, `basketoverall`, `basketbygroup`, `shippingmethod` | NULL | Y | N |
 | rules | An array of rules that this belong to this rule set - see [Rule Sets Rules](Rule_Sets_Rules.md#create-rule-sets-rules) | Array |  | NULL | N | N |
@@ -56,7 +56,7 @@ This allows you to update rule set
 | description | A description about this rule set | String |  | NULL | Y | N |
 | failure_message_administrator | A failure message when the ruleset does not pass when being applied to an administrator | String |  | NULL | N | N |
 | failure_message_customer | A failure message when the ruleset does not pass when being applied to a customer | String |  | NULL | N | N |
-| name | The name for this rule set | String | Up to 50 characters long | NULL | Y | N |
+| name | The name for this rule set | String | Between 1 and 50 characters long | NULL | Y | N |
 | rules | An array of rules that this belong to this rule set - see [Rule Sets Rules](Rule_Sets_Rules.md#update-rule-sets-rules) | Array |  | NULL | N | N |
 
 ## View Rule Sets

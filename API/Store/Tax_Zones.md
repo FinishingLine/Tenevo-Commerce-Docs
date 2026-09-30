@@ -23,9 +23,9 @@ This allows you to create a tax zone
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| code | A unique code to use for the tax zone | String | Up to 50 characters long | NULL | Y | N |
+| code | A unique code to use for the tax zone | String | Between 1 and 50 characters long | NULL | Y | N |
 | country_iso2 | A valid 2 character ISO Country Code | String | Exactly 2 characters long | NULL | Y | N |
-| name | The name for the tax zone | String | Up to 100 characters long | NULL | Y | N |
+| name | The name for the tax zone | String | Between 1 and 100 characters long | NULL | Y | N |
 | rates | An array containing the rates related to this zone - see [Tax Zones Rates](Tax_Zones_Rates.md#create-tax-zones-rates) | Array |  | NULL | N | N |
 
 ## Delete Tax Zone
@@ -46,7 +46,7 @@ This allows you to update a specific tax zone
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| name | The name for the tax zone | String | Up to 100 characters long | NULL | Y | N |
+| name | The name for the tax zone | String | Between 1 and 100 characters long | NULL | Y | N |
 | rates | An array containing the rates related to this zone - see [Tax Zones Rates](Tax_Zones_Rates.md#update-tax-zones-rates) | Array |  | NULL | N | N |
 
 ## View Tax Zones

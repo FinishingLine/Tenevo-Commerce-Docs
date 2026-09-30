@@ -72,7 +72,7 @@ This allows you to update a specific shipment parcel
 | items | An array of items for the shipment parcel - see [Shipments Parcels Items](Shipments_Parcels_Items.md#update-shipments-parcels-items) | Array |  | NULL | N | N |
 | label_data | A base 64 encoded string of the label. Maximum file size: 5MB. Accepted attachment extensions include: .gif, .jpg, & .png | String |  | NULL | N | N |
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
-| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
+| returnslabel_tracking_code | The tracking code of the returns label | String | Up to 30 characters long | NULL | N | N |
 | status | The status of the parcel | String | One of the following values: `closed`, `open`, `packed` | NULL | Y | N |
 | tracking_code | The couriers tracking code, if the parcel can be tracked | String | Up to 100 characters long | NULL | N | N |
 | tracking_status | The current tracking status of the parcel - can only be provided when tracking_code has a value | String | Up to 100 characters long | NULL | N | Y |

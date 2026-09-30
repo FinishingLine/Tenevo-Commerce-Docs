@@ -24,7 +24,7 @@ This allows you to create a tax rule
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | items | An array containing the items related to this rule - see [Tax Rules Items](Tax_Rules_Items.md#create-tax-rules-items) | Array |  | NULL | N | N |
-| name | The name for the tax rule | String | Up to 100 characters long | NULL | Y | N |
+| name | The name for the tax rule | String | Between 1 and 100 characters long | NULL | Y | N |
 
 ## Delete Tax Rule
 This allows you to delete a tax rule
@@ -44,7 +44,7 @@ This allows you to update a specific tax rule
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| name | The name for the tax rule | String | Up to 100 characters long | NULL | Y | N |
+| name | The name for the tax rule | String | Between 1 and 100 characters long | NULL | Y | N |
 
 ## View Tax Rules
 This allows you to list tax rules

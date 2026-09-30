@@ -25,7 +25,7 @@ This allows you to create rules
 | --- | --- | --- | --- | --- | --- | --- |
 | conditions | An array of conditions that this belong to this rule - see [Rules Conditions](Rules_Conditions.md#create-rules-conditions) | Array |  | NULL | N | N |
 | description | A description about this rule | String |  | NULL | Y | N |
-| name | The name for this rule | String | Up to 50 characters long | NULL | Y | N |
+| name | The name for this rule | String | Between 1 and 50 characters long | NULL | Y | N |
 | type | The type of rule | String | One of the following values: `basketoverall`, `basketbygroup`, `shippingmethod`, `ticketautomation` | NULL | Y | N |
 
 ## Delete Rule
@@ -48,7 +48,7 @@ This allows you to update rule
 | --- | --- | --- | --- | --- | --- | --- |
 | conditions | An array of conditions that this belong to this rule - see [Rules Conditions](Rules_Conditions.md#update-rules-conditions) | Array |  | NULL | N | N |
 | description | A description about this rule | String |  | NULL | Y | N |
-| name | The name for this rule | String | Up to 50 characters long | NULL | Y | N |
+| name | The name for this rule | String | Between 1 and 50 characters long | NULL | Y | N |
 
 ## View Rule
 This allows you to list rule

@@ -25,11 +25,11 @@ This allows you to update supplier items
 | --- | --- | --- | --- | --- | --- | --- |
 | barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | Y | N |
 | cost | The cost to you of one unit of the item in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
-| days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long | NULL | N | N |
+| days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | NULL | N | N |
 | depth | The depth of one unit of the item, in millimetres, required when item is physical | Integer | Between 1 and 10 digits long | 0 | N | Y |
-| lead_time | The number of days it will take between placing a purchase order and receiving stock | Integer | Between 1 and 10 digits long | NULL | N | N |
+| lead_time | The number of days it will take between placing a purchase order and receiving stock | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | NULL | N | N |
 | length | The length of one unit of the item, in millimetres, required when item is physical | Integer | Between 1 and 10 digits long | 0 | N | Y |
-| low_stock_level | The amount of inventory remaining that can trigger a low stock level notification in primary Unit of Measure units (-1 = no alert) | Integer | Between 1 and 10 digits long | -1 | N | N |
+| low_stock_level | The amount of inventory remaining that can trigger a low stock level notification in primary Unit of Measure units (-1 = no alert) | Integer | Between 1 and 10 digits long</br> | -1 | N | N |
 | price | The price that the buyer pays for one unit of the item in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | rrp | The recommend retail price of the item, usually set by the manufacturer, for one unit of the item in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | sku | The SKU of the item, must be unique | String | Between 1 and 100 characters long | NULL | Y | N |

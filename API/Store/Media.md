@@ -22,8 +22,8 @@ This allows you to create new media
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| alt_text | Alt Text for the media file | String | Between 1 and 100 characters long | NULL | N | N |
-| filename | The name of the media file (including extension) - must be unique for the given media_folder | String | Between 1 and 100 characters long | NULL | N | N |
+| alt_text | Alt Text for the media file | String | Up to 100 characters long | NULL | N | N |
+| filename | The name of the media file (including extension) - must be unique for the given media_folder | String | Up to 100 characters long | NULL | N | N |
 | media_data | A base 64 encoded string of the media file. Maximum file size: 5MB. Accepted extensions include: .gif, .jpg, & .png | String |  | NULL | Y | N |
 | media_folder | The folder of where the media is being stored | String | One of the following values: `general`, `product` | general | N | N |
 
@@ -43,8 +43,8 @@ This allows you to update specified media
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| alt_text | Alt Text for the media file | String | Between 1 and 100 characters long | NULL | N | N |
-| filename | The name of the media file (including extension) - must be unique for the given media_folder | String | Between 1 and 100 characters long | NULL | N | N |
+| alt_text | Alt Text for the media file | String | Up to 100 characters long | NULL | N | N |
+| filename | The name of the media file (including extension) - must be unique for the given media_folder | String | Up to 100 characters long | NULL | N | N |
 | media_folder | The folder of where the media is being stored | String | One of the following values: `general`, `product` | general | N | N |
 
 ## View Media

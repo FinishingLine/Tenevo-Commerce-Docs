@@ -28,7 +28,7 @@ This allows you to create a marketplace
 | interface_id | A valid Interface ID | Integer | Up to 10 digits long | NULL | Y | N |
 | listings | An array of listings for the marketplace - see [Marketplaces Listings](Marketplaces_Listings.md#create-marketplaces-listings) | Array |  | NULL | N | N |
 | mappings | An array of mappings for the marketplace - see [Marketplaces Mappings](Marketplaces_Mappings.md#create-marketplaces-mappings) | Array |  | NULL | N | N |
-| name | The name that you can referer to this marketplace as | String | Up to 50 characters long | NULL | Y | N |
+| name | The name that you can referer to this marketplace as | String | Between 1 and 50 characters long | NULL | Y | N |
 | products | An array of products for the marketplace - see [Marketplaces Products](Marketplaces_Products.md#create-marketplaces-products) | Array |  | NULL | N | N |
 | properties | An array of properties for the marketplace - see [Marketplaces Properties](Marketplaces_Properties.md#create-marketplaces-properties) | Array |  | NULL | N | N |
 | settings | An array of settings for the marketplace - see [Marketplaces Settings](Marketplaces_Settings.md#create-marketplaces-settings) | Array |  | NULL | N | N |
@@ -58,7 +58,7 @@ This allows you to update a specific marketplace
 | fulfillment_service_id | A valid Fulfillment Service ID | Integer | Up to 10 digits long | default | N | N |
 | listings | An array of listings for the marketplace - see [Marketplaces Listings](Marketplaces_Listings.md#update-marketplaces-listings) | Array |  | NULL | N | N |
 | mappings | An array of mappings for the marketplace - see [Marketplaces Mappings](Marketplaces_Mappings.md#update-marketplaces-mappings) | Array |  | NULL | N | N |
-| name | The name that you can referer to this marketplace as | String | Up to 50 characters long | NULL | Y | N |
+| name | The name that you can referer to this marketplace as | String | Between 1 and 50 characters long | NULL | Y | N |
 | products | An array of products for the marketplace - see [Marketplaces Products](Marketplaces_Products.md#update-marketplaces-products) | Array |  | NULL | N | N |
 | properties | An array of properties for the marketplace - see [Marketplaces Properties](Marketplaces_Properties.md#update-marketplaces-properties) | Array |  | NULL | N | N |
 | settings | An array of settings for the marketplace - see [Marketplaces Settings](Marketplaces_Settings.md#update-marketplaces-settings) | Array |  | NULL | N | N |

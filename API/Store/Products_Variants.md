@@ -23,29 +23,30 @@ This allows you to create product variants
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | N | N |
-| buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | N | N |
+| barcode | The manufacturers barcode on the item | String | Up to 50 characters long | NULL | N | N |
+| buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
-| case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
+| case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | Y |
 | case_variant_id | A valid Product Variant ID that is used as a complete case for this variant, must be provided with `case_size` | Integer |  | NULL | N | Y |
 | components | An array of components for this product variant - see [Products Variants Components](Products_Variants_Components.md#create-products-variants-components) | Array |  | NULL | N | N |
 | cost | The cost to you of one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
-| days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long | NULL | N | N |
+| days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | NULL | N | N |
 | depth | The depth of one unit of the variant, in millimetres, required when product is physical and is simple | Integer | Between 1 and 10 digits long | 0 | N | Y |
 | image_id | A valid Product Image ID | Integer |  | NULL | N | N |
-| inventory_quantity | The amount of the variant that is held in stock in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | Y | N |
-| lead_time | The number of days it will take between placing a purchase order and receiving stock | Integer | Between 1 and 10 digits long | NULL | N | N |
+| inventory_quantity | The amount of the variant that is held in stock in primary Unit of Measure units | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | 0 | Y | N |
+| lead_time | The number of days it will take between placing a purchase order and receiving stock | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | NULL | N | N |
 | length | The length of one unit of the variant, in millimetres, required when product is physical and is simple | Integer | Between 1 and 10 digits long | 0 | N | Y |
-| low_stock_level | The amount of inventory remaining that can trigger a low stock level notification in primary Unit of Measure units (-1 = no alert) | Integer | Between 1 and 10 digits long | -1 | N | N |
+| low_stock_level | The amount of inventory remaining that can trigger a low stock level notification in primary Unit of Measure units (-1 = no alert) | Integer | Between 1 and 10 digits long</br> | -1 | N | N |
+| manufacturer_part_number | The manufacturer's own part, model or style number (EU customs NS-PID) | String | Up to 100 characters long | NULL | N | N |
 | option_one_group_id | A valid Variant Option Group ID | Integer |  | NULL | N | N |
 | option_one_option_id | A valid Variant Option Option ID, must be provided and belong to option_one_group_id when set | Integer |  | NULL | N | Y |
-| option_one_sort_order | The sort order option one | Integer | Between 1 and 3 digits long | 0 | N | N |
+| option_one_sort_order | The sort order option one | Integer | Between 1 and 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | option_three_group_id | A valid Variant Option Group ID | Integer |  | NULL | N | N |
 | option_three_option_id | A valid Variant Option Option ID, must be provided and belong to option_three_group_id when set | Integer |  | NULL | N | Y |
-| option_three_sort_order | The sort order option three | Integer | Between 1 and 3 digits long | 0 | N | N |
+| option_three_sort_order | The sort order option three | Integer | Between 1 and 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | option_two_group_id | A valid Variant Option Group ID | Integer |  | NULL | N | N |
 | option_two_option_id | A valid Variant Option Option ID, must be provided and belong to option_two_group_id when set | Integer |  | NULL | N | Y |
-| option_two_sort_order | The sort order option two | Integer | Between 1 and 3 digits long | 0 | N | N |
+| option_two_sort_order | The sort order option two | Integer | Between 1 and 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | price | The price that the buyer pays for one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | release_date | A valid UTC datetime of when the variant should be released, will automatically change variant status to active if hidden | Datetime |  | NULL | N | N |
 | rrp | The recommend retail price of the variant, usually set by the manufacturer, for one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
@@ -77,29 +78,30 @@ This allows you to update product variants
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| barcode | The manufacturers barcode on the item | String | Between 1 and 50 characters long | NULL | N | N |
-| buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | N | N |
+| barcode | The manufacturers barcode on the item | String | Up to 50 characters long | NULL | N | N |
+| buffer_stock_level | The amount of stock to hold back as a buffer in primary Unit of Measure units | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | can_backorder | Indicates whether the variant can be back ordered, or not - a null value will use the parent product `can_backorder` status | Boolean |  | NULL | N | N |
-| case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long | NULL | N | Y |
+| case_size | The number of units with the given case, must be provided with `case_variant_id` | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 1 | NULL | N | Y |
 | case_variant_id | A valid Product Variant ID that is used as a complete case for this variant, must be provided with `case_size` | Integer |  | NULL | N | Y |
 | components | An array of components for this product variant - see [Products Variants Components](Products_Variants_Components.md#update-products-variants-components) | Array |  | NULL | N | N |
 | cost | The cost to you of one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
-| days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long | NULL | N | N |
+| days_of_stock | The number of days of stock cover to have when replenishing inventory | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | NULL | N | N |
 | depth | The depth of one unit of the variant, in millimetres, required when product is physical | Integer | Between 1 and 10 digits long | 0 | N | Y |
 | image_id | A valid Product Image ID | Integer |  | NULL | N | N |
-| inventory_quantity | The amount of the variant that is held in stock in primary Unit of Measure units | Integer | Between 1 and 10 digits long | 0 | Y | N |
-| lead_time | The number of days it will take between placing a purchase order and receiving stock | Integer | Between 1 and 10 digits long | NULL | N | N |
+| inventory_quantity | The amount of the variant that is held in stock in primary Unit of Measure units | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | 0 | Y | N |
+| lead_time | The number of days it will take between placing a purchase order and receiving stock | Integer | Between 1 and 10 digits long</br>Value must be greater than or equal to 0 | NULL | N | N |
 | length | The length of one unit of the variant, in millimetres, required when product is physical | Integer | Between 1 and 10 digits long | 0 | N | Y |
-| low_stock_level | The amount of inventory remaining that can trigger a low stock level notification in primary Unit of Measure units (-1 = no alert) | Integer | Between 1 and 10 digits long | -1 | N | N |
+| low_stock_level | The amount of inventory remaining that can trigger a low stock level notification in primary Unit of Measure units (-1 = no alert) | Integer | Between 1 and 10 digits long</br> | -1 | N | N |
+| manufacturer_part_number | The manufacturer's own part, model or style number (EU customs NS-PID) | String | Up to 100 characters long | NULL | N | N |
 | option_one_group_id | A valid Variant Option Group ID | Integer |  | NULL | N | N |
 | option_one_option_id | A valid Variant Option Option ID, must be provided and belong to option_one_group_id when set | Integer |  | NULL | N | Y |
-| option_one_sort_order | The sort order option one | Integer | Between 1 and 3 digits long | 0 | N | N |
+| option_one_sort_order | The sort order option one | Integer | Between 1 and 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | option_three_group_id | A valid Variant Option Group ID | Integer |  | NULL | N | N |
 | option_three_option_id | A valid Variant Option Option ID, must be provided and belong to option_three_group_id when set | Integer |  | NULL | N | Y |
-| option_three_sort_order | The sort order option three | Integer | Between 1 and 3 digits long | 0 | N | N |
+| option_three_sort_order | The sort order option three | Integer | Between 1 and 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | option_two_group_id | A valid Variant Option Group ID | Integer |  | NULL | N | N |
 | option_two_option_id | A valid Variant Option Option ID, must be provided and belong to option_two_group_id when set | Integer |  | NULL | N | Y |
-| option_two_sort_order | The sort order option two | Integer | Between 1 and 3 digits long | 0 | N | N |
+| option_two_sort_order | The sort order option two | Integer | Between 1 and 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
 | price | The price that the buyer pays for one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
 | release_date | A valid UTC datetime of when the variant should be released, will automatically change variant status to active if hidden | Datetime |  | NULL | N | N |
 | rrp | The recommend retail price of the variant, usually set by the manufacturer, for one unit of the variant in the primary Unit of Measure | Float | Up to 4 decimal places and no larger than 99999999.9999 | 0.0000 | N | N |
@@ -148,6 +150,7 @@ This allows you to list product variants
 | lead_time | The number of days it will take between placing a purchase order and receiving stock | Integer | Between 1 and 10 digits long |
 | length | The length of one unit of the variant, in millimetres, required when product is physical | Integer | Between 1 and 10 digits long |
 | low_stock_level | The amount of inventory remaining that can trigger a low stock level notification in primary Unit of Measure units (-1 = no alert) | Integer | Between 1 and 10 digits long |
+| manufacturer_part_number | The manufacturer's own part, model or style number (EU customs NS-PID) | String | Up to 100 characters long |
 | name | The name of the variant (uses the options, seperated by / characters) | String |  |
 | option_one_default_sort_order | The default sort order for option one | Integer | Between 1 and 3 digits long |
 | option_one_group | The name of the Variant Option Group | String | Up to 50 characters long |

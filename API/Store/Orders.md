@@ -59,26 +59,26 @@ This allows you to create an order
 | is_resend | Indicates whether the order is an order that has been resent, or not | Boolean |  | 0 | N | N |
 | is_test | Indicates whether an order is a test order, or not | Boolean |  | 0 | N | N |
 | marketplace_id | A valid Marketplace ID | Integer |  | NULL | N | N |
-| marketplace_order_number | The Order Number as provided by the Marketplace | String | Between 1 and 255 characters long | NULL | N | N |
+| marketplace_order_number | The Order Number as provided by the Marketplace | String | Up to 255 characters long | NULL | N | N |
 | notes | Any extra notes pertaining to the order | String |  | NULL | N | N |
 | packing_instructions | The instructions for the packing of the order | String |  | NULL | N | N |
 | payment_ip | The IP address that was used at the time of payment | String | Up to 39 characters long | NULL | N | N |
 | payment_method_country_iso2 | A valid ISO Country Code where the payment method was issued | String | Exactly 2 characters long | NULL | N | N |
 | payment_method_detail | The payment method detail | String | Up to 30 characters long | NULL | N | N |
-| payment_method_gateway | The payment method gateway | String | Up to 20 characters long | NULL | Y | N |
+| payment_method_gateway | The payment method gateway | String | Between 1 and 20 characters long | NULL | Y | N |
 | po_number | A Purchase Order Number that has been provided by the customer for the order | String | Up to 30 characters long | NULL | N | N |
 | profile_id | A valid Customer Profile ID that placed this order | Integer |  | NULL | Y | N |
 | properties | A JSON encoded array of properties related to the order | String |  | NULL | N | N |
-| reference_child_id | A child reference that corresponds to a Marketplace Order ID | String | Between 1 and 255 characters long | NULL | N | N |
-| reference_id | A reference that corresponds to a Marketplace Order ID | String | Between 1 and 255 characters long | NULL | N | N |
+| reference_child_id | A child reference that corresponds to a Marketplace Order ID | String | Up to 255 characters long | NULL | N | N |
+| reference_id | A reference that corresponds to a Marketplace Order ID | String | Up to 255 characters long | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
 | resend_order_id | Where the order is a resend, the original Order ID | Integer |  | NULL | N | N |
 | resend_reason | The reason why a resend is being sent out, only when `is_resend` is true | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` | unknown | N | Y |
-| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long | 0 | N | N |
+| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long</br>Value must be between 0 and 1000 (inclusive)  | 0 | N | N |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long | NULL | N | N |
 | shipping_lock | Indicates whether the shipping is locked, or not | Boolean |  | 0 | N | N |
-| shipping_method_code | The code of the shipping method | String | Up to 40 characters long | NULL | Y | N |
-| shipping_method_name | The name of the shipping method | String | Up to 100 characters long | NULL | Y | N |
+| shipping_method_code | The code of the shipping method | String | Between 1 and 40 characters long | NULL | Y | N |
+| shipping_method_name | The name of the shipping method | String | Between 1 and 100 characters long | NULL | Y | N |
 | shipping_tax | The total amount the recipient paid for tax for shipping | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | source | The source of the order | String | One of the following values: `admin`, `direct`, `marketplace` | direct | N | N |
 | status | The status of the order | String | One of the following values: `awaiting approval`, `hold`, `open` | open | N | N |
@@ -143,7 +143,7 @@ This allows you to update a specific order
 | packing_instructions | The instructions for the packing of the order | String |  | NULL | N | N |
 | processed_at | A valid UTC datetime of when the order was last processed | Datetime |  | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
-| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long | 0 | N | N |
+| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long</br>Value must be between 0 and 1000 (inclusive)  | 0 | N | N |
 | shipping_lock | Indicates whether the order shipping is locked, or not | Boolean |  | 0 | N | N |
 | shipping_method_code | The code of the shipping method, can only be updated while the order is open or on hold | String | Up to 40 characters long | NULL | N | Y |
 | shipping_method_name | The name of the shipping method, can only be updated while the order is open or on hold | String | Up to 100 characters long | NULL | N | Y |

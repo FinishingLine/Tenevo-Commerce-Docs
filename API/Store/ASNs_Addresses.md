@@ -37,7 +37,7 @@ This allows you to create an address for an advanced shipping notice
 | owner_type | The Owner Type of this address; required with `owner_id`. When provided, `supplieraddress` or `supplierservice` must be used when `address_type` is `from`; `fulfillmentservice` must be used when `address_type` is `to` | String | One of the following values: `fulfillmentservice`, `supplieraddress`, `supplierservice` | NULL | N | Y |
 | phone | The phone number of the contact at the address | String | Up to 20 characters long | NULL | N | N |
 | postcode | The postal code/zip code; not required when `owner_id` and `owner_type` is provided | String | Up to 20 characters long | NULL | N | Y |
-| province | The name of the province/state/county | String | Between 1 and 100 characters long | NULL | N | N |
+| province | The name of the province/state/county | String | Up to 100 characters long | NULL | N | N |
 | province_code | The code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | province_iso | An ISO code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | reference | A reference that the address uses for the ASN | String | Up to 50 characters long | NULL | N | N |
@@ -71,8 +71,8 @@ This allows you to update a specific address in an advanced shipment notificatio
 | line3 | Third line of addresses | String | Up to 200 characters long | NULL | N | N |
 | mobile | The mobile phone number of the contact at the address | String | Up to 20 characters long | NULL | N | N |
 | phone | The phone number of the contact at the address | String | Up to 20 characters long | NULL | N | N |
-| postcode | The postal code/zip code | String | Up to 20 characters long | NULL | Y | N |
-| province | The name of the province/state/county | String | Between 1 and 100 characters long | NULL | N | N |
+| postcode | The postal code/zip code, required where the address's country requires one | String | Between 1 and 20 characters long | NULL | N | Y |
+| province | The name of the province/state/county | String | Up to 100 characters long | NULL | N | N |
 | province_code | The code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | province_iso | An ISO code for the province/state/county | String | Up to 10 characters long | NULL | N | N |
 | reference | A reference that the address uses for the ASN | String | Up to 50 characters long | NULL | N | N |

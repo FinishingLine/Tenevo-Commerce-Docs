@@ -25,7 +25,7 @@ This allows you to create rule conditions
 | --- | --- | --- | --- | --- | --- | --- |
 | comparator | The comparator used to compare the field value with the value | String | One of the following values: `changed`, `changedfrom`, `changedto`, `contains`, `endswith`, `greaterthan`, `greaterthanequal`, `lessthan`, `lessthanequal`, `matches`, `notchanged`, `notchangedfrom`, `notchangedto`, `notcontains`, `notmatches`, `startswith` | NULL | Y | N |
 | custom_value | Where a field ends with .custom, the value of the modifier | String |  | NULL | N | Y |
-| field | The field that this rule will look at | String | Up to 75 characters long | NULL | Y | N |
+| field | The field that this rule will look at | String | Between 1 and 75 characters long | NULL | Y | N |
 | is_valuedynamic | Indicates whether or not the value is dynamic | Boolean |  | false | N | N |
 | is_valueempty | Indicates whether or not the value is meant to be empty; must be true when comparator is not changed nor notchanged | Boolean |  | false | N | N |
 | is_valueregex | Indicates whether or not the value is a regular expression | Boolean |  | false | N | N |
@@ -51,7 +51,7 @@ This allows you to update rule condition
 | --- | --- | --- | --- | --- | --- | --- |
 | comparator | The comparator used to compare the field value with the value | String | One of the following values: `changed`, `changedfrom`, `changedto`, `contains`, `endswith`, `greaterthan`, `greaterthanequal`, `lessthan`, `lessthanequal`, `matches`, `notchanged`, `notchangedfrom`, `notchangedto`, `notcontains`, `notmatches`, `startswith` | NULL | Y | N |
 | custom_value | Where a field ends with .custom, the value of the modifier | String |  | NULL | N | Y |
-| field | The field that this rule will look at | String | Up to 75 characters long | NULL | Y | N |
+| field | The field that this rule will look at | String | Between 1 and 75 characters long | NULL | Y | N |
 | is_valuedynamic | Indicates whether or not the value is dynamic | Boolean |  | false | N | N |
 | is_valueempty | Indicates whether or not the value is meant to be empty; must be true when comparator is not changed nor notchanged | Boolean |  | false | N | N |
 | is_valueregex | Indicates whether or not the value is a regular expression | Boolean |  | false | N | N |
