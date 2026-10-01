@@ -27,6 +27,8 @@ This allows you to create a shipment
 | courier_code | The code used for the courier | String | Up to 20 characters long | NULL | N | N |
 | courier_collection_code | The collection code used for the courier | String | Up to 20 characters long | NULL | N | N |
 | courier_name | The name of the courier | String | Up to 30 characters long | NULL | N | N |
+| courier_service | The name of the courier service the shipment went by | String | Up to 100 characters long | NULL | N | N |
+| courier_service_code | The courier's own code for that service | String | Up to 100 characters long | NULL | N | N |
 | created_at | A UTC datetime of when the shipment was created | Datetime |  | NULL | N | N |
 | currency | The ISO 3 character currency code that the order was purchased in | String | Exactly 3 characters long | GBP | N | N |
 | customer_id | A valid Customer ID | Integer |  | NULL | N | N |
@@ -77,6 +79,8 @@ This allows you to update a specific shipment
 | courier_code | The code used for the courier | String | Up to 20 characters long | NULL | N | N |
 | courier_collection_code | The collection code used for the courier | String | Up to 20 characters long | NULL | N | N |
 | courier_name | The name of the courier | String | Up to 30 characters long | NULL | N | N |
+| courier_service | The name of the courier service the shipment went by | String | Up to 100 characters long | NULL | N | N |
+| courier_service_code | The courier's own code for that service | String | Up to 100 characters long | NULL | N | N |
 | est_delivery_date | The estimated delivery date of the shipment | Date |  | NULL | N | N |
 | pallets | An array of pallets for the shipment - see [Shipments Pallets](Shipments_Pallets.md#update-shipments-pallets) | Array |  | NULL | N | N |
 | parcels | An array of parcels for the shipment - see [Shipments Parcels](Shipments_Parcels.md#update-shipments-parcels) | Array |  | NULL | N | N |
@@ -101,6 +105,8 @@ This allows you to list the shipments belonging to the fulfillment
 | courier_code | The code used for the courier | String | Up to 20 characters long |
 | courier_collection_code | The collection code used for the courier | String | Up to 20 characters long |
 | courier_name | The name of the Courier | String |  |
+| courier_service | The name of the courier service the shipment went by | String |  |
+| courier_service_code | The courier's own code for that service | String |  |
 | created_at | A UTC datetime of when the shipment was created | Datetime |  |
 | currency | The ISO 3 character currency code that the order was purchased in | String | Exactly 3 characters long |
 | customer_id | A valid Customer ID | Integer |  |
