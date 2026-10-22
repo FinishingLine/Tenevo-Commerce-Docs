@@ -74,7 +74,7 @@ This allows you to create an order
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
 | resend_order_id | Where the order is a resend, the original Order ID | Integer |  | NULL | N | N |
 | resend_reason | The reason why a resend is being sent out, only when `is_resend` is true | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` | unknown | N | Y |
-| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long</br>Value must be between 0 and 1000 (inclusive)  | 0 | N | N |
+| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long<br/>Value must be between 0 and 1000 (inclusive) | 0 | N | N |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long | NULL | N | N |
 | shipping_lock | Indicates whether the shipping is locked, or not | Boolean |  | 0 | N | N |
 | shipping_method_code | The code of the shipping method | String | Between 1 and 40 characters long | NULL | Y | N |
@@ -143,7 +143,7 @@ This allows you to update a specific order
 | packing_instructions | The instructions for the packing of the order | String |  | NULL | N | N |
 | processed_at | A valid UTC datetime of when the order was last processed | Datetime |  | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
-| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long</br>Value must be between 0 and 1000 (inclusive)  | 0 | N | N |
+| risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long<br/>Value must be between 0 and 1000 (inclusive) | 0 | N | N |
 | shipping_lock | Indicates whether the order shipping is locked, or not | Boolean |  | 0 | N | N |
 | shipping_method_code | The code of the shipping method, can only be updated while the order is open or on hold | String | Up to 40 characters long | NULL | N | Y |
 | shipping_method_name | The name of the shipping method, can only be updated while the order is open or on hold | String | Up to 100 characters long | NULL | N | Y |

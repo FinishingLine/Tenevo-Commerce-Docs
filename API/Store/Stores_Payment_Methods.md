@@ -25,7 +25,7 @@ This allows you to create store payment methods
 | --- | --- | --- | --- | --- | --- | --- |
 | details | Details/Information about the payment method that you can use to inform the customer about | String | Between 1 and 50 characters long | NULL | Y | N |
 | gateway | A valid gateway code | String | Between 1 and 20 characters long | NULL | Y | N |
-| sort_order | The sort order to set order the methods by | Integer | Up to 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
+| sort_order | The sort order to set order the methods by | Integer | Up to 3 digits long<br/>Value must be greater than or equal to 0 | 0 | N | N |
 
 ## Delete Store Payment Method
 This allows you to delete a specified store payment method
@@ -46,7 +46,7 @@ This allows you to update store payment methods
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | details | Details/Information about the payment method that you can use to inform the customer about | String | Between 1 and 50 characters long | NULL | Y | N |
-| sort_order | The sort order to set order the methods by | Integer | Up to 3 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
+| sort_order | The sort order to set order the methods by | Integer | Up to 3 digits long<br/>Value must be greater than or equal to 0 | 0 | N | N |
 
 ## View Store Payment Methods
 This allows you to list store payment methods

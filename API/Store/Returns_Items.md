@@ -25,14 +25,14 @@ This allows you to add items to a return
 | --- | --- | --- | --- | --- | --- | --- |
 | exchangevariant_id | A valid Variant ID of the item required to be exchanged for - only for exchanging an item | Integer |  | NULL | N | Y |
 | order_item_id | A valid Order Item ID of the item being returned | Integer |  | NULL | Y | N |
-| quantity_accepted | The total number of this item that have been accepted | Integer | Up to 10 digits long</br>Value must be greater than or equal to 0 | 0 | N | N |
-| quantity_received | The total number of this item that have been received | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | N | N |
-| quantity_returning | The quantity of units of the item that are returning to be returned | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
+| quantity_accepted | The total number of this item that have been accepted | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 0 | 0 | N | N |
+| quantity_received | The total number of this item that have been received | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | 0 | N | N |
+| quantity_returning | The quantity of units of the item that are returning to be returned | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | NULL | Y | N |
 | reason_details | Details of why the return is being made, required where `reason_id` requires it | String |  | NULL | N | Y |
 | reason_id | A valid Reason ID of why item is being returned | Integer |  | NULL | Y | N |
 | sku | A valid product SKU - only needed when order_item_id is null | String | Up to 100 characters long | NULL | N | Y |
 | uom | The Unit of Measure used for the given UOM Size - will use value from corresponding `order_item_id` or `sku` when not provided | String | Up to 100 characters long | NULL | N | N |
-| uom_size | The size of the corresponding Unit of Measure used - will use value from corresponding `order_item_id` or `sku` when not provided | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 1 | N | N |
+| uom_size | The size of the corresponding Unit of Measure used - will use value from corresponding `order_item_id` or `sku` when not provided | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | 1 | N | N |
 
 ## Delete Return Item
 This allows you to delete a specified return item
@@ -53,9 +53,9 @@ This allows you to update a specific return item
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
 | order_item_id | A valid Order Item ID of the item being returned - can only update when order_item_id is null | Integer |  | NULL | N | Y |
-| quantity_accepted | The total number of this item that have been accepted | Integer | Up to 10 digits long</br>Value must be greater than or equal to 0 | 0 | Y | N |
-| quantity_received | The total number of this item that have been received | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 0 | Y | N |
-| quantity_returning | The quantity of units of the item that are returning to be returned | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
+| quantity_accepted | The total number of this item that have been accepted | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 0 | 0 | Y | N |
+| quantity_received | The total number of this item that have been received | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | 0 | Y | N |
+| quantity_returning | The quantity of units of the item that are returning to be returned | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | NULL | Y | N |
 | reason_details | Details of why the return is being made, only when the return status is application in progress | String |  | NULL | N | Y |
 | reason_id | A valid Reason ID of why item is being returned, only when the return status is application in progress | Integer |  | NULL | N | Y |
 
