@@ -31,15 +31,15 @@ This allows you to add items to a shipment parcel
 | order_item_id | A valid Order Grouping Item ID | Integer |  | NULL | N | N |
 | product_type | The type of product, used for customs declarations | String | Up to 100 characters long | NULL | N | N |
 | properties | A JSON encoded array of properties related to the item | String |  | NULL | N | N |
-| quantity | The quantity of units of this item within the parcel | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
+| quantity | The quantity of units of this item within the parcel | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | NULL | Y | N |
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | sku | The SKU of the item | String | Up to 255 characters long | NULL | N | N |
 | unit_price | The price of one unit of this item, inclusive of taxes, etc | Float | Up to 4 decimal places and no larger than 99999999.9999 | NULL | Y | N |
 | unit_tax | The tax of one unit of this item | Float | Up to 4 decimal places and no larger than 99999999.9999 | NULL | Y | N |
-| unit_weight | The weight of one unit of this item | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
+| unit_weight | The weight of one unit of this item | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | NULL | Y | N |
 | uom | The Unit of Measure used for the given UOM Size | String | Up to 100 characters long | NULL | N | N |
-| uom_size | The size of the corresponding Unit of Measure used | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | 1 | N | N |
+| uom_size | The size of the corresponding Unit of Measure used | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | 1 | N | N |
 
 ## Delete Shipment Parcel Item
 This allows you to delete a shipment parcel item
@@ -64,7 +64,7 @@ This allows you to update a specific shipment parcel item
 | manufactured_country_iso2 | A valid ISO 2 Country Code showing where the item was manufactured, used for customs declarations | String | Exactly 2 characters long | NULL | N | N |
 | manufacturer_part_number | The manufacturer's own part, model or style number (EU customs NS-PID) | String | Up to 100 characters long | NULL | N | N |
 | product_type | The type of product, used for customs declarations | String | Up to 100 characters long | NULL | N | N |
-| quantity | The quantity of units of this item within the parcel | Integer | Up to 10 digits long</br>Value must be greater than or equal to 1 | NULL | Y | N |
+| quantity | The quantity of units of this item within the parcel | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | NULL | Y | N |
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 30 characters long | NULL | N | N |
 | sku | The SKU of the item | String | Up to 255 characters long | NULL | N | N |
