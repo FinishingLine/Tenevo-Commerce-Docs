@@ -8,7 +8,7 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /pages/:page/stores/ | POST | This allows you to create a page store | [Details](#create-page-stores) |
-| /pages/:page/stores/:storepage | DELETE | This allows you to delete a page store | [Details](#delete-page-store) |
+| /pages/:page/stores/:store | DELETE | This allows you to delete a page store | [Details](#delete-page-store) |
 
 ## Create Page Stores
 This allows you to create a page store
@@ -24,6 +24,6 @@ This allows you to create a page store
 ## Delete Page Store
 This allows you to delete a page store
 
-**URL** : `/pages/:page/stores/:storepage`
+**URL** : `/pages/:page/stores/:store`
 
 **Method** : `DELETE`

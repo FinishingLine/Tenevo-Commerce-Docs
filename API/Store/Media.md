@@ -8,10 +8,10 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /media/ | POST | This allows you to create new media | [Details](#create-media) |
-| /media/:id/ | DELETE | This allows you to delete media | [Details](#delete-media) |
-| /media/:id/ | PUT | This allows you to update specified media | [Details](#update-media) |
+| /media/:media/ | DELETE | This allows you to delete media | [Details](#delete-media) |
+| /media/:media/ | PUT | This allows you to update specified media | [Details](#update-media) |
 | /media/ | GET | This allows you to list media | [Details](#view-media) |
-| /media/:id/ | GET | This allows you to list media | [Details](#view-media) |
+| /media/:media/ | GET | This allows you to list media | [Details](#view-media) |
 
 ## Create Media
 This allows you to create new media
@@ -30,14 +30,14 @@ This allows you to create new media
 ## Delete Media
 This allows you to delete media
 
-**URL** : `/media/:id/`
+**URL** : `/media/:media/`
 
 **Method** : `DELETE`
 
 ## Update Media
 This allows you to update specified media
 
-**URL** : `/media/:id/`
+**URL** : `/media/:media/`
 
 **Method** : `PUT`
 
@@ -52,7 +52,7 @@ This allows you to list media
 
 **URL** : `/media/`
 
-**URL** : `/media/:id/`
+**URL** : `/media/:media/`
 
 **Method** : `GET`
 

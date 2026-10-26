@@ -7,14 +7,14 @@ The below endpoints are available with this API
 
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
-| /administrators/:admin/filters/ | PUT | This allows you to update a specific administrator's filters | [Details](#update-specific-administrator-filters) |
-| /administrators/:admin/filters/ | GET | This allows you to list the administrator's filters | [Details](#view-administrator-filters) |
-| /administrators/:admin/filters/:filter | GET | This allows you to list the administrator's filters | [Details](#view-administrator-filters) |
+| /administrators/:administrator/filters/ | PUT | This allows you to update a specific administrator's filters | [Details](#update-specific-administrator-filters) |
+| /administrators/:administrator/filters/ | GET | This allows you to list the administrator's filters | [Details](#view-administrator-filters) |
+| /administrators/:administrator/filters/:filter | GET | This allows you to list the administrator's filters | [Details](#view-administrator-filters) |
 
 ## Update Specific Administrator Filters
 This allows you to update a specific administrator's filters
 
-**URL** : `/administrators/:admin/filters/`
+**URL** : `/administrators/:administrator/filters/`
 
 **Method** : `PUT`
 
@@ -26,9 +26,9 @@ This allows you to update a specific administrator's filters
 ## View Administrator Filters
 This allows you to list the administrator's filters
 
-**URL** : `/administrators/:admin/filters/`
+**URL** : `/administrators/:administrator/filters/`
 
-**URL** : `/administrators/:admin/filters/:filter`
+**URL** : `/administrators/:administrator/filters/:filter`
 
 **Method** : `GET`
 

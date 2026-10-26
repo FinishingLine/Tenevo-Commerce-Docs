@@ -8,11 +8,11 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /administrators/ | POST | This allows you to create an administrator | [Details](#create-administrator) |
-| /administrators/:admin/ | DELETE | This allows you to delete an administrator | [Details](#delete-administrator) |
+| /administrators/:administrator/ | DELETE | This allows you to delete an administrator | [Details](#delete-administrator) |
 | /administrators/ | PUT | This allows you to update a specific administrator | [Details](#update-administrators) |
-| /administrators/:admin/ | PUT | This allows you to update a specific administrator | [Details](#update-administrators) |
+| /administrators/:administrator/ | PUT | This allows you to update a specific administrator | [Details](#update-administrators) |
 | /administrators/ | GET | This allows you to list the administrators | [Details](#view-administrators) |
-| /administrators/:admin/ | GET | This allows you to list the administrators | [Details](#view-administrators) |
+| /administrators/:administrator/ | GET | This allows you to list the administrators | [Details](#view-administrators) |
 
 ## Create Administrator
 This allows you to create an administrator
@@ -32,7 +32,7 @@ This allows you to create an administrator
 ## Delete Administrator
 This allows you to delete an administrator
 
-**URL** : `/administrators/:admin/`
+**URL** : `/administrators/:administrator/`
 
 **Method** : `DELETE`
 
@@ -41,7 +41,7 @@ This allows you to update a specific administrator
 
 **URL** : `/administrators/`
 
-**URL** : `/administrators/:admin/`
+**URL** : `/administrators/:administrator/`
 
 **Method** : `PUT`
 
@@ -56,7 +56,7 @@ This allows you to list the administrators
 
 **URL** : `/administrators/`
 
-**URL** : `/administrators/:admin/`
+**URL** : `/administrators/:administrator/`
 
 **Method** : `GET`
 

@@ -8,11 +8,11 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /orders/:order/addresses/ | POST | This allows you to create an address for an order | [Details](#create-order-addresses) |
-| /orders/:order/addresses/:addresses | DELETE | This allows you to delete an address from an order | [Details](#delete-order-addresses) |
+| /orders/:order/addresses/:address | DELETE | This allows you to delete an address from an order | [Details](#delete-order-addresses) |
 | /orders/:order/addresses/ | PUT | This allows you to update a specific address in an order | [Details](#update-order-addresses) |
-| /orders/:order/addresses/:addresses/ | PUT | This allows you to update a specific address in an order | [Details](#update-order-addresses) |
+| /orders/:order/addresses/:address/ | PUT | This allows you to update a specific address in an order | [Details](#update-order-addresses) |
 | /orders/:order/addresses/ | GET | This allows you to list the addresses belonging to the order | [Details](#view-order-addresses) |
-| /orders/:order/addresses/:addresses | GET | This allows you to list the addresses belonging to the order | [Details](#view-order-addresses) |
+| /orders/:order/addresses/:address | GET | This allows you to list the addresses belonging to the order | [Details](#view-order-addresses) |
 
 ## Create Order Addresses
 This allows you to create an address for an order
@@ -52,7 +52,7 @@ This allows you to create an address for an order
 ## Delete Order Addresses
 This allows you to delete an address from an order
 
-**URL** : `/orders/:order/addresses/:addresses`
+**URL** : `/orders/:order/addresses/:address`
 
 **Method** : `DELETE`
 
@@ -61,7 +61,7 @@ This allows you to update a specific address in an order
 
 **URL** : `/orders/:order/addresses/`
 
-**URL** : `/orders/:order/addresses/:addresses/`
+**URL** : `/orders/:order/addresses/:address/`
 
 **Method** : `PUT`
 
@@ -97,7 +97,7 @@ This allows you to list the addresses belonging to the order
 
 **URL** : `/orders/:order/addresses/`
 
-**URL** : `/orders/:order/addresses/:addresses`
+**URL** : `/orders/:order/addresses/:address`
 
 **Method** : `GET`
 

@@ -8,11 +8,11 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /asns/:asn/addresses/ | POST | This allows you to create an address for an advanced shipping notice | [Details](#create-advanced-shipment-notification-addresses) |
-| /asns/:asn/addresses/:addresses | DELETE | This allows you to delete an address from an advanced shipment notification | [Details](#delete-advanced-shipment-notification-addresses) |
+| /asns/:asn/addresses/:address | DELETE | This allows you to delete an address from an advanced shipment notification | [Details](#delete-advanced-shipment-notification-addresses) |
 | /asns/:asn/addresses/ | PUT | This allows you to update a specific address in an advanced shipment notification | [Details](#update-advanced-shipment-notification-addresses) |
-| /asns/:asn/addresses/:addresses/ | PUT | This allows you to update a specific address in an advanced shipment notification | [Details](#update-advanced-shipment-notification-addresses) |
+| /asns/:asn/addresses/:address/ | PUT | This allows you to update a specific address in an advanced shipment notification | [Details](#update-advanced-shipment-notification-addresses) |
 | /asns/:asn/addresses/ | GET | This allows you to list the addresses belonging to the advanced shipment notification | [Details](#view-advanced-shipment-notification-addresses) |
-| /asns/:asn/addresses/:addresses | GET | This allows you to list the addresses belonging to the advanced shipment notification | [Details](#view-advanced-shipment-notification-addresses) |
+| /asns/:asn/addresses/:address | GET | This allows you to list the addresses belonging to the advanced shipment notification | [Details](#view-advanced-shipment-notification-addresses) |
 
 ## Create Advanced Shipment Notification Addresses
 This allows you to create an address for an advanced shipping notice
@@ -46,7 +46,7 @@ This allows you to create an address for an advanced shipping notice
 ## Delete Advanced Shipment Notification Addresses
 This allows you to delete an address from an advanced shipment notification
 
-**URL** : `/asns/:asn/addresses/:addresses`
+**URL** : `/asns/:asn/addresses/:address`
 
 **Method** : `DELETE`
 
@@ -55,7 +55,7 @@ This allows you to update a specific address in an advanced shipment notificatio
 
 **URL** : `/asns/:asn/addresses/`
 
-**URL** : `/asns/:asn/addresses/:addresses/`
+**URL** : `/asns/:asn/addresses/:address/`
 
 **Method** : `PUT`
 
@@ -83,7 +83,7 @@ This allows you to list the addresses belonging to the advanced shipment notific
 
 **URL** : `/asns/:asn/addresses/`
 
-**URL** : `/asns/:asn/addresses/:addresses`
+**URL** : `/asns/:asn/addresses/:address`
 
 **Method** : `GET`
 
