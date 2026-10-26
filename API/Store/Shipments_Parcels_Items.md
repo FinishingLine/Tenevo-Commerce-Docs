@@ -23,6 +23,7 @@ This allows you to add items to a shipment parcel
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
+| barcode | The item's barcode when packed, e.g. a GTIN/EAN (EU customs S-PID) | String | Up to 50 characters long | NULL | N | N |
 | description | A description of the item, used for customs declarations | String | Up to 200 characters long | NULL | N | N |
 | hs_tariff_code | The HS Tariff Code of the item, used for customs declarations | Integer |  | NULL | N | N |
 | item_name | The name of the item | String | Between 1 and 200 characters long | NULL | Y | N |
@@ -59,6 +60,7 @@ This allows you to update a specific shipment parcel item
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
+| barcode | The item's barcode when packed, e.g. a GTIN/EAN (EU customs S-PID) | String | Up to 50 characters long | NULL | N | N |
 | description | A description of the item, used for customs declarations | String | Up to 200 characters long | NULL | N | N |
 | hs_tariff_code | The HS Tariff Code of the item, used for customs declarations | Integer |  | NULL | N | N |
 | manufactured_country_iso2 | A valid ISO 2 Country Code showing where the item was manufactured, used for customs declarations | String | Exactly 2 characters long | NULL | N | N |
@@ -80,6 +82,7 @@ This allows you to list the items belonging to a shipment parcel
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
+| barcode | The item's barcode when packed, e.g. a GTIN/EAN (EU customs S-PID) | String | Up to 50 characters long |
 | batch_number | A comma seperated list of batch numbers | String |  |
 | description | A description of the item, used for customs declarations | String | Up to 200 characters long |
 | expiry_date | A comma seperated list of expiry dates | String |  |

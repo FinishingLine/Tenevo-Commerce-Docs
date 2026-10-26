@@ -8,11 +8,11 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /orders/:order/taxes/ | POST | This allows you to create an tax for an order | [Details](#create-order-taxes) |
-| /orders/:order/taxes/:taxes | DELETE | This allows you to delete an tax from an order | [Details](#delete-order-taxes) |
+| /orders/:order/taxes/:tax | DELETE | This allows you to delete an tax from an order | [Details](#delete-order-taxes) |
 | /orders/:order/taxes/ | PUT | This allows you to update a specific tax in an order | [Details](#update-order-taxes) |
-| /orders/:order/taxes/:taxes/ | PUT | This allows you to update a specific tax in an order | [Details](#update-order-taxes) |
+| /orders/:order/taxes/:tax/ | PUT | This allows you to update a specific tax in an order | [Details](#update-order-taxes) |
 | /orders/:order/taxes/ | GET | This allows you to list the taxes belonging to the order | [Details](#view-order-taxes) |
-| /orders/:order/taxes/:taxes | GET | This allows you to list the taxes belonging to the order | [Details](#view-order-taxes) |
+| /orders/:order/taxes/:tax | GET | This allows you to list the taxes belonging to the order | [Details](#view-order-taxes) |
 
 ## Create Order Taxes
 This allows you to create an tax for an order
@@ -31,7 +31,7 @@ This allows you to create an tax for an order
 ## Delete Order Taxes
 This allows you to delete an tax from an order
 
-**URL** : `/orders/:order/taxes/:taxes`
+**URL** : `/orders/:order/taxes/:tax`
 
 **Method** : `DELETE`
 
@@ -40,7 +40,7 @@ This allows you to update a specific tax in an order
 
 **URL** : `/orders/:order/taxes/`
 
-**URL** : `/orders/:order/taxes/:taxes/`
+**URL** : `/orders/:order/taxes/:tax/`
 
 **Method** : `PUT`
 
@@ -56,7 +56,7 @@ This allows you to list the taxes belonging to the order
 
 **URL** : `/orders/:order/taxes/`
 
-**URL** : `/orders/:order/taxes/:taxes`
+**URL** : `/orders/:order/taxes/:tax`
 
 **Method** : `GET`
 

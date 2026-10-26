@@ -82,6 +82,7 @@ problem with the field it is about. A successful response has no `request.error`
 | Code             | HTTP | What it means                    | What to do                                     |
 | ---------------- | ---- | -------------------------------- | ---------------------------------------------- |
 | `internal_error` | 5xx  | Something went wrong on our side | Try again, and contact support if it continues |
+| `maintenance`    | 503  | The API is being updated         | Try again after the `Retry-After` seconds      |
 
 ## From `/auth/`
 

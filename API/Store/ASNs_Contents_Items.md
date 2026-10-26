@@ -12,7 +12,7 @@ The below endpoints are available with this API
 | /asns/:asn/contents/:content/items/ | PUT | This allows you to update a specific item in an advanced shipment notification content | [Details](#update-advanced-shipment-notification-content-items) |
 | /asns/:asn/contents/:content/items/:item | PUT | This allows you to update a specific item in an advanced shipment notification content | [Details](#update-advanced-shipment-notification-content-items) |
 | /asns/:asn/contents/:content/items/ | GET | This allows you to list the items belonging to the advanced shipment notification content | [Details](#view-advanced-shipment-notification-content-items) |
-| /asns/:asn/contents/:content/items/:items | GET | This allows you to list the items belonging to the advanced shipment notification content | [Details](#view-advanced-shipment-notification-content-items) |
+| /asns/:asn/contents/:content/items/:item | GET | This allows you to list the items belonging to the advanced shipment notification content | [Details](#view-advanced-shipment-notification-content-items) |
 
 ## Create Advanced Shipment Notification Content Items
 This allows you to create items for an advanced shipment notification content
@@ -71,7 +71,7 @@ This allows you to list the items belonging to the advanced shipment notificatio
 
 **URL** : `/asns/:asn/contents/:content/items/`
 
-**URL** : `/asns/:asn/contents/:content/items/:items`
+**URL** : `/asns/:asn/contents/:content/items/:item`
 
 **Method** : `GET`
 

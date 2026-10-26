@@ -8,11 +8,11 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /suppliers/:supplier/addresses/ | POST | This allows you to create an address for a supplier | [Details](#create-supplier-addresses) |
-| /suppliers/:supplier/addresses/:addresses | DELETE | This allows you to delete an address from a supplier | [Details](#delete-supplier-addresses) |
+| /suppliers/:supplier/addresses/:address | DELETE | This allows you to delete an address from a supplier | [Details](#delete-supplier-addresses) |
 | /suppliers/:supplier/addresses/ | PUT | This allows you to update a specific address in a supplier | [Details](#update-supplier-addresses) |
-| /suppliers/:supplier/addresses/:addresses/ | PUT | This allows you to update a specific address in a supplier | [Details](#update-supplier-addresses) |
+| /suppliers/:supplier/addresses/:address/ | PUT | This allows you to update a specific address in a supplier | [Details](#update-supplier-addresses) |
 | /suppliers/:supplier/addresses/ | GET | This allows you to list the addresses belonging to the supplier | [Details](#view-supplier-addresses) |
-| /suppliers/:supplier/addresses/:addresses | GET | This allows you to list the addresses belonging to the supplier | [Details](#view-supplier-addresses) |
+| /suppliers/:supplier/addresses/:address | GET | This allows you to list the addresses belonging to the supplier | [Details](#view-supplier-addresses) |
 
 ## Create Supplier Addresses
 This allows you to create an address for a supplier
@@ -43,7 +43,7 @@ This allows you to create an address for a supplier
 ## Delete Supplier Addresses
 This allows you to delete an address from a supplier
 
-**URL** : `/suppliers/:supplier/addresses/:addresses`
+**URL** : `/suppliers/:supplier/addresses/:address`
 
 **Method** : `DELETE`
 
@@ -52,7 +52,7 @@ This allows you to update a specific address in a supplier
 
 **URL** : `/suppliers/:supplier/addresses/`
 
-**URL** : `/suppliers/:supplier/addresses/:addresses/`
+**URL** : `/suppliers/:supplier/addresses/:address/`
 
 **Method** : `PUT`
 
@@ -80,7 +80,7 @@ This allows you to list the addresses belonging to the supplier
 
 **URL** : `/suppliers/:supplier/addresses/`
 
-**URL** : `/suppliers/:supplier/addresses/:addresses`
+**URL** : `/suppliers/:supplier/addresses/:address`
 
 **Method** : `GET`
 

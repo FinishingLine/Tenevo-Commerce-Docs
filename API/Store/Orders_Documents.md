@@ -8,7 +8,7 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /orders/:order/documents/ | POST | This allows you to create a document for an order | [Details](#create-order-document) |
-| /orders/:order/documents/:documents | DELETE | This allows you to delete a document from an order | [Details](#delete-order-documents) |
+| /orders/:order/documents/:document | DELETE | This allows you to delete a document from an order | [Details](#delete-order-documents) |
 | /orders/:order/documents/ | PUT | This allows you to update a specific document in an order | [Details](#update-order-documents) |
 | /orders/:order/documents/:document/ | PUT | This allows you to update a specific document in an order | [Details](#update-order-documents) |
 | /orders/:order/documents/ | GET | This allows you to list the documents belonging to the order | [Details](#view-order-documents) |
@@ -33,7 +33,7 @@ This allows you to create a document for an order
 ## Delete Order Documents
 This allows you to delete a document from an order
 
-**URL** : `/orders/:order/documents/:documents`
+**URL** : `/orders/:order/documents/:document`
 
 **Method** : `DELETE`
 

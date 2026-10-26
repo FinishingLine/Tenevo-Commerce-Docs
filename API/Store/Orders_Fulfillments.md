@@ -8,14 +8,14 @@ The below endpoints are available with this API
 | Endpoint | Method | Description | |
 | --- | --- | --- | --- |
 | /orders/fulfillments/ | GET | This allows you to list every parcel (or pallet, on a pallet shipment) sent for an order, with its tracking and delivery status - cancelled shipments are included, with a delivery_status of cancelled | [Details](#view-fulfillments) |
-| /orders/:id/fulfillments/ | GET | This allows you to list every parcel (or pallet, on a pallet shipment) sent for an order, with its tracking and delivery status - cancelled shipments are included, with a delivery_status of cancelled | [Details](#view-fulfillments) |
+| /orders/:order/fulfillments/ | GET | This allows you to list every parcel (or pallet, on a pallet shipment) sent for an order, with its tracking and delivery status - cancelled shipments are included, with a delivery_status of cancelled | [Details](#view-fulfillments) |
 
 ## View Fulfillments
 This allows you to list every parcel (or pallet, on a pallet shipment) sent for an order, with its tracking and delivery status - cancelled shipments are included, with a delivery_status of cancelled
 
 **URL** : `/orders/fulfillments/`
 
-**URL** : `/orders/:id/fulfillments/`
+**URL** : `/orders/:order/fulfillments/`
 
 **Method** : `GET`
 
