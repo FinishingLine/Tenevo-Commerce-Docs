@@ -10,8 +10,8 @@ The below endpoints are available with this API
 | /shipments/:shipment/pallets/:pallet/parcels/:parcel/items/ | POST | This allows you to add items to a shipment pallet parcel | [Details](#create-shipment-pallets-parcels-items) |
 | /shipments/:shipment/pallets/:pallet/parcels/:parcel/items/ | PUT | This allows you to update a specific shipment pallet parcel item | [Details](#update-shipment-pallet-parcels-items) |
 | /shipments/:shipment/pallets/:pallet/parcels/:parcel/items/:item/ | PUT | This allows you to update a specific shipment pallet parcel item | [Details](#update-shipment-pallet-parcels-items) |
-| /shipments/:shipment/pallets/:pallet/parcels/:parcel/items/ | GET | This allows you to list the parcels belonging to a shipment pallet item | [Details](#view-shipment-pallet-parcel-item) |
-| /shipments/:shipment/pallets/:pallet/parcels/:parcel/items/:item/ | GET | This allows you to list the parcels belonging to a shipment pallet item | [Details](#view-shipment-pallet-parcel-item) |
+| /shipments/:shipment/pallets/:pallet/parcels/:parcel/items/ | GET | This allows you to list the items belonging to a shipment pallet parcel | [Details](#view-shipment-pallet-parcel-item) |
+| /shipments/:shipment/pallets/:pallet/parcels/:parcel/items/:item/ | GET | This allows you to list the items belonging to a shipment pallet parcel | [Details](#view-shipment-pallet-parcel-item) |
 
 ## Create Shipment Pallets Parcels Items
 This allows you to add items to a shipment pallet parcel
@@ -30,7 +30,7 @@ This allows you to update a specific shipment pallet parcel item
 **Method** : `PUT`
 
 ## View Shipment Pallet Parcel Item
-This allows you to list the parcels belonging to a shipment pallet item
+This allows you to list the items belonging to a shipment pallet parcel
 
 **URL** : `/shipments/:shipment/pallets/:pallet/parcels/:parcel/items/`
 
