@@ -11,8 +11,8 @@ The below endpoints are available with this API
 | /shipments/:shipment/ | DELETE | This allows you to delete an shipment | [Details](#delete-shipment) |
 | /shipments/ | PUT | This allows you to update a specific shipment | [Details](#update-shipments) |
 | /shipments/:shipment/ | PUT | This allows you to update a specific shipment | [Details](#update-shipments) |
-| /shipments/ | GET | This allows you to list the shipments belonging to the fulfillment | [Details](#view-shipments) |
-| /shipments/:shipment/ | GET | This allows you to list the shipments belonging to the fulfillment | [Details](#view-shipments) |
+| /shipments/ | GET | This allows you to list the shipments | [Details](#view-shipments) |
+| /shipments/:shipment/ | GET | This allows you to list the shipments | [Details](#view-shipments) |
 
 ## Create Shipment
 This allows you to create a shipment
@@ -91,7 +91,7 @@ This allows you to update a specific shipment
 | status | The status of the shipment | String | One of the following values: `cancelled`, `despatched`, `labelled`, `open` | NULL | N | N |
 
 ## View Shipments
-This allows you to list the shipments belonging to the fulfillment
+This allows you to list the shipments
 
 **URL** : `/shipments/`
 
