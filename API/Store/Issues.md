@@ -51,7 +51,7 @@ This allows you to update issues
 | customer_id | A valid Customer ID - can only update when customer_id is null | Integer |  | NULL | N | Y |
 | notes | Notes relating to the issue | String |  | NULL | N | N |
 | resolver_id | A valid Admin ID, required when status is closed | Integer |  | NULL | N | Y |
-| status | The status of the issue | String | One of the following values: `open`, `closed` | open | N | N |
+| status | The status of the issue | String | One of the following values: `closed`, `open` | open | N | N |
 | store_id | A valid Store ID - can only update when store_id is null | Integer |  | NULL | N | Y |
 
 ## View Issues
@@ -83,7 +83,7 @@ This allows you to list issues
 | reference | The reference for the issue | String | Exactly 10 characters long |
 | resolver | The name of the Admin whom resolved the issue | String |  |
 | resolver_id | A valid Admin ID | Integer |  |
-| status | The status of the issue | String | One of the following values: `open`, `closed` |
+| status | The status of the issue | String | One of the following values: `closed`, `open` |
 | store | The name of the store | String | Up to 50 characters long |
 | store_id | A valid Store ID | Integer |  |
 | updated_at | A UTC datetime of when the issue was updated | Datetime |  |

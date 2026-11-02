@@ -30,7 +30,7 @@ This allows you to create customer profiles
 | password_confirm | Confirmation of the password to use, must match `password`, required if username provided | String | Between 1 and 100 characters long | NULL | N | Y |
 | primary_address_id | A valid Customer Address ID | Integer |  | NULL | N | N |
 | profile_type_id | A valid Profile Type ID | Integer |  | NULL | N | N |
-| status | The status of the profile | String | One of the following values: `closed`, `active` | active | N | N |
+| status | The status of the profile | String | One of the following values: `active`, `closed` | active | N | N |
 | username | The username of the profile (must be unique), required if is_primary true | String | Between 1 and 100 characters long | NULL | N | Y |
 | wishlist | An array of wishlist items that the profile would like - see [Customers Profiles Wishlist](Customers_Profiles_Wishlist.md#create-customers-profiles-wishlist) | Array |  | NULL | N | N |
 
@@ -58,7 +58,7 @@ This allows you to update customer profiles
 | password_confirm | Confirmation of the password to use, must match `password`, required if username provided | String | Between 1 and 100 characters long | NULL | N | Y |
 | primary_address_id | A valid Customer Address ID | Integer |  | NULL | N | N |
 | profile_type_id | A valid Profile Type ID | Integer |  | NULL | N | N |
-| status | The status of the profile | String | One of the following values: `closed`, `active` | active | N | N |
+| status | The status of the profile | String | One of the following values: `active`, `closed` | active | N | N |
 | username | The username of the profile (must be unique), required if is_primary true | String | Between 1 and 100 characters long | NULL | N | Y |
 | wishlist | An array of wishlist items that the profile would like - see [Customers Profiles Wishlist](Customers_Profiles_Wishlist.md#update-customers-profiles-wishlist) | Array |  | NULL | N | N |
 

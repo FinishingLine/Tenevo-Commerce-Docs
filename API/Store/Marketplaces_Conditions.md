@@ -23,7 +23,7 @@ This allows you to create a condition for a marketplace
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| comparator | The comparator function to use to compare the value | String | One of the following values: `after`, `before`, `contain`, `equal`, `less`, `lessequal`, `more`, `moreequal`, `notequal`, `notcontain` | NULL | Y | N |
+| comparator | The comparator function to use to compare the value | String | One of the following values: `after`, `before`, `contain`, `equal`, `less`, `lessequal`, `more`, `moreequal`, `notcontain`, `notequal` | NULL | Y | N |
 | field | The name of the field that is being used to extract a value to compare against the stored value | String | Between 1 and 100 characters long | NULL | Y | N |
 | type | The type of condition | String | One of the following values: `order`, `orderitem`, `product` | NULL | Y | N |
 | value | The value to compare against the stored value | String | Between 1 and 100 characters long | NULL | Y | N |
@@ -48,7 +48,7 @@ This allows you to update conditions for a marketplace
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| comparator | The comparator function to use to compare the value | String | One of the following values: `after`, `before`, `contain`, `equal`, `less`, `lessequal`, `more`, `moreequal`, `notequal`, `notcontain` | NULL | Y | N |
+| comparator | The comparator function to use to compare the value | String | One of the following values: `after`, `before`, `contain`, `equal`, `less`, `lessequal`, `more`, `moreequal`, `notcontain`, `notequal` | NULL | Y | N |
 | field | The name of the field that is being used to extract a value to compare against the stored value | String | Between 1 and 100 characters long | NULL | Y | N |
 | value | The value to compare against the stored value | String | Between 1 and 100 characters long | NULL | Y | N |
 | value_modifier | The modifier used to manipulate the value - for example, if value is 1 and days is used, the value_modifier will effectively be looking for dates tomorrow (with equals comparator) | String | One of the following values: `days`, `minutes`, `months` | NULL | Y | N |
@@ -65,7 +65,7 @@ This allows you to list conditions for a marketplace
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
-| comparator | The comparator function to use to compare the value | String | One of the following values: `after`, `before`, `contain`, `equal`, `less`, `lessequal`, `more`, `moreequal`, `notequal`, `notcontain` |
+| comparator | The comparator function to use to compare the value | String | One of the following values: `after`, `before`, `contain`, `equal`, `less`, `lessequal`, `more`, `moreequal`, `notcontain`, `notequal` |
 | field | The name of the field that is being used to extract a value to compare against the stored value | String | Between 1 and 100 characters long |
 | type | The type of condition | String | One of the following values: `order`, `orderitem`, `product` |
 | value | The value to compare against the stored value | String | Between 1 and 100 characters long |

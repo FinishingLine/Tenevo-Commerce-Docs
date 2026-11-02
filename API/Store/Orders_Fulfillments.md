@@ -28,7 +28,7 @@ This allows you to list every parcel (or pallet, on a pallet shipment) sent for 
 | delivered_at | A UTC datetime of when the carrier delivered the parcel (or pallet) | Datetime |  |
 | delivery_status | Where the parcel (or pallet) has got to, worked out from its latest tracking event and the shipment status | String | One of the following values: `attempted_delivery`, `cancelled`, `delayed`, `delivered`, `despatched`, `failure`, `in_transit`, `labelled`, `out_for_delivery`, `pending` |
 | entity_id | The Parcel ID, or the Pallet ID on a pallet shipment | Integer |  |
-| entity_type | Whether the fulfillment is a parcel, or a pallet on a pallet shipment | String | One of the following values: `parcel`, `pallet` |
+| entity_type | Whether the fulfillment is a parcel, or a pallet on a pallet shipment | String | One of the following values: `pallet`, `parcel` |
 | first_attempted_at | A UTC datetime of the first delivery attempt made by the carrier | Datetime |  |
 | has_delivery_exception | Indicates whether the latest tracking event needs someone to act on it (e.g. lost, refused, or returning to sender), or not | Boolean |  |
 | shipment_id | The Shipment ID | Integer |  |

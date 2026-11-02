@@ -26,7 +26,7 @@ This allows you to list attribute set group attributes
 | attribute_id | A valid Attribute ID | Integer |  |
 | description | A description of the attribute | String |  |
 | field_default | The default value the field takes when no data is provided | String |  |
-| field_input | The type of input that should be used to input the data | String | One of the following values: `date`, `datetime`, `dropdown`, `file`, `html`, `radio`, `time`, `text`, `textarea`, `toggle` |
+| field_input | The type of input that should be used to input the data | String | One of the following values: `date`, `datetime`, `dropdown`, `file`, `html`, `radio`, `text`, `textarea`, `time`, `toggle` |
 | field_options | A pipe seperated list of options that the field could be the value of | String |  |
 | field_type | The type of data that is expected in the field | String | One of the following values: `boolean`, `choice`, `date`, `datetime`, `email`, `file`, `float`, `integer`, `string`, `time`, `url` |
 | frontend_editable | Indicates whether or not the data can be edited/updated on the frontend | Boolean |  |
