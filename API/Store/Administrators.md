@@ -74,6 +74,6 @@ This allows you to list the administrators
 | signature | The signature to use when dealing with support requests, in markdown | String |  |
 | signature_html | The signature to use when dealing with support requests, in html | String |  |
 | signature_plain | The signature to use when dealing with support requests, in plain text | String |  |
-| status | The administrator's account status | String | One of the following values: `active`, `hold`, `leaver` |
+| status | The administrator's account status | String | One of the following values: `active`, `hold`, `invited`, `leaver` |
 | updated_at | A UTC timestamp of when the administrator was last updated | Datetime |  |
 | username | The administrator's username | String | Between 1 and 255 characters long |

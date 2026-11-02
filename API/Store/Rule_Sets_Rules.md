@@ -23,7 +23,7 @@ This allows you to create rule set rules
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| pass_if | Indicates which condition should allow the rule set to pass, based on how the rule set rules evaluate | String | One of the following values: `allfalse`, `anyfalse`, `alltrue`, `anytrue` | NULL | Y | N |
+| pass_if | Indicates which condition should allow the rule set to pass, based on how the rule set rules evaluate | String | One of the following values: `allfalse`, `alltrue`, `anyfalse`, `anytrue` | NULL | Y | N |
 | rule_id | A valid Rule ID matching the rule set owner_type, must be unique for the rule set | Integer |  | NULL | Y | N |
 
 ## Delete Rule Set Rule
@@ -44,7 +44,7 @@ This allows you to update rule set rules
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
-| pass_if | Indicates which condition should allow the rule set to pass, based on how the rule set rules evaluate | String | One of the following values: `allfalse`, `anyfalse`, `alltrue`, `anytrue` | NULL | Y | N |
+| pass_if | Indicates which condition should allow the rule set to pass, based on how the rule set rules evaluate | String | One of the following values: `allfalse`, `alltrue`, `anyfalse`, `anytrue` | NULL | Y | N |
 
 ## View Rule Set Rules
 This allows you to list rule set rules
@@ -59,5 +59,5 @@ This allows you to list rule set rules
 | --- | --- | --- | --- |
 | description | A description about this rule | String |  |
 | name | The name for this rule | String | Up to 50 characters long |
-| pass_if | Indicates which condition should allow the rule set to pass, based on how the rule set rules evaluate | String | One of the following values: `allfalse`, `anyfalse`, `alltrue`, `anytrue` |
+| pass_if | Indicates which condition should allow the rule set to pass, based on how the rule set rules evaluate | String | One of the following values: `allfalse`, `alltrue`, `anyfalse`, `anytrue` |
 | rule_id | A valid Rule ID | Integer |  |

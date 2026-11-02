@@ -30,7 +30,7 @@ This allows you to create an order
 | booking_time | The time for the booking of the order - required if `requires_booking` is set to true | Time |  | NULL | N | Y |
 | currency | A valid ISO 3 character currency code | String | Exactly 3 characters long | NULL | Y | N |
 | customer_id | A valid Customer ID that this order belongs to | Integer |  | NULL | Y | N |
-| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `default`, `dap`, `ddp`, `dtp` | default | N | N |
+| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `dap`, `ddp`, `default`, `dtp` | default | N | N |
 | deliver_max | A date that the order needs to be delivered no later than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_min | A date that the order needs to be delivered no earlier than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_on | A date that the order needs to be delivered on | Date |  | NULL | N | N |
@@ -73,7 +73,7 @@ This allows you to create an order
 | reference_id | A reference that corresponds to a Marketplace Order ID | String | Up to 255 characters long | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
 | resend_order_id | Where the order is a resend, the original Order ID | Integer |  | NULL | N | N |
-| resend_reason | The reason why a resend is being sent out, only when `is_resend` is true | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` | unknown | N | Y |
+| resend_reason | The reason why a resend is being sent out, only when `is_resend` is true | String | One of the following values: `item damaged`, `item defective`, `item not received`, `shipment damaged`, `shipment not received`, `unknown` | unknown | N | Y |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long<br/>Value must be between 0 and 1000 (inclusive) | 0 | N | N |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long | NULL | N | N |
 | shipping_lock | Indicates whether the shipping is locked, or not | Boolean |  | 0 | N | N |
@@ -115,7 +115,7 @@ This allows you to update a specific order
 | cancelled_reason | The reason for a cancelled order | String |  | NULL | N | N |
 | closed_at | A valid UTC datetime of when the order was closed | Datetime |  | NULL | N | N |
 | currency | A valid ISO 3 character currency code | String | Exactly 3 characters long | NULL | Y | N |
-| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `default`, `dap`, `ddp`, `dtp` | NULL | N | N |
+| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `dap`, `ddp`, `default`, `dtp` | NULL | N | N |
 | deliver_max | A date that the order needs to be delivered no later than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_min | A date that the order needs to be delivered no earlier than - ignored when `deliver_on` is provided | Date |  | NULL | N | N |
 | deliver_on | A date that the order needs to be delivered on | Date |  | NULL | N | N |
@@ -179,7 +179,7 @@ This allows you to list orders
 | created_at | A UTC datetime of when the order was created | Datetime |  |
 | currency | The ISO 3 character currency code | String | Exactly 3 characters long |
 | customer_id | The Customer ID of the customer the order belongs to | Integer |  |
-| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `default`, `dap`, `ddp`, `dtp` |
+| customs_duty_terms | The customs duty terms to use when sending out the order | String | One of the following values: `dap`, `ddp`, `default`, `dtp` |
 | deliver_max | A date that the order needs to be delivered no later than | Date |  |
 | deliver_min | A date that the order needs to be delivered no earlier than | Date |  |
 | deliver_on | A date that the order needs to be delivered on | Date |  |
@@ -241,7 +241,7 @@ This allows you to list orders
 | release_at | Where the order contains a pre-release item, a UTC datetime of when the next item will be released | Datetime |  |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  |
 | resend_order_id | Where the order is a resend, the original Order ID | Integer |  |
-| resend_reason | The reason why a resend is being sent out | String | One of the following values: `unknown`, `shipment not received`, `item not received`, `shipment damaged`, `item damaged`, `item defective` |
+| resend_reason | The reason why a resend is being sent out | String | One of the following values: `item damaged`, `item defective`, `item not received`, `shipment damaged`, `shipment not received`, `unknown` |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long |
 | shipment_reference | A Shipment Reference that has been provided by the customer for the order | String | Up to 50 characters long |
 | shipping_lock | Indicates whether the order shipping is locked, or not | Boolean |  |

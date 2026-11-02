@@ -73,7 +73,7 @@ This allows you to update a specific support ticket
 | requester_type | The type of requester that requested the ticket to be opened | String | One of the following values: `admin`, `contact`, `profile` | NULL | Y | N |
 | resolver_id | A valid ID for the given resolver_type, only when status is solved | Integer | Up to 10 digits long | NULL | N | Y |
 | resolver_type | The type of resolver that requested the ticket to be opened, only when status is solved | String | One of the following values: `admin`, `contact`, `profile` | NULL | N | Y |
-| status | The status of the ticket | String | One of the following values: `open`, `pending`, `hold`, `solved`, `closed` | NULL | Y | N |
+| status | The status of the ticket | String | One of the following values: `closed`, `hold`, `open`, `pending`, `solved` | NULL | Y | N |
 | subject | A subject for the ticket | String | Between 1 and 100 characters long | NULL | Y | N |
 | type | The type of ticket, only updatable if value is not problem and the problem is linked to incidents | String | One of the following values: `incident`, `problem`, `question`, `task` | NULL | N | Y |
 
@@ -117,7 +117,7 @@ This allows you to list support tickets
 | solved_at | A valid UTC datetime of when the ticket was solved | Datetime |  |
 | solved_first_at | A valid UTC datetime of when the ticket was first solved | Datetime |  |
 | source | The source of where the ticket was created from | String | One of the following values: `admin`, `call`, `direct`, `email` |
-| status | The status of the ticket | String | One of the following values: `new`, `open`, `pending`, `hold`, `solved`, `closed` |
+| status | The status of the ticket | String | One of the following values: `closed`, `hold`, `new`, `open`, `pending`, `solved` |
 | store | The name of the Store | String |  |
 | store_id | A valid Store ID | Integer | Up to 10 digits long |
 | subject | A subject for the ticket | String | Up to 100 characters long |

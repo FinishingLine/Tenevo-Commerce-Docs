@@ -28,7 +28,7 @@ This allows you to create a document for an order
 | format | Document format | String | One of the following values: `pdf`, `zpl` | NULL | Y | N |
 | name | The document name | String | Between 1 and 100 characters long | NULL | Y | N |
 | size | Document size | String | One of the following values: `6x4inch`, `a4` | NULL | Y | N |
-| type | The document type | String | One of the following values: `fba_labels`, `carrier_labels`, `other_label`, `pallet_labels`, `pallet_carrier_labels`, `commercial_invoice`, `despatch_note` | NULL | Y | N |
+| type | The document type | String | One of the following values: `carrier_labels`, `commercial_invoice`, `despatch_note`, `fba_labels`, `other_label`, `pallet_carrier_labels`, `pallet_labels` | NULL | Y | N |
 
 ## Delete Order Documents
 This allows you to delete a document from an order
@@ -51,7 +51,7 @@ This allows you to update a specific document in an order
 | copies | Number of copies | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | 1 | N | N |
 | name | The document name | String | Between 1 and 100 characters long | NULL | Y | N |
 | size | Document size | String | One of the following values: `6x4inch`, `a4` | NULL | Y | N |
-| type | The document type | String | One of the following values: `fba_labels`, `carrier_labels`, `other_label`, `pallet_labels`, `pallet_carrier_labels`, `commercial_invoice`, `despatch_note` | NULL | Y | N |
+| type | The document type | String | One of the following values: `carrier_labels`, `commercial_invoice`, `despatch_note`, `fba_labels`, `other_label`, `pallet_carrier_labels`, `pallet_labels` | NULL | Y | N |
 
 ## View Order Documents
 This allows you to list the documents belonging to the order
@@ -69,4 +69,4 @@ This allows you to list the documents belonging to the order
 | format | Document format | String | One of the following values: `pdf`, `zpl` |
 | name | The document name | String | Up to 255 characters long |
 | size | Document size | String | One of the following values: `6x4inch`, `a4` |
-| type | The document type | String | One of the following values: `fba_labels`, `carrier_labels`, `other_label`, `pallet_labels`, `pallet_carrier_labels`, `commercial_invoice`, `despatch_note` |
+| type | The document type | String | One of the following values: `carrier_labels`, `commercial_invoice`, `despatch_note`, `fba_labels`, `other_label`, `pallet_carrier_labels`, `pallet_labels` |

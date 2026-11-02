@@ -36,5 +36,5 @@ This allows you to list the API users that reach this API. The keys themselves a
 | replaces_id | The ID of the API user this one replaced, while that one still exists - empty once it has been revoked | Integer |  |
 | rotated_at | A UTC datetime of when the API user was rotated - empty if it never has been | Datetime |  |
 | rotated_from_id | The ID of the API user this one replaced, whether or not it still exists | Integer |  |
-| status | The status of the API user - expired once past its expiry, replaced once rotated and its replacement is live, expiring within 14 days of its expiry, and active otherwise | String | One of the following values: `active`, `expiring`, `replaced`, `expired` |
+| status | The status of the API user - expired once past its expiry, replaced once rotated and its replacement is live, expiring within 14 days of its expiry, and active otherwise | String | One of the following values: `active`, `expired`, `expiring`, `replaced` |
 | username | The API username | String | Up to 26 characters long |
