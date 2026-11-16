@@ -23,6 +23,7 @@ This allows you to create an address for an order
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
+| address_lock | Indicates whether the address is locked from marketplace changes, or not | Boolean |  | 0 | N | N |
 | address_type | The type of address | String | One of the following values: `delivery`, `invoice` | NULL | Y | N |
 | city | The city or town | String | Between 1 and 100 characters long | NULL | Y | N |
 | company_name | The name of the company where the recipient can be found | String | Up to 100 characters long | NULL | N | N |
@@ -67,6 +68,7 @@ This allows you to update a specific address in an order
 
 | Field | Description | Type | Requirements | Default | Required? | Conditional? |
 | --- | --- | --- | --- | --- | --- | --- |
+| address_lock | Indicates whether the address is locked from marketplace changes, or not | Boolean |  | NULL | N | N |
 | city | The city or town | String | Between 1 and 100 characters long | NULL | Y | N |
 | company_name | The name of the company where the recipient can be found | String | Up to 100 characters long | NULL | N | N |
 | country_iso2 | A valid ISO 2 letter country code | String | Exactly 2 characters long | NULL | Y | N |
@@ -103,6 +105,7 @@ This allows you to list the addresses belonging to the order
 
 | Field | Description | Type | Validation |
 | --- | --- | --- | --- |
+| address_lock | Indicates whether the address is locked from marketplace changes, or not | Boolean |  |
 | address_type | The type of address | String | One of the following values: `delivery`, `invoice` |
 | city | The city or town | String | Between 1 and 100 characters long |
 | company_name | The name of the company where the recipient can be found | String | Between 1 and 100 characters long |

@@ -141,6 +141,7 @@ This allows you to update a specific order
 | is_test | Indicates whether an order is a test order, or not | Boolean |  | 0 | N | N |
 | notes | Any extra notes pertaining to the order | String |  | NULL | N | N |
 | packing_instructions | The instructions for the packing of the order | String |  | NULL | N | N |
+| po_number | A Purchase Order Number provided by the customer - cannot be changed once any of the order has been fulfilled, and cannot be cleared on an order paid by Purchase Order | String | Up to 30 characters long | NULL | N | N |
 | processed_at | A valid UTC datetime of when the order was last processed | Datetime |  | NULL | N | N |
 | requires_booking | Indicates whether the order should be a booking or not | Boolean |  | 0 | N | N |
 | risk_score | A score related to the risk an order contains - the lower the score, the lower the risk | Integer | Up to 4 digits long<br/>Value must be between 0 and 1000 (inclusive) | 0 | N | N |
