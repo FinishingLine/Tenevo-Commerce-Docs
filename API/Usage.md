@@ -75,6 +75,8 @@ The `query` parameter can be used to filter the results that are returned. This 
 
 API field names can be used within the filter along with special characters and actions
 
+Every term must name the field it is for (`reference:ABC`, not just `ABC`). A term with no field is ignored, as is a term for a field the endpoint does not have - searching every field of a large table is too expensive to allow
+
 The below example shows how to find all the people that have the `first_name` of John
 
 ```
