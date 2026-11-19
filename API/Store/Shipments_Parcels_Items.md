@@ -36,6 +36,7 @@ This allows you to add items to a shipment parcel
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 100 characters long | NULL | N | N |
 | sku | The SKU of the item | String | Up to 255 characters long | NULL | N | N |
+| unit_duty | The import duty paid within one unit's price, kept out of the customs value | Float | Up to 2 decimal places and no larger than 99999999.99 | NULL | Y | N |
 | unit_price | The price of one unit of this item, inclusive of taxes, etc | Float | Up to 4 decimal places and no larger than 99999999.9999 | NULL | Y | N |
 | unit_tax | The tax of one unit of this item | Float | Up to 4 decimal places and no larger than 99999999.9999 | NULL | Y | N |
 | unit_weight | The weight of one unit of this item | Integer | Up to 10 digits long<br/>Value must be greater than or equal to 1 | NULL | Y | N |
@@ -70,6 +71,9 @@ This allows you to update a specific shipment parcel item
 | returnslabel_courier_name | The name of the courier providing the returns label | String | Up to 30 characters long | NULL | N | N |
 | returnslabel_tracking_code | The tracking code of the returns label | String | Up to 30 characters long | NULL | N | N |
 | sku | The SKU of the item | String | Up to 255 characters long | NULL | N | N |
+| unit_duty | The import duty paid within one unit's price, kept out of the customs value | Float | Up to 2 decimal places and no larger than 99999999.99 | NULL | N | N |
+| unit_price | The price of one unit of this item, inclusive of taxes, etc | Float | Up to 4 decimal places and no larger than 99999999.9999 | NULL | N | N |
+| unit_tax | The tax of one unit of this item | Float | Up to 2 decimal places and no larger than 99999999.99 | NULL | N | N |
 
 ## View Shipment Parcel Items
 This allows you to list the items belonging to a shipment parcel
@@ -105,6 +109,7 @@ This allows you to list the items belonging to a shipment parcel
 | total_price | The total price of all the units of this item, inclusive of taxes, etc | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | total_tax | The total tax of all the units of this item | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | total_weight | The total weight of all the units of this item | Integer | Up to 10 digits long |
+| unit_duty | The import duty paid within one unit's price, kept out of the customs value | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | unit_price | The price of one unit of this item, inclusive of taxes, etc | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | unit_tax | The tax of one unit of this item | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | unit_weight | The weight of one unit of this item | Integer | Up to 10 digits long |
