@@ -198,6 +198,8 @@ The body that is sent is the original body, plus the `signature`, `timestamp` an
   anything PHP's `strtotime()` can read, but the fingerprint uses the exact text you send.
 - A timestamp more than **two minutes** away from the server's clock is refused with
   `timestamp_out_of_range`. Correct your timestamps by the difference measured at `/auth/`.
+- `/auth/` needs a timestamp too, and refuses a missing or unreadable one with `timestamp_missing`. It does
+  not apply the two-minute check, as `/auth/` is where you measure the difference.
 
 ## How long a signature lasts
 

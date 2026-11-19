@@ -22,6 +22,7 @@ This allows you to get a summary of an order
 | sub_total | The sub total of the order, before discounts and shipping | Float |  |
 | total_credit_balance | The total amount of credit balance used against the order | Float |  |
 | total_discount | The total amount of discounts applied to the order | Float |  |
+| total_duty | The total import duty paid within the item prices | Float |  |
 | total_items | The total number of items ordered (ie. unique SKUs) | Integer |  |
 | total_shipping | The total amount paid for shipping | Float |  |
 | total_tax | The total amount of tax paid on the order | Float |  |

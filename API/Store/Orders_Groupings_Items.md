@@ -29,6 +29,7 @@ This allows you to create an order grouping item
 | is_wrapped | Indicates whether the item should be wrapped, or not | Boolean |  | false | N | N |
 | line_discount | The total discount, including tax, given on the line for the items, ignored if `is_unit_pricing` is true | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_discount_tax | The amount of tax that has been discounted on the line for the items, ignored if `is_unit_pricing` is true | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
+| line_duty | The import duty paid within the line's price, kept out of the customs value, ignored if `is_unit_pricing` is true | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_price | The price of the items, before discounts and tax, ignored if `is_unit_pricing` is true | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_tax | The amount of tax paid on the line for the items, before discounts, ignored if `is_unit_pricing` is true | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_total | The total price paid on the line for the items, after discounts including tax, ignored if `is_unit_pricing` is true | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
@@ -40,6 +41,7 @@ This allows you to create an order grouping item
 | tax_rate | The rate of tax | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | unit_discount | The total discount, including tax, given on one item, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_discount_tax | The amount of tax that has been discounted given on one item, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
+| unit_duty | The import duty paid within one item's price, kept out of the customs value, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_price | The price of the item, before discounts and tax, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_tax | The amount of tax paid for the item, before discounts, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_total | The total price paid for one unit of the item, after discounts including tax, ignored if `is_unit_pricing` is false | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
@@ -69,6 +71,7 @@ This allows you to update a specific order grouping item
 | is_unit_pricing | Indicates whether pricing is provided for one item, ie. a unit, or all the items, ie. the line - unit pricing will be scaled up to line pricing | Boolean |  | false | N | N |
 | line_discount | The total discount, including tax, given on the line for the items, ignored if `is_unit_pricing` is true - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_discount_tax | The amount of tax that has been discounted on the line for the items, ignored if `is_unit_pricing` is true - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
+| line_duty | The import duty paid within the line's price, kept out of the customs value, ignored if `is_unit_pricing` is true - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_price | The price of the items, before discounts and tax, ignored if `is_unit_pricing` is true - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_tax | The amount of tax paid on the line for the items, before discounts, ignored if `is_unit_pricing` is true - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | line_total | The total price paid on the line for the items, after discounts including tax, ignored if `is_unit_pricing` is true - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
@@ -78,6 +81,7 @@ This allows you to update a specific order grouping item
 | tax_rate | The rate of tax - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | N |
 | unit_discount | The total discount, including tax, given on one item, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_discount_tax | The amount of tax that has been discounted given on one item, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
+| unit_duty | The import duty paid within one item's price, kept out of the customs value, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_price | The price of the item, before discounts and tax, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_tax | The amount of tax paid for the item, before discounts, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
 | unit_total | The total price paid for one unit of the item, after discounts including tax, ignored if `is_unit_pricing` is false - can only update when order is open or on hold | Float | Up to 2 decimal places and no larger than 99999999.99 | 0.00 | N | Y |
@@ -112,6 +116,7 @@ This allows you to list the order grouping items
 | is_wrapped | Indicates whether the item should be wrapped, or not | Boolean |  |
 | line_discount | The total discount, including tax, given on the line for the items | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | line_discount_tax | The amount of tax that has been discounted on the line for the items | Float | Up to 2 decimal places and no larger than 99999999.99 |
+| line_duty | The import duty paid within the line's price, kept out of the customs value | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | line_number | A unique numerical reference for this item | Integer | Up to 10 digits long |
 | line_price | The price of the items, before discounts and tax | Float | Up to 2 decimal places and no larger than 99999999.99 |
 | line_tax | The amount of tax paid on the line for the items, before discounts | Float | Up to 2 decimal places and no larger than 99999999.99 |
@@ -138,6 +143,7 @@ This allows you to list the order grouping items
 | type | The type of item that the variant was | String | One of the following values: `bundle`, `set`, `simple` |
 | unit_discount | The total discount, including tax, given on one item, this is scaled down from line_discount | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | unit_discount_tax | The amount of tax that has been discounted given on one item, this is scaled down from line_discount_tax | Float | Up to 2 decimal places and no larger than 99999999.99 |
+| unit_duty | The import duty paid within one item's price, this is scaled down from line_duty | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | unit_price | The price for unit of the item, before discounts and tax, this is scaled down from line_price | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | unit_tax | The amount of tax paid for the item, before discounts, this is scaled down from line_tax | Float | Up to 4 decimal places and no larger than 99999999.9999 |
 | unit_total | The total price paid for one unit of the item, after discounts including tax, this is scaled down from line_total | Float | Up to 4 decimal places and no larger than 99999999.9999 |
