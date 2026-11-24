@@ -185,6 +185,8 @@ This allows you to list orders
 | deliver_min | A date that the order needs to be delivered no earlier than | Date |  |
 | deliver_on | A date that the order needs to be delivered on | Date |  |
 | delivered_at | A UTC datetime of when the last parcel (or pallet) of the order was delivered, once the order has been delivered in full | Datetime |  |
+| delivery_city | The town or city of where the order is being shipped to | String | Up to 100 characters long |
+| delivery_country_iso2 | The ISO 2 letter country code of where the order is being shipped to | String | Exactly 2 characters long |
 | delivery_instructions | The delivery instructions | String |  |
 | delivery_postcode | The postal code/zip code of where the order is being shipped to | String | Up to 20 characters long |
 | delivery_status | Where the order has got to, worked out from all of its shipments - only delivered once the whole order has shipped and every parcel (or pallet) has been delivered | String | One of the following values: `attempted_delivery`, `cancelled`, `delayed`, `delivered`, `despatched`, `failure`, `in_transit`, `labelled`, `out_for_delivery`, `part_delivered`, `pending` |
